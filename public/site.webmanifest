@@ -1,0 +1,23 @@
+{
+  "name": "Go Qatar",
+  "short_name": "Go Qatar",
+  "description": "Navigate Qatar like never before. Find any address by Zone, Street & Building number.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0C0C0C",
+  "theme_color": "#C9A84C",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

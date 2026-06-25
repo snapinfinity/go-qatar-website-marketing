@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"AIza\" \"/Users/niyas/flutter project/go_qator\" --include=\"*.plist\" --include=\"*.xml\" --include=\"*.dart\" 2>/dev/null | head -5)",
+      "Read(//Users/niyas/flutter project/go_qator/**)",
+      "Bash(node -e ' *)",
+      "Bash(python3 -m json.tool)",
+      "Bash(NODE_OPTIONS='--localstorage-file=/tmp/go-qatar-ls' npx tsc --noEmit)",
+      "Bash(node -e \"require\\('framer-motion'\\); console.log\\('ok'\\)\")",
+      "Bash(NODE_OPTIONS='--localstorage-file=/tmp/go-qatar-ls' npx next dev -p 3001)",
+      "Bash(echo \"PID=$!\")",
+      "Bash(open -a \"Google Chrome\" \"http://localhost:3001\")",
+      "Bash(screencapture -x /tmp/hero_full.png)",
+      "Bash(osascript -e 'tell application \"Google Chrome\" to activate')",
+      "Bash(osascript)",
+      "Bash(screencapture -x /tmp/hero_full2.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/hero_full2.png)",
+      "Bash(sips /tmp/hero_full2.png --cropToHeightWidth 400 800 --cropOffset 600 1720 --out /tmp/map_crop_check.png)",
+      "Bash(sips /tmp/hero_full2.png --cropToHeightWidth 400 574 --cropOffset 736 1831 --out /tmp/map_only.png)",
+      "Bash(sips /tmp/hero_full2.png --cropToHeightWidth 400 574 --cropOffset 736 1731 --out /tmp/map_only2.png)",
+      "Bash(cp /tmp/map_only2.png /Users/niyas/react/go_qatar/public/doha-map-static.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/niyas/react/go_qatar/public/doha-map-static.png)",
+      "Bash(npm run dev -- --port 3001 &>/tmp/nextjs-dev.log & *)",
+      "Bash(npx tsc *)",
+      "Bash(npm uninstall *)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}
