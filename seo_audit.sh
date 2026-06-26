@@ -52,8 +52,23 @@ else
   warn "claude-seo not found — installing now"
   echo ""
 
+  # ── Ensure Python 3.10+ is on PATH before running install.sh ──
+  BREW_PY="/opt/homebrew/bin/python3.11"
+  PY_SHIM=""
+  CURRENT_PY_VER=$(python3 -c 'import sys; print(sys.version_info.minor)' 2>/dev/null || echo "0")
+
+  if [ "$CURRENT_PY_VER" -lt 10 ] && [ -x "$BREW_PY" ]; then
+    PY_SHIM=$(mktemp -d)
+    ln -sf "$BREW_PY" "$PY_SHIM/python3"
+    export PATH="$PY_SHIM:$PATH"
+    info "System python3 is 3.$CURRENT_PY_VER — shimmed to $($BREW_PY --version)"
+  elif [ "$CURRENT_PY_VER" -lt 10 ]; then
+    err "Python 3.10+ is required. Install it with: brew install python@3.11"
+    exit 1
+  fi
+
   TMP_DIR=$(mktemp -d)
-  trap 'rm -rf "$TMP_DIR"' EXIT
+  trap 'rm -rf "$TMP_DIR" "${PY_SHIM:-}"' EXIT
 
   echo -e "     Cloning repo..."
   if ! git clone --depth 1 "$SEO_REPO" "$TMP_DIR/claude-seo" --quiet 2>&1; then
