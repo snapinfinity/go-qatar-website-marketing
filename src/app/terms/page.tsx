@@ -3,9 +3,41 @@ import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
+const TERMS_URL = "https://goqatar.app/terms";
+
 export const metadata: Metadata = {
   title: "Terms & Conditions — Go Qatar",
   description: "Read the Terms and Conditions governing your use of the Go Qatar app.",
+  alternates: {
+    canonical: TERMS_URL,
+  },
+  openGraph: {
+    title: "Terms & Conditions — Go Qatar",
+    description: "Read the Terms and Conditions governing your use of the Go Qatar app.",
+    url: TERMS_URL,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://goqatar.app/terms/#webpage",
+      url: TERMS_URL,
+      name: "Terms & Conditions — Go Qatar",
+      isPartOf: { "@id": "https://goqatar.app/#website" },
+      about: { "@id": "https://goqatar.app/#organization" },
+      dateModified: "2025-06",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://goqatar.app" },
+        { "@type": "ListItem", position: 2, name: "Terms & Conditions", item: TERMS_URL },
+      ],
+    },
+  ],
 };
 
 const sections = [
@@ -90,7 +122,7 @@ const sections = [
     number: "08",
     title: "Contact Information",
     content:
-      "If you have any questions about these Terms, please contact us at help.goqatar@gmail.com. We aim to respond to all inquiries within 48 business hours.",
+      "If you have any questions about these Terms, please contact us at help.goqatar@gmail.com. We aim to respond to all inquiries within 24 hours.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
@@ -102,6 +134,10 @@ const sections = [
 export default function TermsPage() {
   return (
     <main className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* Hero */}

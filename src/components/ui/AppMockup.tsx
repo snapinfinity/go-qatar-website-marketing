@@ -68,11 +68,11 @@ export default function AppMockup() {
                 border: "1px solid rgba(255,255,255,0.15)", flexShrink: 0,
               }}
             >
-              <Image src="/logos/app_icon.svg" alt="Go Qatar" width={26} height={26} className="w-full h-full" />
+              <Image src="/logos/app_icon.svg" alt="" width={26} height={26} className="w-full h-full" />
             </div>
             <Image
               src="/logos/go_qatar_text.svg"
-              alt="Go Qatar"
+              alt=""
               width={62}
               height={13}
               className="brightness-0 invert"

@@ -31,7 +31,7 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-xl border border-white/15 overflow-hidden flex-shrink-0">
                 <Image
                   src="/logos/app_icon.svg"
-                  alt="Go Qatar icon"
+                  alt=""
                   width={40}
                   height={40}
                   className="w-full h-full"
@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
               <Image
                 src="/logos/go_qatar_text.svg"
-                alt="Go Qatar"
+                alt="Go Qatar — home"
                 width={108}
                 height={22}
                 className="brightness-0 invert"
@@ -98,9 +98,9 @@ export default function Footer() {
           {/* Links */}
           {Object.entries(footerLinks).map(([section, links]) => (
             <div key={section}>
-              <h4 className="text-white font-semibold text-sm mb-4">
+              <h3 className="text-white font-semibold text-sm mb-4">
                 {section}
-              </h4>
+              </h3>
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.label}>

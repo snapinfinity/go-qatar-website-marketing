@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Audit — 2026-07-21-audit</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  background: #fff;
+}
+h1 { color: #0a3d62; font-size: 28pt; border-bottom: 3px solid #0a3d62; padding-bottom: 8px; margin-top: 0; }
+h2 { color: #0a3d62; font-size: 18pt; margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+h3 { color: #1a5a8c; font-size: 13pt; margin-top: 20px; }
+h4 { color: #444; font-size: 11pt; margin-top: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+p { margin: 8px 0; }
+strong { color: #0a3d62; }
+code { background: #f0f2f5; padding: 2px 6px; border-radius: 3px; font-family: "Consolas", monospace; font-size: 0.9em; }
+pre { background: #1a1a1a; color: #e8e8e8; padding: 14px 18px; border-radius: 6px; overflow-x: auto; }
+pre code { background: transparent; color: inherit; padding: 0; }
+ul, ol { margin: 8px 0 8px 24px; padding: 0; }
+li { margin: 4px 0; }
+li.done { color: #186735; }
+li.todo { color: #8a6f00; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 10pt; }
+th { background: #0a3d62; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 6px 10px; border-bottom: 1px solid #e0e6ec; vertical-align: top; }
+tr:nth-child(even) td { background: #f8fafc; }
+a { color: #0a3d62; text-decoration: underline; }
+a:hover { color: #1a5a8c; }
+.timestamp { color: #888; font-size: 9pt; text-align: right; }
+
+/* Download-PDF control. Uses the browser's own print-to-PDF, so no JS
+   library and no network fetch: these pages are opened over file://.
+   Sits in the normal flow, right-aligned above the title: a viewport-fixed
+   button overlaps the 900px text column on narrower screens, and any
+   breakpoint that avoids that has to be tuned to the button's rendered
+   text width, which silently breaks if the label or font changes. */
+.pdf-btn {
+  display: block;
+  margin: 0 0 20px auto;
+  padding: 9px 16px;
+  background: #0a3d62;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 10pt;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.pdf-btn:hover { background: #1a5a8c; }
+
+@media print {
+  /* The button must never appear on paper. */
+  .pdf-btn { display: none !important; }
+  body { max-width: none; margin: 0; padding: 0; font-size: 10pt; }
+  @page { margin: 15mm; }
+  /* Table headers and code blocks are dark-on-light by design; without this
+     browsers drop the backgrounds when printing and the result is unreadable. */
+  th, pre, li.done, li.todo, strong {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Don't strand a heading at the foot of a page, or split a row/block. */
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  tr, li { break-inside: avoid; page-break-inside: avoid; }
+  pre { break-inside: avoid; page-break-inside: avoid; white-space: pre-wrap; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<button class="pdf-btn" onclick="window.print()" title="Opens the print dialog — choose 'Save as PDF'">&#11015; Download PDF</button>
+<h1>SEO Audit — goqatar.app</h1>
+<p><strong>Date:</strong> 2026-07-21</p>
+<p><strong>Site:</strong> https://goqatar.app — marketing/landing site for the <strong>Go Qatar</strong> mobile app (find any address by Zone / Street / Building number, Qatar news, saved locations, business address API).</p>
+<p><strong>Stack:</strong> Next.js 15 App Router, statically prerendered (<code>X-Nextjs-Prerender: 1</code>).</p>
+<p><strong>Business type:</strong> Mobile-app marketing site (not local-service, not e-commerce).</p>
+<h2>SEO Health Score: 57 / 100</h2>
+<table>
+<thead><tr>
+<th>Category</th>
+<th>Weight</th>
+<th>Score</th>
+<th>Weighted</th>
+</tr></thead><tbody>
+<tr>
+<td>Technical SEO</td>
+<td>22%</td>
+<td>64</td>
+<td>14.1</td>
+</tr>
+<tr>
+<td>Content Quality</td>
+<td>23%</td>
+<td>46</td>
+<td>10.6</td>
+</tr>
+<tr>
+<td>On-Page SEO</td>
+<td>20%</td>
+<td>68</td>
+<td>13.6</td>
+</tr>
+<tr>
+<td>Schema / Structured Data</td>
+<td>10%</td>
+<td>28</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>Performance (CWV)</td>
+<td>10%</td>
+<td>90</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>AI Search Readiness</td>
+<td>10%</td>
+<td>39</td>
+<td>3.9</td>
+</tr>
+<tr>
+<td>Images</td>
+<td>5%</td>
+<td>70</td>
+<td>3.5</td>
+</tr>
+<tr>
+<td>**Total**</td>
+<td>**100%**</td>
+<td></td>
+<td>**~57**</td>
+</tr>
+</tbody></table>
+<p>Supplementary (unweighted): SXO gap 33/100 · Backlinks 20/100 (young domain).</p>
+<p>---</p>
+<h2>Executive Summary</h2>
+<p>Go Qatar has an <strong>excellent engineering foundation</strong> — 96 mobile / 100 desktop Lighthouse performance, perfect CLS, proper SSR/prerender, clean semantic HTML, and strong on-page titles/meta. The problems are almost entirely <strong>SEO infrastructure and trust</strong>, not code quality:</p>
+<p>The site is effectively <strong>invisible to search engines and AI answer engines</strong> because the crawl/discovery layer is missing (no robots.txt, no sitemap, no llms.txt, no structured data), and it has a <strong>duplicate-host problem</strong> — apex <code>goqatar.app</code> and <code>www.goqatar.app</code> both serve 200 with no redirect, so <strong>Google has canonicalized the site to <code>www.goqatar.app</code></strong> on its own while the 3 subpages remain <strong>completely undiscovered</strong> (0 clicks, 0 impressions over 28 days, confirmed via Search Console).</p>
+<h3>Top 5 Critical / High Issues</h3>
+<ol>
+<li><strong>Host duplication + no canonical</strong> — apex &amp; www both 200, no redirect, no <code>&lt;link rel=canonical&gt;</code>; Google picked <code>www</code> for you. (Technical / Google API)</li>
+<li><strong>No robots.txt &amp; no sitemap.xml</strong> (both 404) — no crawl guidance, no URL inventory; subpages never crawled. (Technical / Sitemap / Google API)</li>
+<li><strong>Zero structured data</strong> anywhere — no <code>SoftwareApplication</code>/<code>Organization</code>/<code>WebSite</code> schema on an app-marketing site (the single highest-value schema case). (Schema / Content / GEO)</li>
+<li><strong>Missing security headers</strong> — no CSP, X-Frame-Options, COOP, X-Content-Type-Options, Referrer-Policy, Permissions-Policy; HSTS lacks <code>includeSubDomains</code>/<code>preload</code>. (Technical)</li>
+<li><strong>Weak E-E-A-T / trust</strong> — no About/team, Gmail support address, template legal pages missing Qatar PDPPL &amp; Apple-Sign-In disclosure, unsourced stats and decorative (fake) star ratings. (Content / SXO)</li>
+</ol>
+<h3>Top 5 Quick Wins</h3>
+<ol>
+<li>Ship <code>robots.ts</code> + <code>sitemap.ts</code> (drafts already generated) and submit the sitemap in GSC.</li>
+<li>Add a <code>metadataBase</code> + self-referencing canonical in <code>layout.tsx</code>; add a 308 redirect between apex ↔ www.</li>
+<li>Add <code>Organization</code> + <code>WebSite</code> + <code>MobileApplication</code> JSON-LD (ready-to-paste in <code>findings/schema.md</code>).</li>
+<li>Add security headers via <code>headers()</code> in <code>next.config.ts</code>.</li>
+<li>Publish <code>llms.txt</code> (draft in <code>findings/geo.md</code>) and fix <code>/contact</code> <code>og:url</code> (currently points at homepage).</li>
+</ol>
+<p>---</p>
+<h2>Category Findings</h2>
+<h3>Technical SEO — 64/100</h3>
+<ul>
+<li><strong>Critical</strong> — apex &amp; <code>www</code> both return 200 with identical ETags, no redirect → full duplicate-content exposure.</li>
+<li><strong>Critical</strong> — no <code>&lt;link rel="canonical"&gt;</code> anywhere; nothing consolidates the duplication or self-references pages.</li>
+<li><strong>High</strong> — <code>robots.txt</code> 404 (no crawler directives, no sitemap pointer).</li>
+<li><strong>High</strong> — <code>sitemap.xml</code> 404 (no machine-readable URL inventory).</li>
+<li><strong>High</strong> — missing CSP, X-Frame-Options, COOP, X-Content-Type-Options, Referrer-Policy, Permissions-Policy headers (root cause: no <code>headers()</code> in <code>next.config.ts</code>).</li>
+<li><strong>Medium</strong> — HSTS present but missing <code>includeSubDomains</code>/<code>preload</code>.</li>
+<li><strong>Low</strong> — <code>/Privacy-Policy</code> case-variant 404s instead of redirecting; unlabeled <code>&lt;select&gt;</code>; footer heading-order skip.</li>
+<li><strong>Passes:</strong> HTTP→HTTPS 308, trailing-slash 308, lowercase URLs, correct viewport, SSR prerender, index/follow, custom 404.</li>
+</ul>
+<h3>Content Quality — 46/100 (weighted E-E-A-T ~33)</h3>
+<ul>
+<li><strong>High</strong> — no About/team/authorship; unclear who validates the Zone-Street-Building logic vs. Qatar's official addressing authority.</li>
+<li><strong>High</strong> — personal Gmail support address (<code>help.goqatar@gmail.com</code>) instead of branded <code>@goqatar.app</code>; no legal entity/address despite soliciting B2B API leads.</li>
+<li><strong>High</strong> — no JSON-LD; no canonical "What is Go Qatar" citable passage.</li>
+<li><strong>Medium</strong> — thin, template legal pages; Privacy Policy omits Apple Sign-In, Google Maps SDK, analytics data flows, and any Qatar <strong>PDPPL</strong> reference.</li>
+<li><strong>Medium</strong> — conflicting response-time claims (24h on Contact vs. 48h in Privacy/Terms).</li>
+<li><strong>Medium</strong> — unverifiable enterprise "Business API" claims (SLA/white-label) with no docs/case studies.</li>
+<li><strong>Low</strong> — decorative unsourced 5-star rating &amp; "Loved by Qatar residents"; SVG mockups presented as "the real app"; stale "Last updated: June 2025".</li>
+</ul>
+<h3>On-Page SEO — 68/100</h3>
+<ul>
+<li><strong>Strengths:</strong> strong title/meta/OG, clean H1→H2→H3, natural keyword coverage, Lighthouse SEO 100.</li>
+<li><strong>Critical</strong> — no canonical tags (see Technical).</li>
+<li><strong>Medium</strong> — <code>/contact</code> <code>og:url</code> incorrectly points to the homepage.</li>
+<li><strong>Low</strong> — legacy <code>&lt;meta name="keywords"&gt;</code> (harmless, no value); heading-order skip in footer.</li>
+</ul>
+<h3>Schema / Structured Data — 28/100</h3>
+<ul>
+<li><strong>High</strong> — zero JSON-LD/Microdata/RDFa on any page.</li>
+<li><strong>High</strong> — no <code>SoftwareApplication</code>/<code>MobileApplication</code> despite App Store + Play Store IDs being available.</li>
+<li><strong>Medium</strong> — no <code>Organization</code>/<code>WebSite</code> entity graph (Go Qatar ↔ domain ↔ publisher Snap Infinity); no <code>BreadcrumbList</code>; no <code>ContactPoint</code>.</li>
+<li><strong>Info</strong> — do NOT fabricate <code>aggregateRating</code> from decorative stars; skip deprecated <code>HowTo</code>; FAQ schema is AI-citation-only post May-2026 rich-result retirement.</li>
+<li>Ready-to-paste JSON-LD provided in <code>findings/schema.md</code>.</li>
+</ul>
+<h3>Performance (CWV) — 90/100 (lab-only; no CrUX field data)</h3>
+<ul>
+<li>Mobile: Perf 96, LCP 2.4s, CLS 0, TBT 50ms, SI 4.0s. Desktop: Perf 100, LCP 0.6s.</li>
+<li><strong>High</strong> — LCP is render/hydration-driven (network finishes ~241ms); biggest lever.</li>
+<li><strong>High</strong> — render-blocking CSS (~450ms potential savings via critical-CSS inline/defer).</li>
+<li><strong>Medium</strong> — <code>431-*.js</code> 54% unused (~270ms); legacy-JS polyfills (~12KB); one forced reflow.</li>
+<li><strong>Note</strong> — no CrUX field data (low traffic); re-validate against real-user data as traffic grows.</li>
+</ul>
+<h3>AI Search Readiness (GEO) — 39/100</h3>
+<ul>
+<li><strong>High</strong> — no robots.txt (AI crawlers only accidentally allowed, no directives); no <code>llms.txt</code>; zero schema.</li>
+<li><strong>High</strong> — no FAQ / no 134–167-word citable passages; copy is short marketing taglines with declarative headings.</li>
+<li><strong>High</strong> — zero brand-mention signals (no YouTube/LinkedIn/Reddit/Wikipedia/social); bare Gmail contact.</li>
+<li><strong>Low</strong> — rendering itself is strong (static prerender, full text without JS). <code>llms.txt</code> draft in <code>findings/geo.md</code>.</li>
+</ul>
+<h3>Images — 70/100</h3>
+<ul>
+<li>No oversized images (perf strong); OG image present (1200×630). </li>
+<li><strong>Medium</strong> — generic alt text ("Go Qatar", "Go Qatar icon"); illustrative SVG mockups instead of real app screenshots.</li>
+</ul>
+<h3>Search Experience (SXO) — 33/100 (supplementary)</h3>
+<ul>
+<li><strong>Critical</strong> — page-type mismatch: SERP for "Qatar address finder / navigation app" is dominated by App/Play Store listings (~48%) and free government tools (QNAS, MOI "My Address", ~34%); a single marketing page can't compete without an in-browser lookup tool or store-listing rich results.</li>
+<li><strong>High</strong> — no differentiation vs. Qaddress/QPLACES or the free government QNAS API; Business API pitch has no dedicated URL/docs/pricing.</li>
+<li><strong>Medium</strong> — no ownership of awareness-stage "what is Qatar's Zone-Street-Building system" content (won by ILoveQatar.net, Qatar Trendz).</li>
+</ul>
+<h3>Backlinks — 20/100 (supplementary, young domain)</h3>
+<ul>
+<li><strong>High</strong> — no third-party authority data obtainable (Tier 0 only: Common Crawl + verify crawler; no Moz/Bing/DataForSEO keys).</li>
+<li><strong>Medium</strong> — domain absent from Common Crawl link graph entirely (consistent with a newly launched, un-crawled domain — not a penalty).</li>
+<li><strong>Opportunity</strong> — targets: expat/lifestyle sites (ILoveQatar.net, Marhaba, Qatar Living), Qatar tech directories (QSTP, QDB), app-discovery platforms (Product Hunt, AlternativeTo).</li>
+</ul>
+<h3>Google API (real data — 2026-07-21)</h3>
+<ul>
+<li><strong>GSC property</strong> <code>sc-domain:goqatar.app</code> verified (siteOwner).</li>
+<li><strong>URL Inspection:</strong> <code>/</code> = "Duplicate without user-selected canonical → Google chose <code>www.goqatar.app</code>"; <code>/contact</code>, <code>/privacy-policy</code>, <code>/terms</code> = <strong>Unknown to Google (never crawled)</strong>.</li>
+<li><strong>Search performance (28d):</strong> 0 clicks / 0 impressions.</li>
+<li><strong>Sitemaps:</strong> none submitted. <strong>CrUX:</strong> none (insufficient traffic). <strong>GA4:</strong> not configured.</li>
+</ul>
+<p>---</p>
+<h2>Prioritized Action Plan</h2>
+<h3>Phase 1 — Critical Fixes (Week 1)</h3>
+<ol>
+<li>Decide canonical host (apex vs <code>www</code>) and add a 308 redirect for the other; add <code>metadataBase</code> + self-canonical in <code>layout.tsx</code>. <em>(Google already picked <code>www</code> — confirm intent.)</em></li>
+<li>Ship <code>robots.ts</code> + <code>sitemap.ts</code> (drafts created), deploy, and <strong>submit sitemap in GSC</strong>; request indexing for the 3 subpages.</li>
+<li>Add security headers (<code>headers()</code> in <code>next.config.ts</code>): CSP, X-Frame-Options, COOP, X-Content-Type-Options, Referrer-Policy, Permissions-Policy; extend HSTS.</li>
+<li>Add <code>Organization</code> + <code>WebSite</code> + <code>MobileApplication</code> JSON-LD.</li>
+</ol>
+<h3>Phase 2 — High-Impact (Weeks 2–3)</h3>
+<ol>
+<li>Publish <code>llms.txt</code>; fix <code>/contact</code> <code>og:url</code>.</li>
+<li>Trust fixes: branded support email, real company/legal entity + Qatar address, About/team section.</li>
+<li>Legal review: rewrite template Terms; update Privacy Policy for Apple Sign-In, Google Maps SDK, analytics, and Qatar PDPPL.</li>
+<li>Performance polish: inline critical CSS, split/lazy-load <code>431-*.js</code>, trim legacy polyfills.</li>
+</ol>
+<h3>Phase 3 — Content &amp; Authority (Month 2)</h3>
+<ol>
+<li>Add an FAQ with 134–167-word citable answers; a canonical "What is Go Qatar / Zone-Street-Building" explainer.</li>
+<li>Give the Business API its own page with docs/pricing/case studies (or soften unverifiable claims).</li>
+<li>Replace SVG mockups with real screenshots/demo video; source or remove star ratings.</li>
+<li>Begin backlink outreach (expat sites, Qatar tech directories, Product Hunt launch).</li>
+</ol>
+<h3>Phase 4 — Monitoring (Ongoing)</h3>
+<ol>
+<li>Re-check CrUX/GSC as traffic grows; re-run this audit after Phase 1–2 to measure the score delta. Consider GTM + GA4.</li>
+</ol>
+<p>---</p>
+<p><em>Per-specialist detail: <code>.seo/audits/2026-07-21-findings/</code> (technical, content, schema, sitemap, performance, geo, sxo, google, backlinks).</em></p>
+<p class="timestamp">Generated by seo-tracker</p>
+</body>
+</html>

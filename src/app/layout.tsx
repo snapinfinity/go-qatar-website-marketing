@@ -39,6 +39,10 @@ export const metadata: Metadata = {
   publisher: "Snap Infinity",
   category: "travel",
 
+  alternates: {
+    canonical: BASE_URL,
+  },
+
   openGraph: {
     title: "Go Qatar — Your City. Your Way.",
     description:

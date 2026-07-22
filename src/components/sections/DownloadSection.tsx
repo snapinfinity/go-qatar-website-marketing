@@ -15,7 +15,7 @@ export default function DownloadSection() {
         <AnimateIn>
           {/* App icon */}
           <div className="mb-6 mx-auto inline-block rounded-[22px] border border-white/15 overflow-hidden shadow-2xl shadow-gold/10">
-            <Image src="/logos/app_icon.svg" alt="Go Qatar" width={88} height={88} className="block" />
+            <Image src="/logos/app_icon.svg" alt="Go Qatar app icon" width={88} height={88} className="block" />
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">

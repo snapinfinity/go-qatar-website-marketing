@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Tracker — TODO</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  background: #fff;
+}
+h1 { color: #0a3d62; font-size: 28pt; border-bottom: 3px solid #0a3d62; padding-bottom: 8px; margin-top: 0; }
+h2 { color: #0a3d62; font-size: 18pt; margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+h3 { color: #1a5a8c; font-size: 13pt; margin-top: 20px; }
+h4 { color: #444; font-size: 11pt; margin-top: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+p { margin: 8px 0; }
+strong { color: #0a3d62; }
+code { background: #f0f2f5; padding: 2px 6px; border-radius: 3px; font-family: "Consolas", monospace; font-size: 0.9em; }
+pre { background: #1a1a1a; color: #e8e8e8; padding: 14px 18px; border-radius: 6px; overflow-x: auto; }
+pre code { background: transparent; color: inherit; padding: 0; }
+ul, ol { margin: 8px 0 8px 24px; padding: 0; }
+li { margin: 4px 0; }
+li.done { color: #186735; }
+li.todo { color: #8a6f00; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 10pt; }
+th { background: #0a3d62; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 6px 10px; border-bottom: 1px solid #e0e6ec; vertical-align: top; }
+tr:nth-child(even) td { background: #f8fafc; }
+a { color: #0a3d62; text-decoration: underline; }
+a:hover { color: #1a5a8c; }
+.timestamp { color: #888; font-size: 9pt; text-align: right; }
+
+/* Download-PDF control. Uses the browser's own print-to-PDF, so no JS
+   library and no network fetch: these pages are opened over file://.
+   Sits in the normal flow, right-aligned above the title: a viewport-fixed
+   button overlaps the 900px text column on narrower screens, and any
+   breakpoint that avoids that has to be tuned to the button's rendered
+   text width, which silently breaks if the label or font changes. */
+.pdf-btn {
+  display: block;
+  margin: 0 0 20px auto;
+  padding: 9px 16px;
+  background: #0a3d62;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 10pt;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.pdf-btn:hover { background: #1a5a8c; }
+
+@media print {
+  /* The button must never appear on paper. */
+  .pdf-btn { display: none !important; }
+  body { max-width: none; margin: 0; padding: 0; font-size: 10pt; }
+  @page { margin: 15mm; }
+  /* Table headers and code blocks are dark-on-light by design; without this
+     browsers drop the backgrounds when printing and the result is unreadable. */
+  th, pre, li.done, li.todo, strong {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Don't strand a heading at the foot of a page, or split a row/block. */
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  tr, li { break-inside: avoid; page-break-inside: avoid; }
+  pre { break-inside: avoid; page-break-inside: avoid; white-space: pre-wrap; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<button class="pdf-btn" onclick="window.print()" title="Opens the print dialog — choose 'Save as PDF'">&#11015; Download PDF</button>
+<h1>SEO Tracker — go-qatar-website-marketing</h1>
+<p>Read this file first. Work items are executed top-to-bottom.</p>
+<p>Mark done with <code>seo-tracker done &lt;id&gt;</code>.</p>
+<h2>Setup</h2>
+<ul>
+<li class="done">✓ <strong>1. Verify claude-seo installed</strong></li>
+<li>id: setup-01-verify-tools</li>
+<li>type: auto</li>
+<li>category: setup</li>
+<li>priority: critical</li>
+<li>stop-if-fail: yes</li>
+<li>action: <code>seo-tracker verify-tools</code></li>
+</ul>
+<ul>
+<li class="done">✓ <strong>2. Verify claude-seo up to date</strong></li>
+<li>id: setup-02-update-tools</li>
+<li>type: auto</li>
+<li>category: setup</li>
+<li>priority: high</li>
+<li>action: <code>seo-tracker verify-tools</code> (does update check too)</li>
+</ul>
+<ul>
+<li class="done">✓ <strong>3. Verify Google API keys configured</strong></li>
+<li>id: setup-03-verify-keys</li>
+<li>type: hybrid</li>
+<li>category: setup</li>
+<li>priority: high</li>
+<li>action: <code>seo-tracker verify-keys</code></li>
+</ul>
+<ul>
+<li class="done">✓ <strong>4. Verify project builds</strong></li>
+<li>id: setup-04-verify-build</li>
+<li>type: auto</li>
+<li>category: setup</li>
+<li>priority: medium</li>
+<li>stop-if-fail: no</li>
+<li>action: <code>seo-tracker verify-build</code></li>
+</ul>
+<ul>
+<li class="done">✓ <strong>5. Set deployed URL</strong></li>
+<li>id: setup-05-set-url</li>
+<li>type: hybrid</li>
+<li>category: setup</li>
+<li>priority: critical</li>
+<li>action: <code>seo-tracker set-url</code></li>
+</ul>
+<ul>
+<li class="done">✓ <strong>6. Run initial SEO audit</strong></li>
+<li>id: setup-06-initial-audit</li>
+<li>type: auto</li>
+<li>category: setup</li>
+<li>priority: critical</li>
+<li>action: <code>seo-tracker audit</code></li>
+</ul>
+<ul>
+<li class="done">✓ <strong>7. Check GTM presence</strong></li>
+<li>id: setup-07-check-gtm</li>
+<li>type: auto</li>
+<li>category: analytics</li>
+<li>priority: high</li>
+<li>action: <code>seo-tracker check-gtm</code> (if missing, <code>seo-tracker add-gtm</code>)</li>
+</ul>
+<h2>Fixes — auto (AI can do)</h2>
+<p>&lt;!-- Populated by 'seo-tracker audit' --&gt;</p>
+<ul>
+<li class="done">✓ <strong>Add robots.ts (crawler rules + sitemap pointer)  draft created at src/app/robots.ts</strong></li>
+<li>id: add-robots-ts-crawler-rules-sitemap-pointer-draft-created-at-src-app-robots-ts</li>
+<li>type: auto</li>
+<li>category: technical</li>
+<li>priority: critical</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="done">✓ <strong>Add sitemap.ts generating /, /contact, /privacy-policy, /terms  draft created at src/app/sitemap.ts</strong></li>
+<li>id: add-sitemap-ts-generating-contact-privacy-policy-terms-draft-created-at-src-app-sitemap-ts</li>
+<li>type: auto</li>
+<li>category: technical</li>
+<li>priority: critical</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="done">✓ <strong>Add security headers via headers() in next.config.ts (CSP, X-Frame-Options, COOP, X-Content-Type-Options, Referrer-Policy, Permissions-Policy; extend HSTS)</strong></li>
+<li>id: add-security-headers-via-headers-in-next-config-ts-csp-x-frame-options-coop-x-content-type-options-referrer-policy-permissions-policy-extend-hsts</li>
+<li>type: auto</li>
+<li>category: technical</li>
+<li>priority: high</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="done">✓ <strong>Add Organization + WebSite + MobileApplication JSON-LD to homepage (ready-to-paste in findings/schema.md)</strong></li>
+<li>id: add-organization-website-mobileapplication-json-ld-to-homepage-ready-to-paste-in-findings-schema-md</li>
+<li>type: auto</li>
+<li>category: schema</li>
+<li>priority: high</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="done">✓ <strong>Add BreadcrumbList + ContactPoint JSON-LD to /contact, /privacy-policy, /terms</strong></li>
+<li>id: add-breadcrumblist-contactpoint-json-ld-to-contact-privacy-policy-terms</li>
+<li>type: auto</li>
+<li>category: schema</li>
+<li>priority: medium</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="done">✓ <strong>Publish llms.txt for AI crawlers (draft in findings/geo.md)</strong></li>
+<li>id: publish-llms-txt-for-ai-crawlers-draft-in-findings-geo-md</li>
+<li>type: auto</li>
+<li>category: geo</li>
+<li>priority: high</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="done">✓ <strong>Fix /contact og:url  currently points to homepage instead of /contact</strong></li>
+<li>id: fix-contact-og-url-currently-points-to-homepage-instead-of-contact</li>
+<li>type: auto</li>
+<li>category: on-page</li>
+<li>priority: medium</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="done">✓ <strong>Reconcile support response-time claims: 24h on Contact vs 48h in Privacy/Terms</strong></li>
+<li>id: reconcile-support-response-time-claims-24h-on-contact-vs-48h-in-privacy-terms</li>
+<li>type: auto</li>
+<li>category: content</li>
+<li>priority: medium</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="done">✓ <strong>Fix /Privacy-Policy case-variant 404 (redirect to lowercase); label the unlabeled &lt;select&gt;; fix footer heading-order skip</strong></li>
+<li>id: fix-privacy-policy-case-variant-404-redirect-to-lowercase-label-the-unlabeled-select-fix-footer-heading-order-skip</li>
+<li>type: auto</li>
+<li>category: technical</li>
+<li>priority: low</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="done">✓ **Performance: inline critical CSS, split/lazy-load 431-*.js (54% unused), drop legacy JS polyfills, fix forced reflow**</li>
+<li>id: performance-inline-critical-css-split-lazy-load-431-js-54-unused-drop-legacy-js-polyfills-fix-forced-reflow</li>
+<li>type: auto</li>
+<li>category: performance</li>
+<li>priority: medium</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="done">✓ <strong>Improve image alt text (currently generic 'Go Qatar'/'Go Qatar icon')</strong></li>
+<li>id: improve-image-alt-text-currently-generic-go-qatar-go-qatar-icon</li>
+<li>type: auto</li>
+<li>category: images</li>
+<li>priority: low</li>
+<li>created: 2026-07-21</li>
+</ul>
+<h2>Fixes — manual (user must do)</h2>
+<p>&lt;!-- Populated by 'seo-tracker audit' --&gt;</p>
+<ul>
+<li class="done">✓ <strong>Resolve apex vs www duplication: add 308 redirect + metadataBase self-canonical in layout.tsx</strong></li>
+<li>id: resolve-apex-vs-www-duplication-add-308-redirect-metadatabase-self-canonical-in-layout-tsx</li>
+<li>type: hybrid</li>
+<li>category: technical</li>
+<li>priority: critical</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="todo">☐ <strong>Submit sitemap.xml in Google Search Console and request indexing for /contact, /privacy-policy, /terms</strong></li>
+<li>id: submit-sitemap-xml-in-google-search-console-and-request-indexing-for-contact-privacy-policy-terms</li>
+<li>type: manual</li>
+<li>category: technical</li>
+<li>priority: high</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="todo">☐ <strong>Replace personal Gmail support address with branded @goqatar.app email</strong></li>
+<li>id: replace-personal-gmail-support-address-with-branded-goqatar-app-email</li>
+<li>type: manual</li>
+<li>category: content</li>
+<li>priority: high</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="todo">☐ <strong>Add company/legal entity name + Qatar business address and an About/team section (E-E-A-T)</strong></li>
+<li>id: add-company-legal-entity-name-qatar-business-address-and-an-about-team-section-e-e-a-t</li>
+<li>type: hybrid</li>
+<li>category: content</li>
+<li>priority: high</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="todo">☐ <strong>Legal review: rewrite template Terms; update Privacy Policy for Apple Sign-In, Google Maps SDK, analytics data flows, and Qatar PDPPL</strong></li>
+<li>id: legal-review-rewrite-template-terms-update-privacy-policy-for-apple-sign-in-google-maps-sdk-analytics-data-flows-and-qatar-pdppl</li>
+<li>type: manual</li>
+<li>category: content</li>
+<li>priority: high</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="todo">☐ <strong>Add an FAQ with 134-167 word citable answers + a canonical 'What is Go Qatar / Zone-Street-Building' explainer passage</strong></li>
+<li>id: add-an-faq-with-134-167-word-citable-answers-a-canonical-what-is-go-qatar-zone-street-building-explainer-passage</li>
+<li>type: hybrid</li>
+<li>category: geo</li>
+<li>priority: medium</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="todo">☐ <strong>Give the Business API a dedicated page with docs/pricing/case studies, or soften unverifiable SLA/white-label claims</strong></li>
+<li>id: give-the-business-api-a-dedicated-page-with-docs-pricing-case-studies-or-soften-unverifiable-sla-white-label-claims</li>
+<li>type: hybrid</li>
+<li>category: sxo</li>
+<li>priority: medium</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="todo">☐ <strong>Replace illustrative SVG app mockups with real device screenshots/demo video; source or remove decorative star ratings</strong></li>
+<li>id: replace-illustrative-svg-app-mockups-with-real-device-screenshots-demo-video-source-or-remove-decorative-star-ratings</li>
+<li>type: manual</li>
+<li>category: content</li>
+<li>priority: medium</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="todo">☐ <strong>Backlink outreach: expat sites (ILoveQatar, Marhaba, Qatar Living), Qatar tech directories (QSTP, QDB), Product Hunt/AlternativeTo launch</strong></li>
+<li>id: backlink-outreach-expat-sites-iloveqatar-marhaba-qatar-living-qatar-tech-directories-qstp-qdb-product-hunt-alternativeto-launch</li>
+<li>type: manual</li>
+<li>category: backlinks</li>
+<li>priority: medium</li>
+<li>created: 2026-07-21</li>
+</ul>
+<ul>
+<li class="todo">☐ <strong>Optional: add GTM + GA4 for analytics (not currently present)</strong></li>
+<li>id: optional-add-gtm-ga4-for-analytics-not-currently-present</li>
+<li>type: manual</li>
+<li>category: technical</li>
+<li>priority: low</li>
+<li>created: 2026-07-21</li>
+</ul>
+<p class="timestamp">Generated by seo-tracker</p>
+</body>
+</html>

@@ -290,8 +290,9 @@ export default function BusinessAPISection() {
                 {/* Use case + Volume */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-medium text-white/60 mb-1.5">Primary Use Case</label>
+                    <label htmlFor="business-use-case" className="block text-xs font-medium text-white/60 mb-1.5">Primary Use Case</label>
                     <select
+                      id="business-use-case"
                       value={form.useCase}
                       onChange={(e) => setForm({ ...form, useCase: e.target.value })}
                       className={`${inputClass} cursor-pointer`}
@@ -308,8 +309,9 @@ export default function BusinessAPISection() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-white/60 mb-1.5">Expected Monthly Volume</label>
+                    <label htmlFor="business-volume" className="block text-xs font-medium text-white/60 mb-1.5">Expected Monthly Volume</label>
                     <select
+                      id="business-volume"
                       value={form.volume}
                       onChange={(e) => setForm({ ...form, volume: e.target.value })}
                       className={`${inputClass} cursor-pointer`}

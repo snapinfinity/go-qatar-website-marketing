@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Dashboard — go-qatar-website-marketing</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; padding: 0; background: #f4f6fa; color: #1a1a1a; }
+.header { background: linear-gradient(135deg, #0a3d62 0%, #1a5a8c 100%); color: #fff; padding: 30px 40px; }
+.header h1 { margin: 0; font-size: 24pt; }
+.header .subtitle { opacity: 0.9; margin-top: 4px; font-size: 11pt; }
+.container { max-width: 1100px; margin: 0 auto; padding: 30px 20px; }
+.card { background: #fff; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.card h2 { margin-top: 0; color: #0a3d62; font-size: 15pt; border-bottom: 1px solid #e0e6ec; padding-bottom: 8px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.stat { text-align: center; padding: 20px; background: #f8fafc; border-left: 4px solid #0a3d62; border-radius: 4px; }
+.stat .number { font-size: 32pt; font-weight: 700; color: #0a3d62; line-height: 1; }
+.stat .label { font-size: 9pt; color: #666; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 6px; }
+.progress-bar { background: #e0e6ec; border-radius: 20px; height: 24px; overflow: hidden; margin-top: 12px; }
+.progress-fill { background: linear-gradient(90deg, #0a3d62, #1a5a8c); height: 100%; transition: width 0.3s; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; font-size: 10pt; }
+ul { margin: 8px 0; padding-left: 24px; }
+li { margin: 4px 0; }
+pre { background: #1a1a1a; color: #e8e8e8; padding: 14px 18px; border-radius: 6px; overflow-x: auto; font-family: "Consolas", monospace; font-size: 9pt; margin: 0; }
+a { color: #0a3d62; }
+.nav a { display: inline-block; padding: 8px 16px; margin-right: 8px; background: #0a3d62; color: #fff; border-radius: 20px; text-decoration: none; font-size: 10pt; }
+.nav a:hover { background: #1a5a8c; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>SEO Dashboard — go-qatar-website-marketing</h1>
+  <div class="subtitle">https://goqatar.app</div>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Progress</h2>
+    <div class="grid" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div class="stat">
+        <div class="number">57</div>
+        <div class="label">Health score</div>
+        <div style="font-size: 9pt; color: #666; margin-top: 4px;">first scored audit (2026-07-21)</div>
+      </div>
+      <div class="stat">
+        <div class="number">19</div>
+        <div class="label">Completed</div>
+      </div>
+      <div class="stat">
+        <div class="number">9</div>
+        <div class="label">Remaining</div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 67%;">67%</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Navigation</h2>
+    <div class="nav">
+      <a href="TODO.html">Full TODO list</a>
+      <a href="DONE.html">DONE log</a>
+      <a href="UI-CHANGES.html">UI changes</a>
+      <a href="STATE.html">State summary</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Open TODOs</h2>
+    <ul>
+      <li>Submit sitemap.xml in Google Search Console and request indexing for /contact, /privacy-policy, /terms</li>
+<li>--</li>
+<li>Replace personal Gmail support address with branded @goqatar.app email</li>
+<li>--</li>
+<li>Add company/legal entity name + Qatar business address and an About/team section (E-E-A-T)</li>
+<li>--</li>
+<li>Legal review: rewrite template Terms; update Privacy Policy for Apple Sign-In, Google Maps SDK, analytics data flows, and Qatar PDPPL</li>
+<li>--</li>
+<li>Add an FAQ with 134-167 word citable answers + a canonical 'What is Go Qatar / Zone-Street-Building' explainer passage</li>
+<li>--</li>
+<li>Give the Business API a dedicated page with docs/pricing/case studies, or soften unverifiable SLA/white-label claims</li>
+<li>--</li>
+<li>Replace illustrative SVG app mockups with real device screenshots/demo video; source or remove decorative star ratings</li>
+<li>--</li>
+<li>Backlink outreach: expat sites (ILoveQatar, Marhaba, Qatar Living), Qatar tech directories (QSTP, QDB), Product Hunt/AlternativeTo launch</li>
+<li>--</li>
+<li>Optional: add GTM + GA4 for analytics (not currently present)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Audit reports</h2>
+    <ul>
+      <li><a href="audits/2026-07-21-audit.html">2026-07-21-audit</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Recent completions</h2>
+    <pre>
+## 2026-07-22
+- [x] setup-04-verify-build — 4. Verify project builds (16:06)
+- [x] add-robots-ts-crawler-rules-sitemap-pointer-draft-created-at-src-app-robots-ts — Add robots.ts (crawler rules + sitemap pointer)  draft created at src/app/robots.ts (16:09)
+- [x] add-sitemap-ts-generating-contact-privacy-policy-terms-draft-created-at-src-app-sitemap-ts — Add sitemap.ts generating /, /contact, /privacy-policy, /terms  draft created at src/app/sitemap.ts (16:09)
+- [x] add-security-headers-via-headers-in-next-config-ts-csp-x-frame-options-coop-x-content-type-options-referrer-policy-permissions-policy-extend-hsts — Add security headers via headers() in next.config.ts (CSP, X-Frame-Options, COOP, X-Content-Type-Options, Referrer-Policy, Permissions-Policy; extend HSTS) (16:18)
+- [x] add-organization-website-mobileapplication-json-ld-to-homepage-ready-to-paste-in-findings-schema-md — Add Organization + WebSite + MobileApplication JSON-LD to homepage (ready-to-paste in findings/schema.md) (16:22)
+- [x] add-breadcrumblist-contactpoint-json-ld-to-contact-privacy-policy-terms — Add BreadcrumbList + ContactPoint JSON-LD to /contact, /privacy-policy, /terms (16:22)
+- [x] fix-contact-og-url-currently-points-to-homepage-instead-of-contact — Fix /contact og:url  currently points to homepage instead of /contact (16:22)
+- [x] reconcile-support-response-time-claims-24h-on-contact-vs-48h-in-privacy-terms — Reconcile support response-time claims: 24h on Contact vs 48h in Privacy/Terms (16:22)
+- [x] publish-llms-txt-for-ai-crawlers-draft-in-findings-geo-md — Publish llms.txt for AI crawlers (draft in findings/geo.md) (16:24)
+- [x] fix-privacy-policy-case-variant-404-redirect-to-lowercase-label-the-unlabeled-select-fix-footer-heading-order-skip — Fix /Privacy-Policy case-variant 404 (redirect to lowercase); label the unlabeled &lt;select&gt;; fix footer heading-order skip (16:28)
+- [x] improve-image-alt-text-currently-generic-go-qatar-go-qatar-icon — Improve image alt text (currently generic 'Go Qatar'/'Go Qatar icon') (16:32)
+- [x] performance-inline-critical-css-split-lazy-load-431-js-54-unused-drop-legacy-js-polyfills-fix-forced-reflow — Performance: inline critical CSS, split/lazy-load 431-*.js (54% unused), drop legacy JS polyfills, fix forced reflow (16:44)
+- [x] resolve-apex-vs-www-duplication-add-308-redirect-metadatabase-self-canonical-in-layout-tsx — Resolve apex vs www duplication: add 308 redirect + metadataBase self-canonical in layout.tsx (16:45)</pre>
+  </div>
+
+</div>
+
+</body>
+</html>
