@@ -1,12 +1,19 @@
 import type { NextConfig } from "next";
 
+const isDev = process.env.NODE_ENV !== "production";
+
+// In dev, Next/webpack evaluates modules via eval() (React Fast Refresh +
+// eval source maps) and connects an HMR websocket. A CSP without
+// 'unsafe-eval'/ws: blocks those, so the app renders on the server but never
+// hydrates on the client (only static, non-animated content shows). Production
+// builds don't use eval, so we keep the strict policy there.
 const csp = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self' data:",
-  "connect-src 'self'",
+  `connect-src 'self'${isDev ? " ws:" : ""}`,
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
