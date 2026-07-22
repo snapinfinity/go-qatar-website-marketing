@@ -3,9 +3,41 @@ import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
+const PRIVACY_URL = "https://goqatar.app/privacy-policy";
+
 export const metadata: Metadata = {
   title: "Privacy Policy — Go Qatar",
   description: "Learn how Go Qatar collects, uses, and protects your personal information.",
+  alternates: {
+    canonical: PRIVACY_URL,
+  },
+  openGraph: {
+    title: "Privacy Policy — Go Qatar",
+    description: "Learn how Go Qatar collects, uses, and protects your personal information.",
+    url: PRIVACY_URL,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://goqatar.app/privacy-policy/#webpage",
+      url: PRIVACY_URL,
+      name: "Privacy Policy — Go Qatar",
+      isPartOf: { "@id": "https://goqatar.app/#website" },
+      about: { "@id": "https://goqatar.app/#organization" },
+      dateModified: "2025-06",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://goqatar.app" },
+        { "@type": "ListItem", position: 2, name: "Privacy Policy", item: PRIVACY_URL },
+      ],
+    },
+  ],
 };
 
 const sections = [
@@ -79,7 +111,7 @@ const sections = [
     number: "07",
     title: "Contact Us",
     content:
-      "If you have any questions about this privacy policy, please contact us at help.goqatar@gmail.com. We will respond to your inquiry within 48 hours.",
+      "If you have any questions about this privacy policy, please contact us at help.goqatar@gmail.com. We will respond to your inquiry within 24 hours.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
@@ -91,6 +123,10 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* Hero */}

@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="w-7 h-7 rounded-lg border border-white/15 overflow-hidden flex-shrink-0">
             <Image
               src="/logos/app_icon.svg"
-              alt="Go Qatar icon"
+              alt=""
               width={28}
               height={28}
               className="w-full h-full"
@@ -83,7 +83,7 @@ export default function Navbar() {
           </div>
           <Image
             src="/logos/go_qatar_text.svg"
-            alt="Go Qatar"
+            alt="Go Qatar — home"
             width={80}
             height={16}
             className="brightness-0 invert"

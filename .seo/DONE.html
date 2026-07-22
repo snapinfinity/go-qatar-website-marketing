@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Tracker — DONE</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  background: #fff;
+}
+h1 { color: #0a3d62; font-size: 28pt; border-bottom: 3px solid #0a3d62; padding-bottom: 8px; margin-top: 0; }
+h2 { color: #0a3d62; font-size: 18pt; margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+h3 { color: #1a5a8c; font-size: 13pt; margin-top: 20px; }
+h4 { color: #444; font-size: 11pt; margin-top: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+p { margin: 8px 0; }
+strong { color: #0a3d62; }
+code { background: #f0f2f5; padding: 2px 6px; border-radius: 3px; font-family: "Consolas", monospace; font-size: 0.9em; }
+pre { background: #1a1a1a; color: #e8e8e8; padding: 14px 18px; border-radius: 6px; overflow-x: auto; }
+pre code { background: transparent; color: inherit; padding: 0; }
+ul, ol { margin: 8px 0 8px 24px; padding: 0; }
+li { margin: 4px 0; }
+li.done { color: #186735; }
+li.todo { color: #8a6f00; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 10pt; }
+th { background: #0a3d62; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 6px 10px; border-bottom: 1px solid #e0e6ec; vertical-align: top; }
+tr:nth-child(even) td { background: #f8fafc; }
+a { color: #0a3d62; text-decoration: underline; }
+a:hover { color: #1a5a8c; }
+.timestamp { color: #888; font-size: 9pt; text-align: right; }
+
+/* Download-PDF control. Uses the browser's own print-to-PDF, so no JS
+   library and no network fetch: these pages are opened over file://.
+   Sits in the normal flow, right-aligned above the title: a viewport-fixed
+   button overlaps the 900px text column on narrower screens, and any
+   breakpoint that avoids that has to be tuned to the button's rendered
+   text width, which silently breaks if the label or font changes. */
+.pdf-btn {
+  display: block;
+  margin: 0 0 20px auto;
+  padding: 9px 16px;
+  background: #0a3d62;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 10pt;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.pdf-btn:hover { background: #1a5a8c; }
+
+@media print {
+  /* The button must never appear on paper. */
+  .pdf-btn { display: none !important; }
+  body { max-width: none; margin: 0; padding: 0; font-size: 10pt; }
+  @page { margin: 15mm; }
+  /* Table headers and code blocks are dark-on-light by design; without this
+     browsers drop the backgrounds when printing and the result is unreadable. */
+  th, pre, li.done, li.todo, strong {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Don't strand a heading at the foot of a page, or split a row/block. */
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  tr, li { break-inside: avoid; page-break-inside: avoid; }
+  pre { break-inside: avoid; page-break-inside: avoid; white-space: pre-wrap; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<button class="pdf-btn" onclick="window.print()" title="Opens the print dialog — choose 'Save as PDF'">&#11015; Download PDF</button>
+<h1>SEO Tracker — Done Log</h1>
+<p>Chronological log of completed items. Auto-appended by <code>seo-tracker done &lt;id&gt;</code>.</p>
+<h2>2026-07-21</h2>
+<ul>
+<li class="done">✓ setup-01-verify-tools — 1. Verify claude-seo installed (16:00)</li>
+<li class="done">✓ setup-02-update-tools — 2. Verify claude-seo up to date (16:00)</li>
+<li class="done">✓ setup-03-verify-keys — 3. Verify Google API keys configured (16:01)</li>
+<li class="done">✓ setup-05-set-url — 5. Set deployed URL (16:01)</li>
+<li class="done">✓ setup-07-check-gtm — 7. Check GTM presence (16:10)</li>
+<li class="done">✓ setup-06-initial-audit — 6. Run initial SEO audit (16:33)</li>
+</ul>
+<h2>2026-07-22</h2>
+<ul>
+<li class="done">✓ setup-04-verify-build — 4. Verify project builds (16:06)</li>
+<li class="done">✓ add-robots-ts-crawler-rules-sitemap-pointer-draft-created-at-src-app-robots-ts — Add robots.ts (crawler rules + sitemap pointer)  draft created at src/app/robots.ts (16:09)</li>
+<li class="done">✓ add-sitemap-ts-generating-contact-privacy-policy-terms-draft-created-at-src-app-sitemap-ts — Add sitemap.ts generating /, /contact, /privacy-policy, /terms  draft created at src/app/sitemap.ts (16:09)</li>
+<li class="done">✓ add-security-headers-via-headers-in-next-config-ts-csp-x-frame-options-coop-x-content-type-options-referrer-policy-permissions-policy-extend-hsts — Add security headers via headers() in next.config.ts (CSP, X-Frame-Options, COOP, X-Content-Type-Options, Referrer-Policy, Permissions-Policy; extend HSTS) (16:18)</li>
+<li class="done">✓ add-organization-website-mobileapplication-json-ld-to-homepage-ready-to-paste-in-findings-schema-md — Add Organization + WebSite + MobileApplication JSON-LD to homepage (ready-to-paste in findings/schema.md) (16:22)</li>
+<li class="done">✓ add-breadcrumblist-contactpoint-json-ld-to-contact-privacy-policy-terms — Add BreadcrumbList + ContactPoint JSON-LD to /contact, /privacy-policy, /terms (16:22)</li>
+<li class="done">✓ fix-contact-og-url-currently-points-to-homepage-instead-of-contact — Fix /contact og:url  currently points to homepage instead of /contact (16:22)</li>
+<li class="done">✓ reconcile-support-response-time-claims-24h-on-contact-vs-48h-in-privacy-terms — Reconcile support response-time claims: 24h on Contact vs 48h in Privacy/Terms (16:22)</li>
+<li class="done">✓ publish-llms-txt-for-ai-crawlers-draft-in-findings-geo-md — Publish llms.txt for AI crawlers (draft in findings/geo.md) (16:24)</li>
+<li class="done">✓ fix-privacy-policy-case-variant-404-redirect-to-lowercase-label-the-unlabeled-select-fix-footer-heading-order-skip — Fix /Privacy-Policy case-variant 404 (redirect to lowercase); label the unlabeled &lt;select&gt;; fix footer heading-order skip (16:28)</li>
+<li class="done">✓ improve-image-alt-text-currently-generic-go-qatar-go-qatar-icon — Improve image alt text (currently generic 'Go Qatar'/'Go Qatar icon') (16:32)</li>
+<li class="done">✓ performance-inline-critical-css-split-lazy-load-431-js-54-unused-drop-legacy-js-polyfills-fix-forced-reflow — Performance: inline critical CSS, split/lazy-load 431-*.js (54% unused), drop legacy JS polyfills, fix forced reflow (16:44)</li>
+<li class="done">✓ resolve-apex-vs-www-duplication-add-308-redirect-metadatabase-self-canonical-in-layout-tsx — Resolve apex vs www duplication: add 308 redirect + metadataBase self-canonical in layout.tsx (16:45)</li>
+</ul>
+<p class="timestamp">Generated by seo-tracker</p>
+</body>
+</html>
