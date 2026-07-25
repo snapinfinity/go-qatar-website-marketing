@@ -28,7 +28,7 @@ const jsonLd = {
       name: "Privacy Policy — Go Qatar",
       isPartOf: { "@id": "https://goqatar.app/#website" },
       about: { "@id": "https://goqatar.app/#organization" },
-      dateModified: "2025-06",
+      dateModified: "2026-07-26",
     },
     {
       "@type": "BreadcrumbList",
@@ -45,7 +45,7 @@ const sections = [
     number: "01",
     title: "Information We Collect",
     content:
-      "We collect information provided through Google Sign-In, such as your name, email address, and profile picture. We also store your favorite locations and recent search history locally on your device to provide a personalized experience.",
+      "When you create an account, we collect the information provided through Google Sign-In or Apple Sign-In, such as your name, email address, and profile picture. When you use navigation and address lookup, we process your device location to show relevant results. Your favorite locations and recent search history are stored locally on your device to provide a personalized experience.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
@@ -65,9 +65,31 @@ const sections = [
   },
   {
     number: "03",
+    title: "Analytics & Cookies",
+    content:
+      "Our website uses Google Analytics, loaded through Google Tag Manager, to understand how visitors interact with our pages. These tools set cookies and collect anonymized usage data such as pages viewed, device and browser type, and approximate location, which helps us improve the product. This data is processed by Google. You can opt out through your browser's cookie settings or the Google Analytics opt-out browser add-on. Our website uses cookies only for analytics — we do not use advertising or cross-site tracking cookies.",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z" />
+      </svg>
+    ),
+  },
+  {
+    number: "04",
+    title: "Maps & Location Services",
+    content:
+      "Go Qatar uses the Google Maps Platform SDK to display maps and provide navigation and address lookup. When you use these features, your location and map interactions are processed by Google in accordance with Google's Privacy Policy. We use location data only to power navigation and address search — we do not sell your location data.",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+      </svg>
+    ),
+  },
+  {
+    number: "05",
     title: "Information Sharing",
     content:
-      "We do not share your personal information with third parties except as described in this policy. We may share information with vendors, consultants, and other service providers who need access to such information to carry out work on our behalf.",
+      "We do not sell your personal information. We share information only with the service providers that help us operate Go Qatar — including Google (Sign-In, Google Maps Platform, and Google Analytics) and Apple (Sign-In) — and with vendors who process data on our behalf under confidentiality obligations. We may also disclose information where required by law.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z" />
@@ -75,7 +97,7 @@ const sections = [
     ),
   },
   {
-    number: "04",
+    number: "06",
     title: "Data Security",
     content:
       "We take reasonable measures to help protect your personal information from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction. Your data is encrypted in transit and stored securely.",
@@ -86,10 +108,10 @@ const sections = [
     ),
   },
   {
-    number: "05",
+    number: "07",
     title: "Your Rights",
     content:
-      "You have the right to access or delete your personal information at any time. You can remove your saved favorites and recent searches directly within the app. For account-related data, you may contact us at help.goqatar@gmail.com.",
+      "You have the right to access, correct, or delete your personal information at any time. You can remove your saved favorites and recent searches directly within the app, and you may request deletion of your account data by contacting us. If you are in Qatar, we handle personal data in line with the Personal Data Privacy Protection Law (PDPPL); depending on your location, additional rights may apply. To exercise any of these rights, contact us at help.goqatar@gmail.com.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
@@ -97,7 +119,7 @@ const sections = [
     ),
   },
   {
-    number: "06",
+    number: "08",
     title: "Changes to This Policy",
     content:
       "We may change this privacy policy from time to time. If we make changes, we will notify you by revising the date at the top of the policy and, in some cases, we may provide you with additional notice through the app.",
@@ -108,7 +130,7 @@ const sections = [
     ),
   },
   {
-    number: "07",
+    number: "09",
     title: "Contact Us",
     content:
       "If you have any questions about this privacy policy, please contact us at help.goqatar@gmail.com. We will respond to your inquiry within 24 hours.",
@@ -157,7 +179,7 @@ export default function PrivacyPolicyPage() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
               <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
             </svg>
-            Last updated: June 2025
+            Last updated: July 2026
           </div>
         </div>
       </section>
