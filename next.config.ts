@@ -14,7 +14,11 @@ const csp = [
   "img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com",
   "font-src 'self' data:",
   `connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.analytics.google.com${isDev ? " ws:" : ""}`,
-  "frame-ancestors 'none'",
+  // 'none' blocked Google's own Tag Assistant debugger, which embeds a live
+  // preview of the connected page in an iframe to establish its debug
+  // session — a bare 'none' silently breaks that handshake (generic
+  // "timeout", no CSP console error) while still stopping real clickjacking.
+  "frame-ancestors 'self' https://tagassistant.google.com",
   "base-uri 'self'",
   "form-action 'self'",
   "object-src 'none'",
@@ -22,7 +26,11 @@ const csp = [
 
 const securityHeaders = [
   { key: "Content-Security-Policy", value: csp },
-  { key: "X-Frame-Options", value: "DENY" },
+  // Legacy fallback for browsers without CSP frame-ancestors support; modern
+  // browsers use frame-ancestors above (which allows tagassistant.google.com).
+  // X-Frame-Options has no multi-origin syntax, so SAMEORIGIN is the closest
+  // safe value — Tag Assistant just won't work in a browser this old.
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
