@@ -265,7 +265,7 @@ Mark done with `seo-tracker done <id>`.
   - priority: medium
   - created: 2026-07-21
 
-- [ ] **Optional: add GTM + GA4 for analytics (not currently present)**
+- [~] **Optional: add GTM + GA4 for analytics (not currently present)**
   - id: optional-add-gtm-ga4-for-analytics-not-currently-present
   - type: manual
   - category: technical

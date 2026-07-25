@@ -27,3 +27,7 @@ Chronological log of completed items. Auto-appended by `seo-tracker done <id>`.
 
 ## 2026-07-25
 - [x] submit-sitemap-xml-in-google-search-console-and-request-indexing-for-contact-privacy-policy-terms — Submit sitemap.xml in Google Search Console and request indexing for /contact, /privacy-policy, /terms (17:25)
+
+## 2026-07-26
+- [~] optional-add-gtm-ga4-for-analytics-not-currently-present — Optional: add GTM + GA4 for analytics (not currently present) (staged, awaiting verify) (03:51)
+- [ ] optional-add-gtm-ga4-for-analytics-not-currently-present — Optional: add GTM + GA4 for analytics (not currently present) (verify FAILED: signal not present) (03:51)

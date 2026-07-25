@@ -24,3 +24,17 @@ Append entries in this format:
 - **Visual impact:** All page sections below the fold now render and animate in on scroll (were previously blank in local dev). No change to the deployed production site.
 - **Review URL:** local `next dev` → http://localhost:3000 (verify sections render + scroll reveals fire)
 - **Reviewed?** [ ]
+
+## 2026-07-26 — Add Google Tag Manager (GTM-PS48G5JD)
+- **Change:** Installed `@next/third-parties` and rendered `<GoogleTagManager gtmId="GTM-PS48G5JD">` in the root layout; opened the production CSP (`script-src`, `img-src`, `connect-src`) for `googletagmanager.com` and `google-analytics.com` so the tag isn't blocked. Container was created in GTM by the user but **not yet published**, and this change is **not yet deployed** — `seo-tracker verify-live` confirms `gtm.js` is not yet reachable on https://goqatar.app. TODO item staged (`[~]`), not marked done, until a post-deploy `verify-live` check passes.
+- **Files:** src/app/layout.tsx, next.config.ts, package.json, package-lock.json
+- **Visual impact:** None visible on-page; adds a network request to googletagmanager.com and (once tags are configured) sets analytics cookies.
+- **Review URL:** https://goqatar.app (after deploy — check Network tab for `gtm.js?id=GTM-PS48G5JD`, and GTM's own Preview mode)
+- **Reviewed?** [ ]
+
+## 2026-07-26 — Expand Privacy Policy: analytics/cookies, Apple Sign-In, Maps SDK, PDPPL rights
+- **Change:** Added two new sections ("Analytics & Cookies", "Maps & Location Services") disclosing Google Analytics/GTM cookie use and the Google Maps Platform SDK; updated "Information We Collect" to include Apple Sign-In and location data; updated "Information Sharing" to name Google/Apple as processors; updated "Your Rights" to reference Qatar's PDPPL. Renumbered sections 01-09. Bumped "Last updated" to July 2026 and JSON-LD `dateModified` to 2026-07-26. This addresses the Privacy Policy portion of the open "legal review" finding — Terms & Conditions and a formal legal review are still outstanding (see `legal-review-rewrite-template-terms-...` in TODO.md, left open).
+- **Files:** src/app/privacy-policy/page.tsx
+- **Visual impact:** Two new visible policy sections; renumbered section badges; updated "Last updated" date in the hero.
+- **Review URL:** https://goqatar.app/privacy-policy
+- **Reviewed?** [ ]
