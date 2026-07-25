@@ -31,3 +31,4 @@ Chronological log of completed items. Auto-appended by `seo-tracker done <id>`.
 ## 2026-07-26
 - [~] optional-add-gtm-ga4-for-analytics-not-currently-present — Optional: add GTM + GA4 for analytics (not currently present) (staged, awaiting verify) (03:51)
 - [ ] optional-add-gtm-ga4-for-analytics-not-currently-present — Optional: add GTM + GA4 for analytics (not currently present) (verify FAILED: signal not present) (03:51)
+- [x] optional-add-gtm-ga4-for-analytics-not-currently-present — Optional: add GTM + GA4 for analytics (not currently present) (verified live: signal googletagmanager.com/gtm.js present) (04:07)
