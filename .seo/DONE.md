@@ -24,3 +24,6 @@ Chronological log of completed items. Auto-appended by `seo-tracker done <id>`.
 - [x] improve-image-alt-text-currently-generic-go-qatar-go-qatar-icon — Improve image alt text (currently generic 'Go Qatar'/'Go Qatar icon') (16:32)
 - [x] performance-inline-critical-css-split-lazy-load-431-js-54-unused-drop-legacy-js-polyfills-fix-forced-reflow — Performance: inline critical CSS, split/lazy-load 431-*.js (54% unused), drop legacy JS polyfills, fix forced reflow (16:44)
 - [x] resolve-apex-vs-www-duplication-add-308-redirect-metadatabase-self-canonical-in-layout-tsx — Resolve apex vs www duplication: add 308 redirect + metadataBase self-canonical in layout.tsx (16:45)
+
+## 2026-07-25
+- [x] submit-sitemap-xml-in-google-search-console-and-request-indexing-for-contact-privacy-policy-terms — Submit sitemap.xml in Google Search Console and request indexing for /contact, /privacy-policy, /terms (17:25)

@@ -136,6 +136,69 @@ Mark done with `seo-tracker done <id>`.
   - priority: low
   - created: 2026-07-21
 
+- [ ] **Re-do performance fix: it did NOT ship  live HTML still has render-blocking CSS + 431-*.js 54% unused. Real critical-CSS inline + code-split framer-motion, verify in prod**
+  - id: re-do-performance-fix-it-did-not-ship-live-html-still-has-render-blocking-css-431-js-54-unused-real-critical-css-inline-code-split-framer-motion-verify-in-prod
+  - type: auto
+  - category: performance
+  - priority: high
+  - created: 2026-07-25
+
+- [ ] **Land the footer heading-order fix  PSI heading-order audit still scores 0 despite being marked done**
+  - id: land-the-footer-heading-order-fix-psi-heading-order-audit-still-scores-0-despite-being-marked-done
+  - type: auto
+  - category: technical
+  - priority: high
+  - created: 2026-07-25
+
+- [ ] **Fix homepage H1  currently only 'Your City.' with the rest in a non-heading div; make a complete keyword-bearing H1**
+  - id: fix-homepage-h1-currently-only-your-city-with-the-rest-in-a-non-heading-div-make-a-complete-keyword-bearing-h1
+  - type: auto
+  - category: content
+  - priority: medium
+  - created: 2026-07-25
+
+- [ ] **Tighten CSP: remove 'unsafe-inline' from script-src and style-src**
+  - id: tighten-csp-remove-unsafe-inline-from-script-src-and-style-src
+  - type: auto
+  - category: technical
+  - priority: medium
+  - created: 2026-07-25
+
+- [ ] **Fix sitemap lastmod: hardcoded 2026-06-26, real last edit was 2026-07-23**
+  - id: fix-sitemap-lastmod-hardcoded-2026-06-26-real-last-edit-was-2026-07-23
+  - type: auto
+  - category: technical
+  - priority: medium
+  - created: 2026-07-25
+
+- [ ] **Fix JSON-LD dateModified '2025-06' to real YYYY-MM-DD on /privacy-policy and /terms; add Instagram to Organization sameAs**
+  - id: fix-json-ld-datemodified-2025-06-to-real-yyyy-mm-dd-on-privacy-policy-and-terms-add-instagram-to-organization-sameas
+  - type: auto
+  - category: schema
+  - priority: medium
+  - created: 2026-07-25
+
+- [ ] **Add Last-Updated field + license line to llms.txt**
+  - id: add-last-updated-field-license-line-to-llms-txt
+  - type: auto
+  - category: geo
+  - priority: medium
+  - created: 2026-07-25
+
+- [ ] **Add HowTo JSON-LD to the 'How It Works' 3-step section; add homepage WebPage node to entity graph**
+  - id: add-howto-json-ld-to-the-how-it-works-3-step-section-add-homepage-webpage-node-to-entity-graph
+  - type: auto
+  - category: schema
+  - priority: low
+  - created: 2026-07-25
+
+- [ ] **Add IndexNow key file for push indexing to Bing/Yandex/Naver**
+  - id: add-indexnow-key-file-for-push-indexing-to-bing-yandex-naver
+  - type: auto
+  - category: technical
+  - priority: low
+  - created: 2026-07-25
+
 ## Fixes — manual (user must do)
 <!-- Populated by 'seo-tracker audit' -->
 
@@ -146,7 +209,7 @@ Mark done with `seo-tracker done <id>`.
   - priority: critical
   - created: 2026-07-21
 
-- [ ] **Submit sitemap.xml in Google Search Console and request indexing for /contact, /privacy-policy, /terms**
+- [x] **Submit sitemap.xml in Google Search Console and request indexing for /contact, /privacy-policy, /terms**
   - id: submit-sitemap-xml-in-google-search-console-and-request-indexing-for-contact-privacy-policy-terms
   - type: manual
   - category: technical
@@ -208,3 +271,10 @@ Mark done with `seo-tracker done <id>`.
   - category: technical
   - priority: low
   - created: 2026-07-21
+
+- [ ] **Reconcile 'Works Offline' homepage claim vs live/real-time Maps + news-feed features (factual inconsistency)**
+  - id: reconcile-works-offline-homepage-claim-vs-live-real-time-maps-news-feed-features-factual-inconsistency
+  - type: hybrid
+  - category: content
+  - priority: medium
+  - created: 2026-07-25

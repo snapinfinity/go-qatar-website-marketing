@@ -1,0 +1,726 @@
+{
+  "url": "https://goqatar.app",
+  "psi": {
+    "mobile": {
+      "url": "https://goqatar.app",
+      "strategy": "mobile",
+      "lighthouse_scores": {
+        "performance": 96,
+        "accessibility": 95,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lab_metrics": {
+        "first-contentful-paint": {
+          "value": 959,
+          "display": "1.0\u00a0s",
+          "score": 1
+        },
+        "largest-contentful-paint": {
+          "value": 2326,
+          "display": "2.3\u00a0s",
+          "score": 0.93
+        },
+        "total-blocking-time": {
+          "value": 45,
+          "display": "50\u00a0ms",
+          "score": 1
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "display": "0",
+          "score": 1
+        },
+        "speed-index": {
+          "value": 4217.376022564776,
+          "display": "4.2\u00a0s",
+          "score": 0.77
+        },
+        "interactive": {
+          "value": 2333.5,
+          "display": "2.3\u00a0s",
+          "score": 0.99
+        }
+      },
+      "field_metrics": {},
+      "opportunities": [
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "savings_ms": 150,
+          "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+        }
+      ],
+      "diagnostics": [
+        {
+          "id": "total-byte-weight",
+          "title": "Avoids enormous network payloads",
+          "display": "Total size was 276\u00a0KiB",
+          "score": 1,
+          "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn how to reduce payload sizes](https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/)."
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "title": "Minimizes main-thread work",
+          "display": "1.2\u00a0s",
+          "score": 1,
+          "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)"
+        },
+        {
+          "id": "bootup-time",
+          "title": "JavaScript execution time",
+          "display": "0.4\u00a0s",
+          "score": 1,
+          "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to reduce Javascript execution time](https://developer.chrome.com/docs/lighthouse/performance/bootup-time/)."
+        },
+        {
+          "id": "layout-shifts",
+          "title": "Avoid large layout shifts",
+          "display": "",
+          "score": null,
+          "description": "These are the largest layout shifts observed on the page. Each table item represents a single layout shift, and shows the element that shifted the most. Below each item are possible root causes that led to the layout shift. Some of these layout shifts may not be included in the CLS metric value due to [windowing](https://web.dev/articles/cls#what_is_cls). [Learn how to improve CLS](https://web.dev/articles/optimize-cls)"
+        },
+        {
+          "id": "long-tasks",
+          "title": "Avoid long main-thread tasks",
+          "display": "2 long tasks found",
+          "score": 1,
+          "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. [Learn how to avoid long main-thread tasks](https://web.dev/articles/optimize-long-tasks)"
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "display": "Est savings of 24\u00a0KiB",
+          "score": 0,
+          "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "display": "",
+          "score": 1,
+          "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
+        }
+      ],
+      "failed_audits": [
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "display": "",
+          "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load."
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "display": "Est savings of 90\u00a0ms",
+          "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path."
+        },
+        {
+          "id": "heading-order",
+          "title": "Heading elements are not in a sequentially-descending order",
+          "score": 0,
+          "display": "",
+          "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more about heading order](https://dequeuniversity.com/rules/axe/4.12/heading-order)."
+        },
+        {
+          "id": "lcp-breakdown-insight",
+          "title": "LCP breakdown",
+          "score": 0,
+          "display": "",
+          "description": "Each [subpart has specific improvement strategies](https://developer.chrome.com/docs/performance/insights/lcp-breakdown). Ideally, most of the LCP time should be spent on loading the resources, not within delays."
+        },
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0,
+          "display": "",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.12/color-contrast)."
+        },
+        {
+          "id": "legacy-javascript-insight",
+          "title": "Legacy JavaScript",
+          "score": 0.5,
+          "display": "Est savings of 12\u00a0KiB",
+          "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://developer.chrome.com/docs/performance/insights/legacy-javascript)"
+        },
+        {
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.77,
+          "display": "4.2\u00a0s",
+          "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/)."
+        }
+      ],
+      "passed_audits_count": 84,
+      "seo_audits": [
+        {
+          "id": "is-crawlable",
+          "title": "Page isn\u2019t blocked from indexing",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "document-title",
+          "title": "Document has a `<title>` element",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "meta-description",
+          "title": "Document has a meta description",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "http-status-code",
+          "title": "Page has successful HTTP status code",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "link-text",
+          "title": "Links have descriptive text",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "crawlable-anchors",
+          "title": "Links are crawlable",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "robots-txt",
+          "title": "robots.txt is valid",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "image-alt",
+          "title": "Image elements have `[alt]` attributes",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "hreflang",
+          "title": "Document has a valid `hreflang`",
+          "score": 1,
+          "pass": true
+        },
+        {
+          "id": "canonical",
+          "title": "Document has a valid `rel=canonical`",
+          "score": 1,
+          "pass": true
+        }
+      ],
+      "accessibility_audits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "score": 0,
+          "display": ""
+        },
+        {
+          "id": "heading-order",
+          "title": "Heading elements are not in a sequentially-descending order",
+          "score": 0,
+          "display": ""
+        }
+      ],
+      "audit_details": {
+        "long-tasks": {
+          "title": "Avoid long main-thread tasks",
+          "headings": [
+            "url",
+            "startTime",
+            "duration"
+          ],
+          "items": [
+            {
+              "url": "https://goqatar.app/_next/static/chunks/255-98a0bdaa30757bda.js",
+              "startTime": 1801,
+              "duration": 95
+            },
+            {
+              "url": "https://goqatar.app/",
+              "startTime": 932,
+              "duration": 51
+            }
+          ],
+          "total_items": 2
+        },
+        "legacy-javascript-insight": {
+          "title": "Legacy JavaScript",
+          "headings": [
+            "url",
+            "wastedBytes"
+          ],
+          "items": [
+            {
+              "url": "https://goqatar.app/_next/static/chunks/255-98a0bdaa30757bda.js",
+              "wastedBytes": 11912
+            }
+          ],
+          "total_items": 1
+        },
+        "resource-summary": {
+          "title": "Resources Summary",
+          "headings": [
+            "label",
+            "requestCount",
+            "transferSize"
+          ],
+          "items": [
+            {
+              "label": "Total",
+              "requestCount": 18,
+              "transferSize": 283122
+            },
+            {
+              "label": "Script",
+              "requestCount": 8,
+              "transferSize": 185943
+            },
+            {
+              "label": "Font",
+              "requestCount": 1,
+              "transferSize": 49496
+            },
+            {
+              "label": "Document",
+              "requestCount": 1,
+              "transferSize": 20613
+            },
+            {
+              "label": "Image",
+              "requestCount": 7,
+              "transferSize": 18370
+            }
+          ],
+          "total_items": 9
+        },
+        "trusted-types-xss": {
+          "title": "Mitigate DOM-based XSS with Trusted Types",
+          "headings": [
+            "description",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "No `Content-Security-Policy` header with Trusted Types directive found",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "dom-size-insight": {
+          "title": "Optimize DOM size",
+          "headings": [
+            "statistic",
+            "node",
+            "value"
+          ],
+          "items": [
+            {
+              "statistic": "Total elements",
+              "value": "{'granularity': 1, 'type': 'numeric', 'value': 858}"
+            },
+            {
+              "statistic": "DOM depth",
+              "node": "{'path': '2,HTML,1,BODY,1,MAIN,7,SECTION,1,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,svg,0,path', 'snippet': '<path d=\"M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7",
+              "value": "{'value': 14, 'type': 'numeric', 'granularity': 1}"
+            },
+            {
+              "statistic": "Most children",
+              "node": "{'snippet': '<svg viewBox=\"0 0 320 260\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-[52%]\" style=\"filter:drop-shadow(0 20px 40px rgba(201,168,76,0.45))\">', 'path': '2,HTML,1,BODY,1,MAIN,5,",
+              "value": "{'granularity': 1, 'type': 'numeric', 'value': 22}"
+            }
+          ],
+          "total_items": 3
+        },
+        "bootup-time": {
+          "title": "JavaScript execution time",
+          "headings": [
+            "url",
+            "total",
+            "scripting",
+            "scriptParseCompile"
+          ],
+          "items": [
+            {
+              "url": "https://goqatar.app/",
+              "total": 410.1552000000002,
+              "scripting": 4.147199999999995,
+              "scriptParseCompile": 2.746799999999999
+            },
+            {
+              "url": "https://goqatar.app/_next/static/chunks/431-b79a3704beb05cad.js",
+              "total": 380.7252000000006,
+              "scripting": 100.80120000000046,
+              "scriptParseCompile": 14.4792
+            },
+            {
+              "url": "https://goqatar.app/_next/static/chunks/255-98a0bdaa30757bda.js",
+              "total": 241.19640000000078,
+              "scripting": 217.0392000000008,
+              "scriptParseCompile": 12.6612
+            },
+            {
+              "url": "Unattributable",
+              "total": 80.04720000000012,
+              "scripting": 1.9427999999999999,
+              "scriptParseCompile": 0
+            }
+          ],
+          "total_items": 4
+        },
+        "render-blocking-insight": {
+          "title": "Render-blocking requests",
+          "headings": [
+            "url",
+            "totalBytes",
+            "wastedMs"
+          ],
+          "items": [
+            {
+              "url": "https://goqatar.app/_next/static/css/308ef6b3d4864eb5.css",
+              "totalBytes": 8700,
+              "wastedMs": 151
+            }
+          ],
+          "total_items": 1
+        },
+        "network-requests": {
+          "title": "Network Requests",
+          "headings": [
+            "url",
+            "protocol",
+            "networkRequestTime",
+            "networkEndTime",
+            "transferSize",
+            "resourceSize",
+            "statusCode",
+            "mimeType",
+            "resourceType"
+          ],
+          "items": [
+            {
+              "url": "https://goqatar.app/",
+              "protocol": "h2",
+              "networkRequestTime": 1.2789998054504395,
+              "networkEndTime": 1636.4559998512268,
+              "transferSize": 20613,
+              "resourceSize": 104823,
+              "statusCode": 200,
+              "mimeType": "text/html",
+              "resourceType": "Document"
+            },
+            {
+              "url": "https://goqatar.app/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+              "protocol": "h2",
+              "networkRequestTime": 1689.3940000534058,
+              "networkEndTime": 2033.375,
+              "transferSize": 49496,
+              "resourceSize": 48432,
+              "statusCode": 200,
+              "mimeType": "font/woff2",
+              "resourceType": "Font"
+            },
+            {
+              "url": "https://goqatar.app/_next/static/css/308ef6b3d4864eb5.css",
+              "protocol": "h2",
+              "networkRequestTime": 1689.486999988556,
+              "networkEndTime": 2051.6059999465942,
+              "transferSize": 8700,
+              "resourceSize": 37553,
+              "statusCode": 200,
+              "mimeType": "text/css",
+              "resourceType": "Stylesheet"
+            },
+            {
+              "url": "https://goqatar.app/_next/static/chunks/webpack-9f77bc27d3e36dfb.js",
+              "protocol": "h2",
+              "networkRequestTime": 1694.950999736786,
+              "networkEndTime": 2284.691999912262,
+              "transferSize": 3100,
+              "resourceSize": 3881,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script"
+            },
+            {
+              "url": "https://goqatar.app/_next/static/chunks/4bd1b696-c023c6e3521b1417.js",
+              "protocol": "h2",
+              "networkRequestTime": 1695.0629997253418,
+              "networkEndTime": 2402.545000076294,
+              "transferSize": 56694,
+              "resourceSize": 173019,
+              "statusCode": 200,
+              "mimeType": "application/javascript",
+              "resourceType": "Script"
+            }
+          ],
+          "total_items": 18
+        },
+        "baseline": {
+          "title": "Baseline Features",
+          "headings": [
+            "featureId",
+            "displayStatus",
+            "source"
+          ],
+          "items": [
+            {
+              "featureId": "https://webstatus.dev/features/font-metric-overrides",
+              "displayStatus": "{'displayString': 'Limited Availability', 'status': 'limited', 'type': 'baseline-status'}"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/background-clip-text",
+              "displayStatus": "{'type': 'baseline-status', 'displayString': 'Limited Availability', 'status': 'limited'}"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/scrollend",
+              "displayStatus": "{'displayString': 'Newly Available (2025-12-12)', 'status': 'low', 'type': 'baseline-status'}",
+              "source": "https://goqatar.app/_next/static/chunks/4bd1b696-c023c6e3521b1417.js"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/transform-box",
+              "displayStatus": "{'type': 'baseline-status', 'status': 'low', 'displayString': 'Newly Available (2024-04-16)'}",
+              "source": "https://goqatar.app/_next/static/chunks/431-b79a3704beb05cad.js"
+            },
+            {
+              "featureId": "https://webstatus.dev/features/fetch-priority",
+              "displayStatus": "{'type': 'baseline-status', 'displayString': 'Newly Available (2024-10-29)', 'status': 'low'}"
+            }
+          ],
+          "total_items": 25
+        },
+        "csp-xss": {
+          "title": "Ensure CSP is effective against XSS attacks",
+          "headings": [
+            "description",
+            "directive",
+            "severity"
+          ],
+          "items": [
+            {
+              "description": "`'unsafe-inline'` allows the execution of unsafe in-page scripts and event handlers. Consider using CSP nonces or hashes to allow scripts individually.",
+              "directive": "script-src",
+              "severity": "High"
+            }
+          ],
+          "total_items": 1
+        },
+        "server-response-time": {
+          "title": "Initial server response time was short",
+          "headings": [
+            "url",
+            "responseTime"
+          ],
+          "items": [
+            {
+              "url": "https://goqatar.app/",
+              "responseTime": 4
+            }
+          ],
+          "total_items": 1
+        },
+        "network-rtt": {
+          "title": "Network Round Trip Times",
+          "headings": [
+            "origin",
+            "rtt"
+          ],
+          "items": [
+            {
+              "origin": "https://goqatar.app",
+              "rtt": 0.006871409896070566
+            }
+          ],
+          "total_items": 1
+        },
+        "network-server-latency": {
+          "title": "Server Backend Latencies",
+          "headings": [
+            "origin",
+            "serverResponseTime"
+          ],
+          "items": [
+            {
+              "origin": "https://goqatar.app",
+              "serverResponseTime": 1
+            }
+          ],
+          "total_items": 1
+        },
+        "total-byte-weight": {
+          "title": "Avoids enormous network payloads",
+          "headings": [
+            "url",
+            "totalBytes"
+          ],
+          "items": [
+            {
+              "url": "https://goqatar.app/_next/static/chunks/4bd1b696-c023c6e3521b1417.js",
+              "totalBytes": 56694
+            },
+            {
+              "url": "https://goqatar.app/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+              "totalBytes": 49496
+            },
+            {
+              "url": "https://goqatar.app/_next/static/chunks/255-98a0bdaa30757bda.js",
+              "totalBytes": 47168
+            },
+            {
+              "url": "https://goqatar.app/_next/static/chunks/431-b79a3704beb05cad.js",
+              "totalBytes": 45271
+            },
+            {
+              "url": "https://goqatar.app/_next/static/chunks/app/page-6abef6f3d9a864a1.js",
+              "totalBytes": 20697
+            }
+          ],
+          "total_items": 10
+        },
+        "mainthread-work-breakdown": {
+          "title": "Minimizes main-thread work",
+          "headings": [
+            "groupLabel",
+            "duration"
+          ],
+          "items": [
+            {
+              "groupLabel": "Other",
+              "duration": 337.3175999999985
+            },
+            {
+              "groupLabel": "Script Evaluation",
+              "duration": 335.54999999999865
+            },
+            {
+              "groupLabel": "Style & Layout",
+              "duration": 278.5248000000002
+            },
+            {
+              "groupLabel": "Rendering",
+              "duration": 121.2636000000009
+            },
+            {
+              "groupLabel": "Script Parsing & Compilation",
+              "duration": 54.29279999999999
+            }
+          ],
+          "total_items": 7
+        },
+        "main-thread-tasks": {
+          "title": "Tasks",
+          "headings": [
+            "startTime",
+            "duration"
+          ],
+          "items": [
+            {
+              "startTime": 1663.947,
+              "duration": 5.657
+            },
+            {
+              "startTime": 1671.221,
+              "duration": 19.591
+            },
+            {
+              "startTime": 1693.317,
+              "duration": 9.271
+            },
+            {
+              "startTime": 2053.967,
+              "duration": 85.189
+            },
+            {
+              "startTime": 2139.986,
+              "duration": 29.267
+            }
+          ],
+          "total_items": 43
+        },
+        "unused-javascript": {
+          "title": "Reduce unused JavaScript",
+          "headings": [
+            "url",
+            "totalBytes",
+            "wastedBytes"
+          ],
+          "items": [
+            {
+              "url": "https://goqatar.app/_next/static/chunks/431-b79a3704beb05cad.js",
+              "totalBytes": 44130,
+              "wastedBytes": 24178
+            }
+          ],
+          "total_items": 1
+        },
+        "heading-order": {
+          "title": "Heading elements are not in a sequentially-descending order",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'lhId': '1-20-H4', 'nodeLabel': 'Delivery Routing', 'boundingRect': {'height': 20, 'bottom': 10128, 'width': 282, 'left': 93, 'top': 10108, 'right': 375}, 'selector': 'div > div.group > div > h4.text"
+            }
+          ],
+          "total_items": 1
+        },
+        "color-contrast": {
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'explanation': 'Fix any of the following:\\n  Element has insufficient color contrast of 4.35 (foreground color: #848484, background color: #202020, font size: 6.0pt (8px), font weight: normal). Expec"
+            },
+            {
+              "node": "{'lhId': '1-3-SPAN', 'boundingRect': {'height': 12, 'left': 195, 'bottom': 1222, 'width': 28, 'top': 1210, 'right': 223}, 'selector': 'div.absolute > div.absolute > div > span', 'nodeLabel': 'History'"
+            },
+            {
+              "node": "{'lhId': '1-4-SPAN', 'nodeLabel': 'Favorites', 'boundingRect': {'height': 12, 'left': 245, 'bottom': 1222, 'width': 36, 'right': 281, 'top': 1210}, 'selector': 'div.absolute > div.absolute > div > spa"
+            },
+            {
+              "node": "{'lhId': '1-5-SPAN', 'nodeLabel': 'Profile', 'boundingRect': {'height': 12, 'right': 326, 'top': 1210, 'width': 22, 'left': 304, 'bottom': 1222}, 'selector': 'div.absolute > div.absolute > div > span'"
+            },
+            {
+              "node": "{'explanation': 'Fix any of the following:\\n  Element has insufficient color contrast of 4.48 (foreground color: #787878, background color: #0a0a0a, font size: 10.5pt (14px), font weight: normal). Exp"
+            }
+          ],
+          "total_items": 17
+        },
+        "viewport-insight": {
+          "title": "Optimize viewport for mobile",
+          "headings": [
+            "node"
+          ],
+          "items": [
+            {
+              "node": "{'type': 'node', 'nodeLabel': 'head > meta', 'boundingRect': {'right': 0, 'top': 0, 'left': 0, 'bottom': 0, 'width': 0, 'height': 0}, 'selector': 'head > meta', 'lhId': 'page-2-META', 'path': '2,HTML,"
+            }
+          ],
+          "total_items": 1
+        }
+      },
+      "analysis_timestamp": "2026-07-25T11:42:14.148Z",
+      "error": null
+    }
+  },
+  "crux": {
+    "target": "https://goqatar.app",
+    "metrics": {},
+    "collection_period": null,
+    "form_factor": "ALL",
+    "error": "No CrUX data for this origin. The site likely has insufficient Chrome traffic volume for eligibility."
+  },
+  "error": null
+}

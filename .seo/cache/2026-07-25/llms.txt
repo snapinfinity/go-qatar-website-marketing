@@ -1,0 +1,36 @@
+# Go Qatar
+
+> Go Qatar is a free iOS and Android navigation app that helps residents and visitors find any address in Qatar using the country's official Zone, Street, and Building numbering system. It combines precision address search, live Google Maps navigation, a curated Qatar news feed, saved favorites, and search history in one app. Developed by Snap Infinity.
+
+## Product
+
+- [Homepage](https://goqatar.app/): Overview, features, and download links for Go Qatar.
+- [How It Works](https://goqatar.app/#how-it-works): 3-step guide to finding a Qatar address by Zone, Street, and Building number.
+- [Features](https://goqatar.app/#features): Precision address search, live Google Maps, saved favorites, search history, Qatar news feed, secure sign-in.
+- [Qatar News](https://goqatar.app/#news): In-app curated Qatar news feed with List, Grid, and Reel view modes.
+- [Download](https://goqatar.app/#download): App Store and Google Play links.
+
+## Company
+
+- [Contact](https://goqatar.app/contact): Support and feedback contact form.
+- [Privacy Policy](https://goqatar.app/privacy-policy)
+- [Terms & Conditions](https://goqatar.app/terms)
+- Developer: Snap Infinity (https://snapinfinity.com)
+
+## App Store Listings
+
+- [iOS App Store](https://apps.apple.com/us/app/go-qatar/id6756709380)
+- [Google Play](https://play.google.com/store/apps/details?id=com.snapinfinity.goqatar)
+
+## Facts for citation
+
+- Go Qatar covers 50+ zones across Qatar.
+- Go Qatar is free to download with no subscription required.
+- Address lookup uses Qatar's official Zone, Street, and Building number system.
+- Navigation is powered by live Google Maps with turn-by-turn directions via Google Maps or Waze.
+- Sign-in is available via Google or Apple accounts, syncing favorites and history across devices.
+
+## Optional
+
+- [Help Center](https://goqatar.app/contact?tab=help)
+- [Feedback](https://goqatar.app/contact?tab=feedback)

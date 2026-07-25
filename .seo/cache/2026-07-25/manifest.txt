@@ -1,0 +1,11 @@
+url: https://goqatar.app
+date: 2026-07-25 17:12
+
+homepage.html 200
+robots.txt 200
+sitemap.xml 200
+llms.txt 200
+pages/privacy-policy.html 200 /privacy-policy
+pages/terms.html 200 /terms
+pages/contact.html 200 /contact
+psi-mobile.json ok

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Audit — 2026-07-25-audit</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #1a1a1a;
+  line-height: 1.6;
+  background: #fff;
+}
+h1 { color: #0a3d62; font-size: 28pt; border-bottom: 3px solid #0a3d62; padding-bottom: 8px; margin-top: 0; }
+h2 { color: #0a3d62; font-size: 18pt; margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+h3 { color: #1a5a8c; font-size: 13pt; margin-top: 20px; }
+h4 { color: #444; font-size: 11pt; margin-top: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+p { margin: 8px 0; }
+strong { color: #0a3d62; }
+code { background: #f0f2f5; padding: 2px 6px; border-radius: 3px; font-family: "Consolas", monospace; font-size: 0.9em; }
+pre { background: #1a1a1a; color: #e8e8e8; padding: 14px 18px; border-radius: 6px; overflow-x: auto; }
+pre code { background: transparent; color: inherit; padding: 0; }
+ul, ol { margin: 8px 0 8px 24px; padding: 0; }
+li { margin: 4px 0; }
+li.done { color: #186735; }
+li.todo { color: #8a6f00; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 10pt; }
+th { background: #0a3d62; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+td { padding: 6px 10px; border-bottom: 1px solid #e0e6ec; vertical-align: top; }
+tr:nth-child(even) td { background: #f8fafc; }
+a { color: #0a3d62; text-decoration: underline; }
+a:hover { color: #1a5a8c; }
+.timestamp { color: #888; font-size: 9pt; text-align: right; }
+
+/* Download-PDF control. Uses the browser's own print-to-PDF, so no JS
+   library and no network fetch: these pages are opened over file://.
+   Sits in the normal flow, right-aligned above the title: a viewport-fixed
+   button overlaps the 900px text column on narrower screens, and any
+   breakpoint that avoids that has to be tuned to the button's rendered
+   text width, which silently breaks if the label or font changes. */
+.pdf-btn {
+  display: block;
+  margin: 0 0 20px auto;
+  padding: 9px 16px;
+  background: #0a3d62;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 10pt;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.pdf-btn:hover { background: #1a5a8c; }
+
+@media print {
+  /* The button must never appear on paper. */
+  .pdf-btn { display: none !important; }
+  body { max-width: none; margin: 0; padding: 0; font-size: 10pt; }
+  @page { margin: 15mm; }
+  /* Table headers and code blocks are dark-on-light by design; without this
+     browsers drop the backgrounds when printing and the result is unreadable. */
+  th, pre, li.done, li.todo, strong {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Don't strand a heading at the foot of a page, or split a row/block. */
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  tr, li { break-inside: avoid; page-break-inside: avoid; }
+  pre { break-inside: avoid; page-break-inside: avoid; white-space: pre-wrap; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<button class="pdf-btn" onclick="window.print()" title="Opens the print dialog — choose 'Save as PDF'">&#11015; Download PDF</button>
+<h1>SEO Audit — goqatar.app — 2026-07-25</h1>
+<p><strong>Health score: 70 / 100</strong> (▲ +13 vs. 57 on 2026-07-21)</p>
+<p>Business type: mobile-app marketing site (Go Qatar — a Qatar navigation /</p>
+<p>Zone-Street-Building addressing app), Next.js on Vercel edge. Audit run as the</p>
+<p>claude-seo method: shared snapshot in <code>.seo/cache/2026-07-25/</code>, seven specialist</p>
+<p>subagents delegated in parallel, findings aggregated below. Per-specialist</p>
+<p>detail lives in <code>.seo/audits/2026-07-25-findings/</code>.</p>
+<h2>Category scores</h2>
+<table>
+<thead><tr>
+<th>Category</th>
+<th>Score</th>
+<th>Trend</th>
+<th>Headline</th>
+</tr></thead><tbody>
+<tr>
+<td>Technical</td>
+<td>90</td>
+<td>▲</td>
+<td>Redirects, headers, canonicals, robots/sitemap all clean; heading-order + CSP nits</td>
+</tr>
+<tr>
+<td>Sitemap</td>
+<td>90</td>
+<td>▲ (was 404)</td>
+<td>Valid, 4/4 routes; only stale hardcoded `lastmod`</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>85</td>
+<td>~</td>
+<td>LCP/CLS/TTFB good, but the logged perf fix did **not** land in prod</td>
+</tr>
+<tr>
+<td>Schema</td>
+<td>82</td>
+<td>▲</td>
+<td>All JSON-LD valid; missing HowTo, aggregateRating, real dateModified</td>
+</tr>
+<tr>
+<td>GEO</td>
+<td>52</td>
+<td>—</td>
+<td>No FAQ, no citable passages, weak brand/authority signals</td>
+</tr>
+<tr>
+<td>SXO</td>
+<td>48</td>
+<td>—</td>
+<td>Page-type mismatch on highest-intent queries; weak trust/business persona</td>
+</tr>
+<tr>
+<td>Content</td>
+<td>46</td>
+<td>—</td>
+<td>E-E-A-T gaps: Gmail support, no entity/address, boilerplate legal</td>
+</tr>
+</tbody></table>
+<h2>What improved since 2026-07-21 (verified live)</h2>
+<ul>
+<li><strong>sitemap.xml + robots.txt</strong> — the critical dual-404 is fixed; both valid, robots declares the sitemap.</li>
+<li><strong>Redirects</strong> — single-hop apex→www, case-variant, and trailing-slash 308s all resolve correctly.</li>
+<li><strong>Security headers</strong> — full HSTS + header set live on primary responses.</li>
+<li><strong>Schema</strong> — Organization / WebSite / MobileApplication / BreadcrumbList / ContactPoint all present and syntactically valid.</li>
+<li><strong>/contact og:url</strong> — confirmed fixed (was pointing at homepage).</li>
+<li><strong>Lighthouse</strong> — Perf 96, A11y 95, Best Practices 100, SEO 100.</li>
+</ul>
+<h2>⚠️ Regressions / fixes that were marked done but did NOT take effect in production</h2>
+<p>Two items are checked off in <code>TODO.md</code>/<code>STATE.md</code> but the live 2026-07-25 crawl shows they are not actually in effect:</p>
+<ol>
+<li><strong>Performance pass</strong> (critical-CSS inline, JS split, drop legacy polyfills) — live HTML still ships a <strong>render-blocking <code>&lt;link rel="stylesheet"&gt;</code></strong>, <code>431-<em>.js</code> is still <strong>54.8% unused</strong> (24.2 KB of 44.1 KB), and <code>255-</em>.js</code> still carries ~11.9 KB legacy JS. <code>critters</code>/<code>optimizeCss</code>/<code>browserslist</code> are in config but the output is byte-identical to the pre-fix baseline. <strong>The fix did not build/deploy as intended.</strong></li>
+<li><strong>Footer heading-order fix</strong> — PSI <code>heading-order</code> accessibility audit still scores <strong>0</strong>; the skip was not (fully) resolved.</li>
+</ol>
+<p>These are re-filed as fresh auto TODOs below rather than silently trusting the checkmarks.</p>
+<h2>Prioritized action plan</h2>
+<h3>Critical / High</h3>
+<ul>
+<li><strong>[SXO]</strong> Highest-intent queries ("Qatar address finder", "Zone Street Building Qatar") return functional lookup tools/APIs — goqatar.app is a pure download page with no on-page lookup or citable explainer. Add a working/illustrated Zone-Street-Building explainer + lightweight in-browser proof. <em>(overlaps open TODO #24)</em></li>
+<li><strong>[Performance]</strong> Re-do the perf fix so it actually ships: real critical-CSS inlining, code-split framer-motion out of the 431 chunk, confirm in prod HTML.</li>
+<li><strong>[Technical]</strong> Land the heading-order fix (PSI still failing).</li>
+<li><strong>[Content/E-E-A-T]</strong> Replace personal Gmail support address with branded <code>@goqatar.app</code>; add Qatar legal entity name + address + About/Team. <em>(open TODOs #21, #22)</em></li>
+<li><strong>[Content/Legal]</strong> Privacy Policy is stale (Jun 2025, Google Sign-In only — no Apple Sign-In, Maps SDK, analytics, Qatar PDPPL); Terms is unedited boilerplate with a <code>GO-QATAR</code> placeholder. <em>(open TODO #23)</em></li>
+<li><strong>[GEO]</strong> No FAQ, no FAQPage JSON-LD, no 134–167-word citable passages, no canonical "What is Go Qatar" explainer — biggest AI-citation gap. <em>(open TODO #24)</em></li>
+</ul>
+<h3>Medium</h3>
+<ul>
+<li><strong>[Technical]</strong> CSP uses <code>'unsafe-inline'</code> for script-src and style-src — tighten.</li>
+<li><strong>[Sitemap]</strong> <code>lastmod</code> hardcoded to 2026-06-26; real last edit was 2026-07-23.</li>
+<li><strong>[Schema]</strong> <code>dateModified: "2025-06"</code> on /privacy-policy and /terms → real <code>YYYY-MM-DD</code>; add Instagram to <code>sameAs</code>.</li>
+<li><strong>[GEO]</strong> llms.txt missing <code>Last-Updated</code> + license line.</li>
+<li><strong>[Content]</strong> "Works Offline" claim conflicts with "live/real-time" Maps/news feed — reconcile.</li>
+<li><strong>[Content]</strong> Homepage H1 is literally only "Your City." (second half is a non-heading div) — no brand/keyword in the real H1.</li>
+<li><strong>[SXO/Content]</strong> "Go Qatar for Business" API makes unverifiable SLA/white-label/webhook claims with no docs/pricing page. <em>(open TODO #25)</em></li>
+<li><strong>[Content/SXO]</strong> Decorative unsourced 5-star "Loved by Qatar residents" rating with no review count/source. <em>(open TODO #26)</em></li>
+</ul>
+<h3>Low</h3>
+<ul>
+<li><strong>[Schema]</strong> Add <code>HowTo</code> to the "How It Works" 3-step section; add homepage <code>WebPage</code> node; add <code>aggregateRating</code> once real store-review data exists.</li>
+<li><strong>[Technical]</strong> No IndexNow key file — add for push indexing to Bing/Yandex/Naver.</li>
+<li><strong>[GEO]</strong> No YouTube / Reddit / Wikipedia / independent-press brand signals. <em>(overlaps open TODO #27 outreach)</em></li>
+</ul>
+<h2>Off-page / manual (unchanged from backlog)</h2>
+<ul>
+<li>Submit sitemap in GSC + request indexing (#20).</li>
+<li>Backlink outreach: ILoveQatar, Marhaba, Qatar Living, QSTP, QDB, Product Hunt, AlternativeTo (#27).</li>
+<li>Optional GTM + GA4 (#28).</li>
+</ul>
+<h2>Notes / limitations</h2>
+<ul>
+<li><strong>No CrUX field data</strong> yet ("insufficient Chrome traffic") — all CWV calls are lab-only proxies, not 75th-percentile field data. Re-check next cycle.</li>
+<li>seo-google (GSC/GA4) and seo-backlinks were not run this cycle; scores above are the seven core on-page/technical specialists.</li>
+</ul>
+<p class="timestamp">Generated by seo-tracker</p>
+</body>
+</html>
