@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,6 +10,7 @@ const inter = Inter({
 });
 
 const BASE_URL = "https://goqatar.app";
+const GTM_ID = "GTM-PS48G5JD";
 
 export const viewport: Viewport = {
   themeColor: "#C9A84C",
@@ -100,6 +102,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <GoogleTagManager gtmId={GTM_ID} />
       <body className="bg-background text-white antialiased">{children}</body>
     </html>
   );
