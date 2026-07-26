@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import type { ReactNode } from "react";
 
 interface AnimateInProps {
@@ -24,7 +24,7 @@ export default function AnimateIn({
   from = "bottom",
 }: AnimateInProps) {
   return (
-    <motion.div
+    <m.div
       className={className}
       initial="hidden"
       whileInView="visible"
@@ -37,7 +37,7 @@ export default function AnimateIn({
       }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -51,7 +51,7 @@ export function StaggerContainer({
   staggerMs?: number;
 }) {
   return (
-    <motion.div
+    <m.div
       className={className}
       initial="hidden"
       whileInView="visible"
@@ -62,7 +62,7 @@ export function StaggerContainer({
       }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -74,7 +74,7 @@ export function StaggerItem({
   className?: string;
 }) {
   return (
-    <motion.div
+    <m.div
       className={className}
       variants={{
         hidden: { opacity: 0, y: 28 },
@@ -82,6 +82,6 @@ export function StaggerItem({
       }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }

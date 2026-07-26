@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import AnimateIn, { StaggerContainer, StaggerItem } from "@/components/ui/AnimateIn";
 
 const steps = [
@@ -64,18 +64,18 @@ export default function HowItWorksSection() {
           <div className="grid sm:grid-cols-3 gap-8">
             {steps.map((step, i) => (
               <StaggerItem key={step.step}>
-                <motion.div
+                <m.div
                   className="group relative text-center"
                   whileHover="hover"
                 >
                   {/* Icon bubble */}
                   <div className="relative inline-flex items-center justify-center mb-6">
-                    <motion.div
+                    <m.div
                       variants={{ hover: { scale: 1.08, transition: { duration: 0.2, ease: "easeOut" } } }}
                       className="w-20 h-20 rounded-2xl bg-gradient-to-br from-gold/15 to-gold/5 border border-gold/20 flex items-center justify-center text-gold"
                     >
                       {step.icon}
-                    </motion.div>
+                    </m.div>
                     <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-gold flex items-center justify-center">
                       <span className="text-black text-[9px] font-black">{i + 1}</span>
                     </div>
@@ -84,7 +84,7 @@ export default function HowItWorksSection() {
                   <div className="text-gold/40 text-xs font-black tracking-[0.2em] mb-2">STEP {step.step}</div>
                   <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                   <p className="text-white/50 text-sm leading-relaxed">{step.description}</p>
-                </motion.div>
+                </m.div>
               </StaggerItem>
             ))}
           </div>

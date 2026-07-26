@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import AnimateIn, { StaggerContainer, StaggerItem } from "@/components/ui/AnimateIn";
 
 const newsViewModes = [
@@ -69,7 +69,7 @@ export default function NewsSection() {
             <StaggerContainer className="space-y-3" staggerMs={80}>
               {newsViewModes.map((mode) => (
                 <StaggerItem key={mode.name}>
-                  <motion.div
+                  <m.div
                     whileHover={{ x: 4, transition: { duration: 0.15 } }}
                     className="flex items-center gap-4 p-4 bg-glass rounded-xl border border-white/08 hover:border-gold/20 transition-colors duration-200 group cursor-pointer"
                   >
@@ -85,7 +85,7 @@ export default function NewsSection() {
                         <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
                       </svg>
                     </div>
-                  </motion.div>
+                  </m.div>
                 </StaggerItem>
               ))}
             </StaggerContainer>
@@ -94,7 +94,7 @@ export default function NewsSection() {
           {/* Right: news preview mockup */}
           <AnimateIn from="right" delay={100}>
             <div className="relative">
-              <motion.div
+              <m.div
                 whileHover={{ y: -4, transition: { duration: 0.2, ease: "easeOut" } }}
                 className="bg-[#1A1A1A] rounded-3xl overflow-hidden border border-white/[0.08] shadow-2xl"
               >
@@ -161,7 +161,7 @@ export default function NewsSection() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </m.div>
 
               {/* Floating badge */}
               <div className="absolute -top-3 -right-3 bg-gold text-black text-xs font-black px-3 py-1.5 rounded-full shadow-lg">

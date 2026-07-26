@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import AnimateIn from "@/components/ui/AnimateIn";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/storeLinks";
 
@@ -30,7 +30,7 @@ export default function DownloadSection() {
 
         {/* Download buttons */}
         <AnimateIn delay={120} className="flex flex-wrap gap-4 justify-center mb-12">
-          <motion.a
+          <m.a
             href={APP_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -46,9 +46,9 @@ export default function DownloadSection() {
               <div className="text-black/50 text-xs leading-none mb-0.5">Download on the</div>
               <div className="font-bold text-lg leading-tight">App Store</div>
             </div>
-          </motion.a>
+          </m.a>
 
-          <motion.a
+          <m.a
             href={PLAY_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -67,7 +67,7 @@ export default function DownloadSection() {
               <div className="text-black/50 text-xs leading-none mb-0.5">Get it on</div>
               <div className="font-bold text-lg leading-tight">Google Play</div>
             </div>
-          </motion.a>
+          </m.a>
         </AnimateIn>
 
         {/* Features list */}

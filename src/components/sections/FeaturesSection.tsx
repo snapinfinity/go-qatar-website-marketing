@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import AnimateIn, { StaggerContainer, StaggerItem } from "@/components/ui/AnimateIn";
 
 const features = [
@@ -116,7 +116,7 @@ export default function FeaturesSection() {
 
           {/* Hero card — spans 2 cols on lg */}
           <AnimateIn delay={0} className="sm:col-span-2 lg:col-span-2 lg:row-span-1">
-            <motion.div
+            <m.div
               whileHover={{ y: -4, transition: { duration: 0.2, ease: "easeOut" } }}
               className={`group relative h-full min-h-[200px] sm:min-h-[220px] rounded-2xl bg-gradient-to-br ${hero.color} border ${hero.border} p-7 overflow-hidden flex flex-col justify-between`}
             >
@@ -153,12 +153,12 @@ export default function FeaturesSection() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           </AnimateIn>
 
           {/* First of the rest — right column, top */}
           <AnimateIn delay={80}>
-            <motion.div
+            <m.div
               whileHover={{ y: -4, transition: { duration: 0.2, ease: "easeOut" } }}
               className={`group relative rounded-2xl bg-gradient-to-br ${rest[0].color} border ${rest[0].border} p-6 overflow-hidden`}
             >
@@ -169,14 +169,14 @@ export default function FeaturesSection() {
               </div>
               <h3 className="text-lg font-bold text-white mb-1.5">{rest[0].title}</h3>
               <p className="text-white/50 text-sm leading-relaxed">{rest[0].description}</p>
-            </motion.div>
+            </m.div>
           </AnimateIn>
 
           {/* Bottom row — 3 equal cards */}
           <StaggerContainer className="sm:col-span-2 lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4" staggerMs={80}>
             {rest.slice(1).map((feat) => (
               <StaggerItem key={feat.title}>
-                <motion.div
+                <m.div
                   whileHover={{ y: -4, transition: { duration: 0.2, ease: "easeOut" } }}
                   className={`group relative rounded-2xl bg-gradient-to-br ${feat.color} border ${feat.border} p-6 h-full overflow-hidden`}
                 >
@@ -185,7 +185,7 @@ export default function FeaturesSection() {
                   </div>
                   <h3 className="text-base font-bold text-white mb-1.5">{feat.title}</h3>
                   <p className="text-white/50 text-sm leading-relaxed">{feat.description}</p>
-                </motion.div>
+                </m.div>
               </StaggerItem>
             ))}
           </StaggerContainer>

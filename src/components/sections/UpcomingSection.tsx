@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import AnimateIn, { StaggerContainer, StaggerItem } from "@/components/ui/AnimateIn";
 
 const upcomingFeatures = [
@@ -81,7 +81,7 @@ export default function UpcomingSection() {
         <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerMs={100}>
           {upcomingFeatures.map((feat) => (
             <StaggerItem key={feat.title}>
-              <motion.div
+              <m.div
                 whileHover={{ y: -6, transition: { duration: 0.22, ease: "easeOut" } }}
                 className="group relative rounded-2xl border border-white/[0.07] bg-white/[0.03] p-7 hover:border-white/[0.14] transition-all duration-300 overflow-hidden h-full"
               >
@@ -126,7 +126,7 @@ export default function UpcomingSection() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </m.div>
             </StaggerItem>
           ))}
         </StaggerContainer>

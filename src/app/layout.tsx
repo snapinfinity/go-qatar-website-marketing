@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
+import MotionProvider from "@/components/ui/MotionProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -103,7 +104,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <GoogleTagManager gtmId={GTM_ID} />
-      <body className="bg-background text-white antialiased">{children}</body>
+      <body className="bg-background text-white antialiased">
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
   );
 }

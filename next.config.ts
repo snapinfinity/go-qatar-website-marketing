@@ -45,9 +45,6 @@ const nextConfig: NextConfig = {
   images: {
     domains: [],
   },
-  experimental: {
-    optimizeCss: true,
-  },
   async headers() {
     return [
       {

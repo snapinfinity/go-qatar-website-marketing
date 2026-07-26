@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-07-26 04:07
+last-updated: 2026-07-26 22:26
 canonical-url: https://goqatar.app
 progress: 21/38
 health-score: 70 (2026-07-25, +13 vs 2026-07-21)

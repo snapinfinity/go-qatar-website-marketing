@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const stats = [
   { value: "50+", label: "Zones Covered", sub: "All of Qatar" },
@@ -13,7 +13,7 @@ export default function StatsSection() {
   return (
     <section className="relative py-10 border-y border-white/[0.06]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <motion.div
+        <m.div
           className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x lg:divide-white/[0.06]"
           initial="hidden"
           whileInView="visible"
@@ -21,7 +21,7 @@ export default function StatsSection() {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
         >
           {stats.map((stat) => (
-            <motion.div
+            <m.div
               key={stat.label}
               className="text-center px-6 py-2"
               variants={{
@@ -32,9 +32,9 @@ export default function StatsSection() {
               <div className="text-3xl font-bold text-gradient-gold mb-1">{stat.value}</div>
               <div className="text-white font-medium text-sm mb-0.5">{stat.label}</div>
               <div className="text-white/35 text-xs">{stat.sub}</div>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

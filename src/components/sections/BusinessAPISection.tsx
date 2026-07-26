@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import AnimateIn, { StaggerContainer, StaggerItem } from "@/components/ui/AnimateIn";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -167,7 +167,7 @@ export default function BusinessAPISection() {
         <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16" staggerMs={70}>
           {USE_CASES.map((uc) => (
             <StaggerItem key={uc.title}>
-            <motion.div
+            <m.div
               whileHover={{ y: -3, transition: { duration: 0.18 } }}
               className="group flex items-start gap-4 p-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:border-gold/20 hover:bg-white/[0.04] transition-colors duration-200"
             >
@@ -178,7 +178,7 @@ export default function BusinessAPISection() {
                 <h4 className="text-white font-semibold text-sm mb-1">{uc.title}</h4>
                 <p className="text-white/45 text-xs leading-relaxed">{uc.desc}</p>
               </div>
-            </motion.div>
+            </m.div>
             </StaggerItem>
           ))}
         </StaggerContainer>

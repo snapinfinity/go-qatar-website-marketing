@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import AppMockup from "@/components/ui/AppMockup";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/storeLinks";
 
@@ -31,7 +31,7 @@ export default function HeroSection() {
           {/* Left: Text content */}
           <div className="text-center lg:text-left">
             {/* Badge */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease }}
@@ -41,31 +41,31 @@ export default function HeroSection() {
                 <Image src="/logos/app_icon.svg" alt="" width={18} height={18} className="w-full h-full" />
               </div>
               Available on iOS &amp; Android
-            </motion.div>
+            </m.div>
 
             {/* Headline — word by word reveal */}
             <div className="overflow-hidden mb-2">
-              <motion.h1
+              <m.h1
                 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.65, delay: 0.1, ease }}
               >
                 Your City.
-              </motion.h1>
+              </m.h1>
             </div>
             <div className="overflow-hidden mb-6">
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.65, delay: 0.18, ease }}
                 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight text-gradient-gold"
               >
                 Your Way.
-              </motion.div>
+              </m.div>
             </div>
 
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.32, ease }}
@@ -74,16 +74,16 @@ export default function HeroSection() {
               Navigate Qatar like a local. Find any address instantly using
               Qatar&apos;s unique Zone, Street &amp; Building system — with
               live news, saved favorites, and smart history.
-            </motion.p>
+            </m.p>
 
             {/* Store buttons */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.42, ease }}
               className="flex flex-wrap gap-3 justify-center lg:justify-start mb-10"
             >
-              <motion.a
+              <m.a
                 href={APP_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -99,9 +99,9 @@ export default function HeroSection() {
                   <div className="text-white/50 text-[10px] leading-none mb-0.5">Download on the</div>
                   <div className="text-white font-semibold text-sm">App Store</div>
                 </div>
-              </motion.a>
+              </m.a>
 
-              <motion.a
+              <m.a
                 href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -120,11 +120,11 @@ export default function HeroSection() {
                   <div className="text-white/50 text-[10px] leading-none mb-0.5">Get it on</div>
                   <div className="text-white font-semibold text-sm">Google Play</div>
                 </div>
-              </motion.a>
-            </motion.div>
+              </m.a>
+            </m.div>
 
             {/* Social proof */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.55 }}
@@ -145,18 +145,18 @@ export default function HeroSection() {
                 </div>
                 <span className="text-white/45 text-xs">Loved by Qatar residents</span>
               </div>
-            </motion.div>
+            </m.div>
           </div>
 
           {/* Right: Phone mockup */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 40, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.75, delay: 0.2, ease }}
             className="flex items-center justify-center lg:justify-end"
           >
             <AppMockup />
-          </motion.div>
+          </m.div>
         </div>
       </div>
 

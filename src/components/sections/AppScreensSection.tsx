@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import AnimateIn from "@/components/ui/AnimateIn";
 
 /* ══ 3D icon: News ════════════════════════════════════════════ */
 function NewsIcon3D() {
   return (
-    <motion.div
+    <m.div
       className="w-full h-full flex items-center justify-center"
       animate={{ y: [0, -10, 0] }}
       transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
@@ -38,16 +38,16 @@ function NewsIcon3D() {
         </defs>
 
         {/* Card stack depth */}
-        <motion.rect x="58" y="42" width="220" height="160" rx="18" fill="#141414"
+        <m.rect x="58" y="42" width="220" height="160" rx="18" fill="#141414"
           animate={{ y: [42, 38, 42] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}/>
-        <motion.rect x="44" y="28" width="220" height="160" rx="18" fill="#1E1E1E"
+        <m.rect x="44" y="28" width="220" height="160" rx="18" fill="#1E1E1E"
           animate={{ y: [28, 24, 28] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.15 }}/>
-        <motion.rect x="44" y="28" width="220" height="38" rx="18" fill="url(#ng-gold-dim)" opacity="0.85"
+        <m.rect x="44" y="28" width="220" height="38" rx="18" fill="url(#ng-gold-dim)" opacity="0.85"
           animate={{ y: [28, 24, 28] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.15 }}/>
-        <motion.rect x="44" y="52" width="220" height="14" fill="url(#ng-gold-dim)" opacity="0.85"
+        <m.rect x="44" y="52" width="220" height="14" fill="url(#ng-gold-dim)" opacity="0.85"
           animate={{ y: [52, 48, 52] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.15 }}/>
 
@@ -58,14 +58,14 @@ function NewsIcon3D() {
 
         {/* Shimmer sweep over header */}
         <g clipPath="url(#ng-header-clip)">
-          <motion.g
+          <m.g
             animate={{ x: [-60, 300] }}
             transition={{ duration: 2.2, repeat: Infinity, repeatDelay: 2.8, ease: "easeInOut" }}
           >
             <rect x={0} y={14} width={44} height={56}
               fill="rgba(255,255,255,0.18)"
               style={{ filter: "blur(8px)" }}/>
-          </motion.g>
+          </m.g>
         </g>
 
         {/* Header items */}
@@ -88,18 +88,18 @@ function NewsIcon3D() {
         <rect x="46" y="160" width="148" height="7" rx="3.5" fill="#2A2A2A"/>
 
         {/* Gold accent dot */}
-        <motion.circle cx="228" cy="136" r="5" fill="#C9A84C"
+        <m.circle cx="228" cy="136" r="5" fill="#C9A84C"
           animate={{ opacity: [0.5, 1, 0.5] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}/>
       </svg>
-    </motion.div>
+    </m.div>
   );
 }
 
 /* ══ 3D icon: Favourites ══════════════════════════════════════ */
 function FavouritesIcon3D() {
   return (
-    <motion.div
+    <m.div
       className="w-full h-full flex items-center justify-center"
       animate={{ y: [0, -10, 0] }}
       transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
@@ -124,10 +124,10 @@ function FavouritesIcon3D() {
         </defs>
 
         {/* Expanding pulse rings */}
-        <motion.circle cx="160" cy="145" r="70" stroke="#C9A84C" strokeWidth="1.5" fill="none"
+        <m.circle cx="160" cy="145" r="70" stroke="#C9A84C" strokeWidth="1.5" fill="none"
           animate={{ r: [70, 130], opacity: [0.45, 0] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut" }}/>
-        <motion.circle cx="160" cy="145" r="70" stroke="#C9A84C" strokeWidth="1" fill="none"
+        <m.circle cx="160" cy="145" r="70" stroke="#C9A84C" strokeWidth="1" fill="none"
           animate={{ r: [70, 130], opacity: [0.3, 0] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut", delay: 1.2 }}/>
 
@@ -149,7 +149,7 @@ function FavouritesIcon3D() {
         <circle cx="160" cy="138" r="32" fill="#181818"/>
 
         {/* Beating heart */}
-        <motion.g
+        <m.g
           style={{ transformOrigin: "160px 138px" }}
           animate={{ scale: [1, 1.14, 1, 1.08, 1] }}
           transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1] }}
@@ -158,23 +158,23 @@ function FavouritesIcon3D() {
             fill="url(#fg-gold)"/>
           <path d="M160 156 C160 156 136 142 136 128 C136 120 143 115 150 118 C153.5 119.5 157 122.5 160 127 C163 122.5 166.5 119.5 170 118 C177 115 184 120 184 128 C184 142 160 156 160 156Z"
             fill="url(#fg-shine)" opacity="0.7"/>
-        </motion.g>
+        </m.g>
 
         {/* Sparkle dots */}
-        <motion.circle cx="96" cy="104" r="3.5" fill="#C9A84C"
+        <m.circle cx="96" cy="104" r="3.5" fill="#C9A84C"
           animate={{ opacity: [0.35, 0.8, 0.35], scale: [1, 1.4, 1] }}
           style={{ transformOrigin: "96px 104px" }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}/>
-        <motion.circle cx="224" cy="118" r="2.5" fill="#C9A84C"
+        <m.circle cx="224" cy="118" r="2.5" fill="#C9A84C"
           animate={{ opacity: [0.25, 0.7, 0.25], scale: [1, 1.4, 1] }}
           style={{ transformOrigin: "224px 118px" }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}/>
-        <motion.circle cx="104" cy="174" r="2" fill="#C9A84C"
+        <m.circle cx="104" cy="174" r="2" fill="#C9A84C"
           animate={{ opacity: [0.2, 0.6, 0.2], scale: [1, 1.4, 1] }}
           style={{ transformOrigin: "104px 174px" }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}/>
       </svg>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -191,7 +191,7 @@ function HistoryIcon3D() {
   });
 
   return (
-    <motion.div
+    <m.div
       className="w-full h-full flex items-center justify-center"
       animate={{ y: [0, -10, 0] }}
       transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 0.9 }}
@@ -238,25 +238,25 @@ function HistoryIcon3D() {
         ))}
 
         {/* Hour hand — very slow (720s per revolution) */}
-        <motion.g
+        <m.g
           style={{ transformOrigin: "160px 160px" }}
           animate={{ rotate: 360 }}
           transition={{ duration: 720, repeat: Infinity, ease: "linear" }}
         >
           <line x1="160" y1="160" x2="127" y2="103" stroke="#C9A84C" strokeWidth="6" strokeLinecap="round"/>
-        </motion.g>
+        </m.g>
 
         {/* Minute hand — moderate (90s per revolution) */}
-        <motion.g
+        <m.g
           style={{ transformOrigin: "160px 160px" }}
           animate={{ rotate: 360 }}
           transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
         >
           <line x1="160" y1="160" x2="200" y2="116" stroke="#C9A84C" strokeWidth="4" strokeLinecap="round"/>
-        </motion.g>
+        </m.g>
 
         {/* Second hand — fast (8s per revolution) */}
-        <motion.g
+        <m.g
           style={{ transformOrigin: "160px 160px" }}
           animate={{ rotate: 360 }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
@@ -264,7 +264,7 @@ function HistoryIcon3D() {
           <line x1="160" y1="160" x2="136" y2="210" stroke="#F7ECAA" strokeWidth="2" strokeLinecap="round" opacity="0.8"/>
           {/* Counter-balance tail */}
           <line x1="160" y1="160" x2="170" y2="142" stroke="#F7ECAA" strokeWidth="2" strokeLinecap="round" opacity="0.5"/>
-        </motion.g>
+        </m.g>
 
         {/* Center cap */}
         <circle cx="160" cy="160" r="9"   fill="url(#hg-bezel)"/>
@@ -274,7 +274,7 @@ function HistoryIcon3D() {
         <rect x="153" y="42" width="14" height="18" rx="4" fill="url(#hg-bezel)"/>
         <rect x="148" y="36" width="24" height="12" rx="6" fill="url(#hg-bezel)"/>
       </svg>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -391,7 +391,7 @@ export default function AppScreensSection() {
           {/* 3D icon panel — aspect-[4/3] keeps it compact */}
           <div className="order-1 lg:order-none">
             <AnimatePresence mode="wait">
-              <motion.div
+              <m.div
                 key={active}
                 initial={{ opacity: 0, scale: 0.88, y: 24 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -411,14 +411,14 @@ export default function AppScreensSection() {
                   }}
                 />
                 {current.visual}
-              </motion.div>
+              </m.div>
             </AnimatePresence>
           </div>
 
           {/* Description */}
           <div className="order-0 lg:order-none">
             <AnimatePresence mode="wait">
-              <motion.div
+              <m.div
                 key={active}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -449,7 +449,7 @@ export default function AppScreensSection() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </m.div>
             </AnimatePresence>
           </div>
         </div>
