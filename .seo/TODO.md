@@ -143,7 +143,7 @@ Mark done with `seo-tracker done <id>`.
   - priority: high
   - created: 2026-07-25
 
-- [ ] **Land the footer heading-order fix  PSI heading-order audit still scores 0 despite being marked done**
+- [~] **Land the footer heading-order fix  PSI heading-order audit still scores 0 despite being marked done**
   - id: land-the-footer-heading-order-fix-psi-heading-order-audit-still-scores-0-despite-being-marked-done
   - type: auto
   - category: technical

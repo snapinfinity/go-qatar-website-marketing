@@ -38,3 +38,11 @@ Append entries in this format:
 - **Visual impact:** Two new visible policy sections; renumbered section badges; updated "Last updated" date in the hero.
 - **Review URL:** https://goqatar.app/privacy-policy
 - **Reviewed?** [ ]
+
+## 2026-08-19 — Hero H1: unify headline + add keyword line
+- **Change:** The `<h1>` contained only "Your City." while "Your Way." sat in a sibling non-heading `<div>`, and neither carried a keyword. Merged both lines into a single `<h1>` (block `<m.span>` children, same sizes/gradient/stagger — visually identical), then added a third smaller line inside the heading: "Navigate Qatar by Zone, Street & Building." (20px mobile / 30px desktop, white/75, reveals at 0.26s). Trimmed the sub-headline paragraph so it no longer repeats "Navigate Qatar" / "Zone, Street & Building".
+- **Files:** src/components/sections/HeroSection.tsx
+- **Visual impact:** New keyword line under the gold "Your Way." — adds ~36px (desktop) / ~55px (mobile, wraps to 2 lines) of hero height. Sub-headline paragraph reworded from "Navigate Qatar like a local. Find any address instantly using Qatar's unique Zone, Street & Building system — with live news, saved favorites, and smart history." to "Find any address instantly with Qatar's official address system — plus live news, saved favorites, and smart history."
+- **Verified locally:** `next start` at 375px and desktop — 48/48/20px and 72/72/30px, gold gradient intact (`-webkit-text-fill-color: transparent`), no horizontal overflow, no console errors. Screenshot not captured (Browser pane hidden, so rAF was paused and framer-motion could not advance).
+- **Review URL:** https://goqatar.app (check hero on mobile — the new line wraps to 2 lines)
+- **Reviewed?** [ ]

@@ -34,3 +34,6 @@ Chronological log of completed items. Auto-appended by `seo-tracker done <id>`.
 - [x] optional-add-gtm-ga4-for-analytics-not-currently-present — Optional: add GTM + GA4 for analytics (not currently present) (verified live: signal googletagmanager.com/gtm.js present) (04:07)
 - [~] re-do-performance-fix-it-did-not-ship-live-html-still-has-render-blocking-css-431-js-54-unused-real-critical-css-inline-code-split-framer-motion-verify-in-prod — Re-do performance fix: it did NOT ship  live HTML still has render-blocking CSS + 431-*.js 54% unused. Real critical-CSS inline + code-split framer-motion, verify in prod (staged, awaiting verify) (22:30)
 - [x] re-do-performance-fix-it-did-not-ship-live-html-still-has-render-blocking-css-431-js-54-unused-real-critical-css-inline-code-split-framer-motion-verify-in-prod — Re-do performance fix: it did NOT ship  live HTML still has render-blocking CSS + 431-*.js 54% unused. Real critical-CSS inline + code-split framer-motion, verify in prod (verified live: signal media="print" present) (22:32)
+
+## 2026-08-19
+- [~] land-the-footer-heading-order-fix-psi-heading-order-audit-still-scores-0-despite-being-marked-done — Land the footer heading-order fix  PSI heading-order audit still scores 0 despite being marked done (staged, awaiting verify) (22:28)

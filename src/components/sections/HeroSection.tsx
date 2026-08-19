@@ -44,26 +44,36 @@ export default function HeroSection() {
             </m.div>
 
             {/* Headline — word by word reveal */}
-            <div className="overflow-hidden mb-2">
-              <m.h1
-                className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight"
-                initial={{ opacity: 0, y: 40 }}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight mb-6">
+              <span className="block overflow-hidden mb-2">
+                <m.span
+                  className="block"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.65, delay: 0.1, ease }}
+                >
+                  Your City.
+                </m.span>
+              </span>
+              <span className="block overflow-hidden mb-3">
+                <m.span
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.65, delay: 0.18, ease }}
+                  className="block text-gradient-gold"
+                >
+                  Your Way.
+                </m.span>
+              </span>
+              <m.span
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.65, delay: 0.1, ease }}
+                transition={{ duration: 0.55, delay: 0.26, ease }}
+                className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-white/75 leading-snug"
               >
-                Your City.
-              </m.h1>
-            </div>
-            <div className="overflow-hidden mb-6">
-              <m.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.65, delay: 0.18, ease }}
-                className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight text-gradient-gold"
-              >
-                Your Way.
-              </m.div>
-            </div>
+                Navigate Qatar by Zone, Street &amp; Building.
+              </m.span>
+            </h1>
 
             <m.p
               initial={{ opacity: 0, y: 20 }}
@@ -71,9 +81,8 @@ export default function HeroSection() {
               transition={{ duration: 0.55, delay: 0.32, ease }}
               className="text-white/55 text-lg sm:text-xl leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0"
             >
-              Navigate Qatar like a local. Find any address instantly using
-              Qatar&apos;s unique Zone, Street &amp; Building system — with
-              live news, saved favorites, and smart history.
+              Find any address instantly with Qatar&apos;s official address
+              system — plus live news, saved favorites, and smart history.
             </m.p>
 
             {/* Store buttons */}
