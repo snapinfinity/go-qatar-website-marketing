@@ -175,7 +175,7 @@ export default function BusinessAPISection() {
                 {uc.icon}
               </div>
               <div>
-                <h4 className="text-white font-semibold text-sm mb-1">{uc.title}</h4>
+                <h3 className="text-white font-semibold text-sm mb-1">{uc.title}</h3>
                 <p className="text-white/45 text-xs leading-relaxed">{uc.desc}</p>
               </div>
             </m.div>

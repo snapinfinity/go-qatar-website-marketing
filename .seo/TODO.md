@@ -136,7 +136,7 @@ Mark done with `seo-tracker done <id>`.
   - priority: low
   - created: 2026-07-21
 
-- [ ] **Re-do performance fix: it did NOT ship  live HTML still has render-blocking CSS + 431-*.js 54% unused. Real critical-CSS inline + code-split framer-motion, verify in prod**
+- [x] **Re-do performance fix: it did NOT ship  live HTML still has render-blocking CSS + 431-*.js 54% unused. Real critical-CSS inline + code-split framer-motion, verify in prod**
   - id: re-do-performance-fix-it-did-not-ship-live-html-still-has-render-blocking-css-431-js-54-unused-real-critical-css-inline-code-split-framer-motion-verify-in-prod
   - type: auto
   - category: performance
