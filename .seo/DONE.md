@@ -37,3 +37,7 @@ Chronological log of completed items. Auto-appended by `seo-tracker done <id>`.
 
 ## 2026-08-19
 - [~] land-the-footer-heading-order-fix-psi-heading-order-audit-still-scores-0-despite-being-marked-done — Land the footer heading-order fix  PSI heading-order audit still scores 0 despite being marked done (staged, awaiting verify) (22:28)
+- [~] fix-homepage-h1-currently-only-your-city-with-the-rest-in-a-non-heading-div-make-a-complete-keyword-bearing-h1 — Fix homepage H1  currently only 'Your City.' with the rest in a non-heading div; make a complete keyword-bearing H1 (staged, awaiting verify) (22:36)
+- [x] land-the-footer-heading-order-fix-psi-heading-order-audit-still-scores-0-despite-being-marked-done — Land the footer heading-order fix  PSI heading-order audit still scores 0 despite being marked done (verified live: signal <h3[^>]*>Delivery Routing</h3> present) (22:36)
+- [ ] fix-homepage-h1-currently-only-your-city-with-the-rest-in-a-non-heading-div-make-a-complete-keyword-bearing-h1 — Fix homepage H1  currently only 'Your City.' with the rest in a non-heading div; make a complete keyword-bearing H1 (verify FAILED: signal not present) (22:37)
+- [x] fix-homepage-h1-currently-only-your-city-with-the-rest-in-a-non-heading-div-make-a-complete-keyword-bearing-h1 — Fix homepage H1  currently only 'Your City.' with the rest in a non-heading div; make a complete keyword-bearing H1 (verified live: signal Navigate Qatar by Zone, Street present) (22:37)

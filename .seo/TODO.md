@@ -143,14 +143,14 @@ Mark done with `seo-tracker done <id>`.
   - priority: high
   - created: 2026-07-25
 
-- [~] **Land the footer heading-order fix  PSI heading-order audit still scores 0 despite being marked done**
+- [x] **Land the footer heading-order fix  PSI heading-order audit still scores 0 despite being marked done**
   - id: land-the-footer-heading-order-fix-psi-heading-order-audit-still-scores-0-despite-being-marked-done
   - type: auto
   - category: technical
   - priority: high
   - created: 2026-07-25
 
-- [ ] **Fix homepage H1  currently only 'Your City.' with the rest in a non-heading div; make a complete keyword-bearing H1**
+- [x] **Fix homepage H1  currently only 'Your City.' with the rest in a non-heading div; make a complete keyword-bearing H1**
   - id: fix-homepage-h1-currently-only-your-city-with-the-rest-in-a-non-heading-div-make-a-complete-keyword-bearing-h1
   - type: auto
   - category: content
