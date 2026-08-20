@@ -41,3 +41,7 @@ Chronological log of completed items. Auto-appended by `seo-tracker done <id>`.
 - [x] land-the-footer-heading-order-fix-psi-heading-order-audit-still-scores-0-despite-being-marked-done — Land the footer heading-order fix  PSI heading-order audit still scores 0 despite being marked done (verified live: signal <h3[^>]*>Delivery Routing</h3> present) (22:36)
 - [ ] fix-homepage-h1-currently-only-your-city-with-the-rest-in-a-non-heading-div-make-a-complete-keyword-bearing-h1 — Fix homepage H1  currently only 'Your City.' with the rest in a non-heading div; make a complete keyword-bearing H1 (verify FAILED: signal not present) (22:37)
 - [x] fix-homepage-h1-currently-only-your-city-with-the-rest-in-a-non-heading-div-make-a-complete-keyword-bearing-h1 — Fix homepage H1  currently only 'Your City.' with the rest in a non-heading div; make a complete keyword-bearing H1 (verified live: signal Navigate Qatar by Zone, Street present) (22:37)
+
+## 2026-08-20
+- [~] tighten-csp-remove-unsafe-inline-from-script-src-and-style-src — Tighten CSP: remove 'unsafe-inline' from script-src and style-src (staged, awaiting verify) (15:56)
+- [x] tighten-csp-remove-unsafe-inline-from-script-src-and-style-src — Tighten CSP: remove 'unsafe-inline' from script-src and style-src (verified live: signal data-css-defer present) (15:57)

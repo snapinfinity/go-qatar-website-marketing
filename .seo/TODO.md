@@ -157,7 +157,7 @@ Mark done with `seo-tracker done <id>`.
   - priority: medium
   - created: 2026-07-25
 
-- [ ] **Tighten CSP: remove 'unsafe-inline' from script-src and style-src**
+- [x] **Tighten CSP: remove 'unsafe-inline' from script-src and style-src**
   - id: tighten-csp-remove-unsafe-inline-from-script-src-and-style-src
   - type: auto
   - category: technical
