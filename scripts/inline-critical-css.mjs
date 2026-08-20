@@ -37,12 +37,54 @@ async function walk(dir) {
 const htmlFiles = await walk(appDir);
 let processed = 0;
 
+// critters' `preload: "media"` strategy defers each stylesheet with
+// `media="print" onload="this.media='all'"`. That onload is an inline event
+// handler, so it only runs under `script-src 'unsafe-inline'` — under a CSP
+// with `script-src-attr 'none'` the swap never fires and the page renders
+// with critical CSS only (i.e. visually broken). Move the swap out of the
+// attribute and into one inline <script> that does the same thing, so the
+// CSP can block handler attributes without breaking the deferred CSS.
+const DEFER_ATTR = "data-css-defer";
+const deferScript =
+  `<script>(function(){var l=document.querySelectorAll('link[${DEFER_ATTR}]');` +
+  `for(var i=0;i<l.length;i++){(function(k){` +
+  `if(k.sheet){k.media='all';}else{k.addEventListener('load',function(){k.media='all';});}` +
+  `})(l[i]);}})();</script>`;
+
+function replaceOnloadHandlers(html) {
+  const swapped = html.replace(
+    /(<link\b[^>]*?)\s+onload="this\.media='all'"/g,
+    `$1 ${DEFER_ATTR}`,
+  );
+  if (!swapped.includes(DEFER_ATTR)) return { html: swapped, count: 0 };
+  const count = swapped.split(DEFER_ATTR).length - 1;
+  return {
+    html: swapped.includes("</body>")
+      ? swapped.replace("</body>", `${deferScript}</body>`)
+      : swapped + deferScript,
+    count,
+  };
+}
+
+let deferred = 0;
+
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   if (!html.includes('<link rel="stylesheet"')) continue;
   const inlined = await critters.process(html);
-  await writeFile(file, inlined);
+  const { html: final, count } = replaceOnloadHandlers(inlined);
+  if (/\bonload=/.test(final)) {
+    throw new Error(
+      `inline-critical-css: ${file} still contains an inline onload handler; ` +
+        "it would be blocked by script-src-attr 'none'.",
+    );
+  }
+  deferred += count;
+  await writeFile(file, final);
   processed++;
 }
 
-console.log(`inline-critical-css: inlined critical CSS in ${processed}/${htmlFiles.length} static page(s).`);
+console.log(
+  `inline-critical-css: inlined critical CSS in ${processed}/${htmlFiles.length} static page(s); ` +
+    `moved ${deferred} onload handler(s) into a CSP-safe inline script.`,
+);

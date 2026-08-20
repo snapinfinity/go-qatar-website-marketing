@@ -7,6 +7,19 @@ const isDev = process.env.NODE_ENV !== "production";
 // 'unsafe-eval'/ws: blocks those, so the app renders on the server but never
 // hydrates on the client (only static, non-animated content shows). Production
 // builds don't use eval, so we keep the strict policy there.
+//
+// Why 'unsafe-inline' stays (audited 2026-08-19, do not "just remove" it):
+//   script-src — App Router ships the RSC payload as ~14 inline
+//     `self.__next_f.push(...)` scripts per page. Block them and the page
+//     renders but never hydrates. Removing 'unsafe-inline' requires either a
+//     per-request nonce from middleware (which opts every page into dynamic
+//     rendering, undoing the static prerender + critical-CSS inlining) or
+//     per-page hashes (which can't work: `headers()` is evaluated during the
+//     build, before the HTML those hashes describe exists).
+//   style-src  — framer-motion animates via inline `style` attributes (147 on
+//     the homepage alone) and the critical CSS is an inline <style> block.
+//     Hashes can't cover attribute values that change every frame.
+// What IS enforced instead: script-src-attr 'none' below.
 const csp = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com${isDev ? " 'unsafe-eval'" : ""}`,
@@ -22,6 +35,17 @@ const csp = [
   "base-uri 'self'",
   "form-action 'self'",
   "object-src 'none'",
+  // 'unsafe-inline' above cannot be dropped from script-src (see the note on
+  // `csp`), but it does not have to extend to inline event-handler attributes
+  // (onclick=, onerror=, onload=, ...) — the classic injection sink. React
+  // attaches listeners in JS and never emits handler attributes, so blocking
+  // them costs nothing here. NOTE: `scripts/inline-critical-css.mjs` must keep
+  // rewriting critters' `onload="this.media='all'"` into its inline defer
+  // script, or the deferred stylesheets never activate under this directive.
+  "script-src-attr 'none'",
+  // Production only: dev is served over plain http://localhost, and upgrading
+  // loopback requests has no security value while risking the HMR socket.
+  ...(isDev ? [] : ["upgrade-insecure-requests"]),
 ].join("; ");
 
 const securityHeaders = [

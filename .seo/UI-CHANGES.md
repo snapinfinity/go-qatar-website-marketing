@@ -46,3 +46,11 @@ Append entries in this format:
 - **Verified locally:** `next start` at 375px and desktop — 48/48/20px and 72/72/30px, gold gradient intact (`-webkit-text-fill-color: transparent`), no horizontal overflow, no console errors. Screenshot not captured (Browser pane hidden, so rAF was paused and framer-motion could not advance).
 - **Review URL:** https://goqatar.app (check hero on mobile — the new line wraps to 2 lines)
 - **Reviewed?** [ ]
+
+## 2026-08-20 — CSP: block inline event handlers (script-src-attr 'none')
+- **Change:** Audited the "remove 'unsafe-inline'" finding. It cannot be removed from either directive (see next.config.ts for the full reasoning: script-src carries ~14 inline RSC payload scripts per page; style-src carries framer-motion's per-frame inline `style` attributes and the inlined critical CSS). Instead enforced `script-src-attr 'none'`, which blocks inline event-handler attributes — the main XSS sink `'unsafe-inline'` opens — plus `upgrade-insecure-requests` (production only). To make that safe, `scripts/inline-critical-css.mjs` now rewrites critters' `onload="this.media='all'"` into one inline defer script and hard-fails the build if any `onload=` attribute survives.
+- **GOTCHA:** if the postbuild rewrite is ever removed while `script-src-attr 'none'` stays, the deferred stylesheets never flip from `media="print"` to `media="all"` and every page renders with critical CSS only — i.e. visually broken, with no console error. The build-time assertion in inline-critical-css.mjs exists to catch exactly that.
+- **Files:** next.config.ts, scripts/inline-critical-css.mjs
+- **Visual impact:** None expected. Verified on `next start`: stylesheet flips to `media="all"` with 529 rules, body background renders from the full sheet, React hydrates, GTM loads, 0 elements with an `onload` attribute, no CSP violations. Also verified in `next dev` (9 sections render + hydrate), since a previous CSP change silently broke dev hydration.
+- **Review URL:** https://goqatar.app (after deploy — confirm the page is fully styled, not just critical-CSS styled)
+- **Reviewed?** [ ]
