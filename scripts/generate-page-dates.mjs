@@ -11,9 +11,14 @@
 // the Terms page, and bumping every route on every deploy is exactly the
 // lastmod churn that makes search engines distrust the signal.
 //
-// Runs as `prebuild`. If git is unavailable or returns nothing (e.g. a CI
-// shallow clone with no history for a path), the committed JSON is left
-// untouched rather than overwritten with a guess.
+// Runs as `prebuild`. It only regenerates in a full clone. In a SHALLOW clone
+// (Vercel's default) `git log -1 -- <path>` does not return nothing for an
+// untouched file — it returns the shallow boundary commit, because that
+// commit has no known parents and so appears to have created every file in
+// the tree. That silently produced dates that were too recent (/contact and
+// /terms were stamped with the boundary commit's 2026-07-26 instead of their
+// real 2026-07-23) and looked entirely plausible. So detect shallowness up
+// front and keep the committed JSON, which was generated in a full clone.
 import { execFileSync } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -28,13 +33,25 @@ const ROUTE_SOURCES = {
   "/terms": ["src/app/terms"],
 };
 
+function git(args) {
+  return execFileSync("git", args, {
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "ignore"],
+  }).trim();
+}
+
+// A shallow clone cannot answer "when did this file last change", so don't ask.
+function isShallowOrUnavailable() {
+  try {
+    return git(["rev-parse", "--is-shallow-repository"]) !== "false";
+  } catch {
+    return true;
+  }
+}
+
 function lastCommitDate(paths) {
   try {
-    const out = execFileSync(
-      "git",
-      ["log", "-1", "--format=%cs", "--", ...paths],
-      { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] },
-    ).trim();
+    const out = git(["log", "-1", "--format=%cs", "--", ...paths]);
     return /^\d{4}-\d{2}-\d{2}$/.test(out) ? out : null;
   } catch {
     return null;
@@ -42,6 +59,17 @@ function lastCommitDate(paths) {
 }
 
 const existing = JSON.parse(await readFile(OUT_FILE, "utf8"));
+
+if (isShallowOrUnavailable()) {
+  console.log(
+    "generate-page-dates: shallow clone or no git — keeping committed dates " +
+      `(${Object.entries(existing)
+        .map(([r, d]) => `${r} ${d}`)
+        .join(", ")}).`,
+  );
+  process.exit(0);
+}
+
 const next = { ...existing };
 const stale = [];
 

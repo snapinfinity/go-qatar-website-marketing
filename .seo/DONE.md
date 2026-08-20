@@ -45,3 +45,4 @@ Chronological log of completed items. Auto-appended by `seo-tracker done <id>`.
 ## 2026-08-20
 - [~] tighten-csp-remove-unsafe-inline-from-script-src-and-style-src — Tighten CSP: remove 'unsafe-inline' from script-src and style-src (staged, awaiting verify) (15:56)
 - [x] tighten-csp-remove-unsafe-inline-from-script-src-and-style-src — Tighten CSP: remove 'unsafe-inline' from script-src and style-src (verified live: signal data-css-defer present) (15:57)
+- [~] fix-sitemap-lastmod-hardcoded-2026-06-26-real-last-edit-was-2026-07-23 — Fix sitemap lastmod: hardcoded 2026-06-26, real last edit was 2026-07-23 (staged, awaiting verify) (16:04)
