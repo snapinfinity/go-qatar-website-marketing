@@ -164,7 +164,7 @@ Mark done with `seo-tracker done <id>`.
   - priority: medium
   - created: 2026-07-25
 
-- [~] **Fix sitemap lastmod: hardcoded 2026-06-26, real last edit was 2026-07-23**
+- [x] **Fix sitemap lastmod: hardcoded 2026-06-26, real last edit was 2026-07-23**
   - id: fix-sitemap-lastmod-hardcoded-2026-06-26-real-last-edit-was-2026-07-23
   - type: auto
   - category: technical
