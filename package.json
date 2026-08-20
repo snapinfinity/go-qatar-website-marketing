@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_OPTIONS=--localstorage-file=/tmp/go-qatar-ls next dev",
+    "prebuild": "node scripts/generate-page-dates.mjs",
     "build": "cross-env NODE_OPTIONS=--localstorage-file=/tmp/go-qatar-ls next build",
     "postbuild": "node scripts/inline-critical-css.mjs",
     "start": "cross-env NODE_OPTIONS=--localstorage-file=/tmp/go-qatar-ls next start",
