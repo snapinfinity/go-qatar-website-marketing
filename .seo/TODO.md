@@ -171,7 +171,7 @@ Mark done with `seo-tracker done <id>`.
   - priority: medium
   - created: 2026-07-25
 
-- [ ] **Fix JSON-LD dateModified '2025-06' to real YYYY-MM-DD on /privacy-policy and /terms; add Instagram to Organization sameAs**
+- [x] **Fix JSON-LD dateModified '2025-06' to real YYYY-MM-DD on /privacy-policy and /terms; add Instagram to Organization sameAs**
   - id: fix-json-ld-datemodified-2025-06-to-real-yyyy-mm-dd-on-privacy-policy-and-terms-add-instagram-to-organization-sameas
   - type: auto
   - category: schema
