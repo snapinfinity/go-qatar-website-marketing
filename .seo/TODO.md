@@ -178,7 +178,7 @@ Mark done with `seo-tracker done <id>`.
   - priority: medium
   - created: 2026-07-25
 
-- [ ] **Add Last-Updated field + license line to llms.txt**
+- [x] **Add Last-Updated field + license line to llms.txt**
   - id: add-last-updated-field-license-line-to-llms-txt
   - type: auto
   - category: geo

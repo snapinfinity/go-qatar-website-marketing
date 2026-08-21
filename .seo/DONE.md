@@ -51,3 +51,5 @@ Chronological log of completed items. Auto-appended by `seo-tracker done <id>`.
 ## 2026-08-21
 - [~] fix-json-ld-datemodified-2025-06-to-real-yyyy-mm-dd-on-privacy-policy-and-terms-add-instagram-to-organization-sameas — Fix JSON-LD dateModified '2025-06' to real YYYY-MM-DD on /privacy-policy and /terms; add Instagram to Organization sameAs (staged, awaiting verify) (15:38)
 - [x] fix-json-ld-datemodified-2025-06-to-real-yyyy-mm-dd-on-privacy-policy-and-terms-add-instagram-to-organization-sameas — Fix JSON-LD dateModified '2025-06' to real YYYY-MM-DD on /privacy-policy and /terms; add Instagram to Organization sameAs (verified live: signal 2025-06 absent) (15:39)
+- [~] add-last-updated-field-license-line-to-llms-txt — Add Last-Updated field + license line to llms.txt (staged, awaiting verify) (15:45)
+- [x] add-last-updated-field-license-line-to-llms-txt — Add Last-Updated field + license line to llms.txt (verified live: signal ^License:  present) (15:46)
