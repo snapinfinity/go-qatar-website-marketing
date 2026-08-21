@@ -19,9 +19,9 @@
 // /terms were stamped with the boundary commit's 2026-07-26 instead of their
 // real 2026-07-23) and looked entirely plausible. So detect shallowness up
 // front and keep the committed JSON, which was generated in a full clone.
-import { execFileSync } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { isShallowOrUnavailable, lastCommitDate } from "./git-dates.mjs";
 
 const OUT_FILE = path.join(process.cwd(), "src", "lib", "pageDates.json");
 
@@ -32,31 +32,6 @@ const ROUTE_SOURCES = {
   "/privacy-policy": ["src/app/privacy-policy"],
   "/terms": ["src/app/terms"],
 };
-
-function git(args) {
-  return execFileSync("git", args, {
-    encoding: "utf8",
-    stdio: ["ignore", "pipe", "ignore"],
-  }).trim();
-}
-
-// A shallow clone cannot answer "when did this file last change", so don't ask.
-function isShallowOrUnavailable() {
-  try {
-    return git(["rev-parse", "--is-shallow-repository"]) !== "false";
-  } catch {
-    return true;
-  }
-}
-
-function lastCommitDate(paths) {
-  try {
-    const out = git(["log", "-1", "--format=%cs", "--", ...paths]);
-    return /^\d{4}-\d{2}-\d{2}$/.test(out) ? out : null;
-  } catch {
-    return null;
-  }
-}
 
 const existing = JSON.parse(await readFile(OUT_FILE, "utf8"));
 
