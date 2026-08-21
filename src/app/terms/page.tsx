@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import pageDates from "@/lib/pageDates.json";
 
 const TERMS_URL = "https://goqatar.app/terms";
 
@@ -28,7 +29,10 @@ const jsonLd = {
       name: "Terms & Conditions — Go Qatar",
       isPartOf: { "@id": "https://goqatar.app/#website" },
       about: { "@id": "https://goqatar.app/#organization" },
-      dateModified: "2025-06",
+      // Page-level modification date, from the same generated source as the
+      // sitemap's lastmod so the two can never disagree. This is NOT the date
+      // the legal text changed — that is the visible "Last updated" below.
+      dateModified: pageDates["/terms"],
     },
     {
       "@type": "BreadcrumbList",
@@ -168,7 +172,7 @@ export default function TermsPage() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
               <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
             </svg>
-            Last updated: June 2025
+            Last updated: June 2026
           </div>
         </div>
       </section>

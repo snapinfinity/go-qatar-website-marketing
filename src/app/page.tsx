@@ -26,6 +26,10 @@ const jsonLd = {
       sameAs: [
         "https://apps.apple.com/us/app/go-qatar/id6756709380",
         "https://play.google.com/store/apps/details?id=com.snapinfinity.goqatar",
+        // Verified 2026-08-20: @goqatar.app is titled "Go Qatar" and links to
+        // App Store id6756709380 — the same listing above — so it is the same
+        // entity, not a lookalike.
+        "https://www.instagram.com/goqatar.app/",
       ],
       parentOrganization: {
         "@type": "Organization",

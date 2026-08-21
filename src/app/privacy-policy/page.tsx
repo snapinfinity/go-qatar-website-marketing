@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import pageDates from "@/lib/pageDates.json";
 
 const PRIVACY_URL = "https://goqatar.app/privacy-policy";
 
@@ -28,7 +29,9 @@ const jsonLd = {
       name: "Privacy Policy — Go Qatar",
       isPartOf: { "@id": "https://goqatar.app/#website" },
       about: { "@id": "https://goqatar.app/#organization" },
-      dateModified: "2026-07-26",
+      // See the note in terms/page.tsx — generated, and kept in step with
+      // the sitemap's lastmod for this route.
+      dateModified: pageDates["/privacy-policy"],
     },
     {
       "@type": "BreadcrumbList",
