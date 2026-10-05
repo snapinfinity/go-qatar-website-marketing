@@ -93,7 +93,7 @@ export async function POST(req: NextRequest) {
 <body style="font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px;">
   <div style="max-width: 560px; margin: 0 auto; background: #1a1a1a; border-radius: 12px; overflow: hidden;">
     <div style="background: #292827; padding: 20px 24px; border-bottom: 1px solid rgba(255,255,255,0.1);">
-      <h2 style="margin: 0; color: #C9A84C; font-size: 18px;">Go Qatar — ${categoryLabel}</h2>
+      <h2 style="margin: 0; color: #E8A0B0; font-size: 18px;">Go Qatar — ${categoryLabel}</h2>
     </div>
     <div style="padding: 24px;">
       <table style="width:100%; border-collapse:collapse; margin-bottom:16px;">
@@ -103,7 +103,7 @@ export async function POST(req: NextRequest) {
         </tr>
         <tr>
           <td style="color:#999; font-size:12px; padding: 6px 0;">Category</td>
-          <td style="color:#C9A84C; font-size:14px; padding: 6px 0; font-weight:600;">${categoryLabel}</td>
+          <td style="color:#E8A0B0; font-size:14px; padding: 6px 0; font-weight:600;">${categoryLabel}</td>
         </tr>
         <tr>
           <td style="color:#999; font-size:12px; padding: 6px 0;">Subject</td>

@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --font-inter: "Inter", system-ui, sans-serif;
+    --font-jost: "Jost", system-ui, sans-serif;
   }
 
   * {
@@ -18,22 +18,22 @@
   }
 
   body {
-    background-color: #0C0C0C;
+    background-color: #0B0C0E;
     color: #ffffff;
-    font-family: var(--font-inter);
+    font-family: var(--font-jost);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background: rgba(201, 168, 76, 0.3);
+    background: rgba(138, 21, 56, 0.6);
     color: #fff;
   }
 }
 
 @layer utilities {
-  .text-gradient-gold {
-    background: linear-gradient(135deg, #C9A84C 0%, #F0D98A 50%, #C9A84C 100%);
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #E8A0B0 0%, #F4F3F1 50%, #E8A0B0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -46,12 +46,12 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  .bg-gold-glow {
-    box-shadow: 0 0 40px rgba(201, 168, 76, 0.15), 0 0 80px rgba(201, 168, 76, 0.05);
+  .bg-brand-glow {
+    box-shadow: 0 0 40px rgba(138, 21, 56, 0.3), 0 0 80px rgba(138, 21, 56, 0.1);
   }
 
-  .border-gold-subtle {
-    border: 1px solid rgba(201, 168, 76, 0.25);
+  .border-brand-subtle {
+    border: 1px solid rgba(232, 160, 176, 0.25);
   }
 
   .scrollbar-hide {
@@ -68,6 +68,22 @@
     border-color: rgba(255, 255, 255, 0.08);
   }
 
+  /* Hero blue plate: digits type in, then the result pin drops (BluePlate.tsx) */
+  .plate-digit {
+    opacity: 0;
+    animation: plate-digit 180ms ease-out forwards;
+  }
+
+  .plate-pin {
+    opacity: 0;
+    animation: plate-pin 600ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  .plate-ping {
+    opacity: 0;
+    animation: plate-ping 1.4s ease-out 2;
+  }
+
   /* Respect reduced motion */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -75,5 +91,30 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
+
+    .plate-digit,
+    .plate-pin {
+      animation: none;
+      opacity: 1;
+    }
+
+    .plate-ping {
+      animation: none;
+    }
   }
+}
+
+@keyframes plate-digit {
+  from { opacity: 0; transform: translateY(0.12em); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes plate-pin {
+  from { opacity: 0; transform: translateY(-14px) scale(0.96); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes plate-ping {
+  0%   { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 0; transform: scale(2.2); }
 }

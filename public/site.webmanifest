@@ -1,11 +1,11 @@
 {
   "name": "Go Qatar",
   "short_name": "Go Qatar",
-  "description": "Navigate Qatar like never before. Find any address by Zone, Street & Building number.",
+  "description": "Find any building from its blue plate, plan Doha Metro journeys, and read Qatar news.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0C0C0C",
-  "theme_color": "#C9A84C",
+  "background_color": "#0B0C0E",
+  "theme_color": "#8A1538",
   "icons": [
     {
       "src": "/icon-192.png",

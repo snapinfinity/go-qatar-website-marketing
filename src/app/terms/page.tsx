@@ -49,7 +49,7 @@ const sections = [
     number: "01",
     title: "Acceptance of Terms",
     content:
-      "By accessing and using GO-QATAR, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.",
+      "By accessing and using Go Qatar, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
@@ -60,7 +60,7 @@ const sections = [
     number: "02",
     title: "Use License",
     content:
-      "Permission is granted to temporarily use GO-QATAR for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title. Under this license you may not: modify or copy the materials; use the materials for any commercial purpose; attempt to decompile or reverse engineer any software contained in the app.",
+      "Permission is granted to temporarily use Go Qatar for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title. Under this license you may not: modify or copy the materials; use the materials for any commercial purpose; attempt to decompile or reverse engineer any software contained in the app.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l6 2.67V11c0 3.88-2.62 7.5-6 8.93C8.62 18.5 6 14.88 6 11V7.67L12 5zm-1 3v5h2V8h-2zm0 6v2h2v-2h-2z" />
@@ -71,7 +71,7 @@ const sections = [
     number: "03",
     title: "User Account",
     content:
-      "You are responsible for maintaining the security of your Google account used to access GO-QATAR. You agree to accept responsibility for all activities that occur under your account. If you suspect unauthorized access, please notify us immediately at help.goqatar@gmail.com.",
+      "You are responsible for maintaining the security of your Google account used to access Go Qatar. You agree to accept responsibility for all activities that occur under your account. If you suspect unauthorized access, please notify us immediately at help.goqatar@gmail.com.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
@@ -104,7 +104,7 @@ const sections = [
     number: "06",
     title: "Limitation of Liability",
     content:
-      "In no event shall GO-QATAR be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of (or inability to access or use) the service.",
+      "In no event shall Go Qatar be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of (or inability to access or use) the service.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
@@ -146,7 +146,7 @@ export default function TermsPage() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-gold/[0.05] blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-brand/[0.12] blur-[100px] pointer-events-none" />
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
           style={{
@@ -157,12 +157,12 @@ export default function TermsPage() {
         />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-semibold uppercase tracking-widest mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 border border-brand-light/25 text-brand-light text-xs font-semibold uppercase tracking-[0.2em] mb-6">
             <div className="w-4 h-4 rounded-sm overflow-hidden flex-shrink-0 border border-white/20"><Image src="/logos/app_icon.svg" alt="" width={16} height={16} className="w-full h-full" /></div>
             Legal
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-            Terms &amp; <span className="text-gradient-gold">Conditions</span>
+            Terms &amp; <span className="text-gradient-brand">Conditions</span>
           </h1>
           <p className="text-white/50 text-lg leading-relaxed mb-4">
             Please read these terms carefully before using Go Qatar. By using the
@@ -181,9 +181,9 @@ export default function TermsPage() {
       <section className="pb-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           {/* Intro card */}
-          <div className="p-6 bg-gold/[0.06] border border-gold/20 rounded-2xl mb-10">
+          <div className="p-6 bg-brand/[0.15] border border-brand-light/20 rounded-2xl mb-10">
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold shrink-0 mt-0.5">
+              <div className="w-8 h-8 rounded-lg bg-brand/40 flex items-center justify-center text-brand-light shrink-0 mt-0.5">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                 </svg>
@@ -214,12 +214,12 @@ export default function TermsPage() {
             {sections.map((section) => (
               <div
                 key={section.number}
-                className="group p-6 bg-white/[0.03] border border-white/[0.06] rounded-2xl hover:border-gold/20 hover:bg-white/[0.05] transition-all duration-200"
+                className="group p-6 bg-white/[0.03] border border-white/[0.06] rounded-2xl hover:border-brand-light/20 hover:bg-white/[0.05] transition-all duration-200"
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 flex items-center gap-3">
-                    <span className="text-gold/30 text-xs font-black tracking-widest">{section.number}</span>
-                    <div className="w-9 h-9 rounded-xl bg-white/[0.05] group-hover:bg-gold/10 group-hover:text-gold text-white/40 flex items-center justify-center transition-all duration-200">
+                    <span className="text-brand-light/30 text-xs font-black tracking-widest">{section.number}</span>
+                    <div className="w-9 h-9 rounded-xl bg-white/[0.05] group-hover:bg-brand/20 group-hover:text-brand-light text-white/40 flex items-center justify-center transition-all duration-200">
                       {section.icon}
                     </div>
                   </div>
@@ -236,9 +236,9 @@ export default function TermsPage() {
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             <a
               href="/privacy-policy"
-              className="p-5 bg-white/[0.03] border border-white/[0.06] rounded-2xl hover:border-gold/20 transition-all duration-200 group flex items-center gap-3"
+              className="p-5 bg-white/[0.03] border border-white/[0.06] rounded-2xl hover:border-brand-light/20 transition-all duration-200 group flex items-center gap-3"
             >
-              <div className="w-10 h-10 rounded-xl bg-white/[0.05] group-hover:bg-gold/10 group-hover:text-gold text-white/40 flex items-center justify-center transition-all duration-200">
+              <div className="w-10 h-10 rounded-xl bg-white/[0.05] group-hover:bg-brand/20 group-hover:text-brand-light text-white/40 flex items-center justify-center transition-all duration-200">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
                 </svg>
@@ -256,7 +256,7 @@ export default function TermsPage() {
               </div>
               <div>
                 <div className="text-white font-semibold text-sm">Contact Support</div>
-                <div className="text-gold/70 text-xs">help.goqatar@gmail.com</div>
+                <div className="text-brand-light/70 text-xs">help.goqatar@gmail.com</div>
               </div>
             </div>
           </div>

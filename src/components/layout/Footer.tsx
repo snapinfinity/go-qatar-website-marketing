@@ -46,8 +46,8 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white/45 text-sm leading-relaxed max-w-xs">
-              Navigate Qatar effortlessly with our precision address system.
-              Your city, your way.
+              Addresses, metro and news — in one app.
+              Your city. Your way.
             </p>
 
             <div className="flex items-center gap-3 mt-6">
@@ -56,7 +56,7 @@ export default function Footer() {
                 href={APP_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 bg-glass rounded-lg border border-white/08 hover:border-gold/30 transition-all"
+                className="flex items-center gap-2 px-3 py-2 bg-glass rounded-lg border border-white/08 hover:border-brand-light/30 transition-all"
               >
                 <svg
                   width="16"
@@ -77,7 +77,7 @@ export default function Footer() {
                 href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-2 bg-glass rounded-lg border border-white/08 hover:border-gold/30 transition-all"
+                className="flex items-center gap-2 px-3 py-2 bg-glass rounded-lg border border-white/08 hover:border-brand-light/30 transition-all"
               >
                 <svg
                   width="16"
@@ -128,7 +128,7 @@ export default function Footer() {
               href="https://snapinfinity.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/40 hover:text-gold transition-colors duration-200 font-medium"
+              className="text-white/40 hover:text-brand-light transition-colors duration-200 font-medium"
             >
               snapinfinity.com
             </a>

@@ -63,8 +63,8 @@ const FAQ = [
     a: "Yes, Go Qatar is completely free — no subscription, no hidden fees.",
   },
   {
-    q: "How do I open a location in Google Maps or Waze?",
-    a: "After searching or from History/Favourites, tap the 'Google Map' or 'Waze' button on any result to open it directly in your preferred navigation app.",
+    q: "How do I open a location in Apple Maps, Google Maps or Waze?",
+    a: "After searching or from History/Favourites, tap the navigation button on any result and pick Apple Maps, Google Maps or Waze. Only the apps installed on your phone are offered.",
   },
 ];
 
@@ -89,7 +89,7 @@ function FormField({
 }
 
 const inputClass =
-  "w-full bg-[#1E1E1E] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/25 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/20 transition-all duration-200";
+  "w-full bg-field border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/25 text-sm focus:outline-none focus:border-brand-light/50 focus:ring-1 focus:ring-brand-light/20 transition-all duration-200";
 
 export default function ContactClient() {
   const [tab, setTab] = useState<Tab>("contact");
@@ -204,14 +204,14 @@ export default function ContactClient() {
 
       {/* Hero */}
       <section className="pt-32 pb-16 relative">
-        <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-gold/[0.05] blur-[100px] pointer-events-none" />
+        <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-brand/[0.12] blur-[100px] pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-semibold uppercase tracking-widest mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 border border-brand-light/25 text-brand-light text-xs font-semibold uppercase tracking-[0.2em] mb-6">
             We&apos;re here to help
           </div>
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-4">
             Get in{" "}
-            <span className="text-gradient-gold">Touch</span>
+            <span className="text-gradient-brand">Touch</span>
           </h1>
           <p className="text-white/50 text-lg max-w-lg mx-auto">
             Send us a message, share feedback, or browse our Help Center.
@@ -229,7 +229,7 @@ export default function ContactClient() {
               onClick={() => setTab(t.id)}
               className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-sm font-semibold transition-all duration-200 ${
                 tab === t.id
-                  ? "bg-gold text-black shadow-lg"
+                  ? "bg-brand text-white shadow-lg"
                   : "text-white/50 hover:text-white hover:bg-white/[0.05]"
               }`}
             >
@@ -287,8 +287,8 @@ export default function ContactClient() {
 
           {status === "success" ? (
             <div className="text-center py-12">
-              <div className="w-16 h-16 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center mx-auto mb-5">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="#C9A84C">
+              <div className="w-16 h-16 rounded-full bg-brand/30 border border-brand-light/30 flex items-center justify-center mx-auto mb-5">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="#E8A0B0">
                   <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                 </svg>
               </div>
@@ -345,7 +345,7 @@ export default function ContactClient() {
                           width="28"
                           height="28"
                           viewBox="0 0 24 24"
-                          fill={star <= form.rating ? "#C9A84C" : "rgba(255,255,255,0.15)"}
+                          fill={star <= form.rating ? "#E8A0B0" : "rgba(255,255,255,0.15)"}
                         >
                           <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
                         </svg>
@@ -434,7 +434,7 @@ export default function ContactClient() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full py-3.5 bg-gold text-black font-bold rounded-xl hover:bg-gold-light transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 flex items-center justify-center gap-2"
+                className="w-full py-3.5 bg-brand text-white font-bold rounded-xl hover:brightness-110 transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 flex items-center justify-center gap-2"
               >
                 {status === "loading" ? (
                   <>
@@ -460,16 +460,16 @@ export default function ContactClient() {
         <div className="mt-8 grid sm:grid-cols-2 gap-4">
           <a
             href="mailto:help.goqatar@gmail.com"
-            className="flex items-center gap-4 p-4 bg-white/[0.03] border border-white/[0.07] rounded-xl hover:border-gold/25 transition-all group"
+            className="flex items-center gap-4 p-4 bg-white/[0.03] border border-white/[0.07] rounded-xl hover:border-brand-light/25 transition-all group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#C9A84C">
+            <div className="w-10 h-10 rounded-xl bg-brand/20 border border-brand-light/20 flex items-center justify-center flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#E8A0B0">
                 <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
               </svg>
             </div>
             <div>
               <p className="text-white/40 text-xs mb-0.5">Email directly</p>
-              <p className="text-white text-sm font-medium group-hover:text-gold transition-colors">
+              <p className="text-white text-sm font-medium group-hover:text-brand-light transition-colors">
                 help.goqatar@gmail.com
               </p>
             </div>

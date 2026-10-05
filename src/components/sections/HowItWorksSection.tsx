@@ -30,7 +30,7 @@ const steps = [
     step: "03",
     title: "Navigate or Save",
     description:
-      "Open navigation in Google Maps or Waze with one tap, share the location, or save it to your favorites for instant future access.",
+      "Open navigation in Apple Maps, Google Maps or Waze with one tap, share the location, or save it to your favorites for instant future access.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
@@ -42,17 +42,17 @@ const steps = [
 export default function HowItWorksSection() {
   return (
     <section id="how-it-works" className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gold/[0.02] to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand/[0.05] to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <AnimateIn className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-white/50 text-xs font-semibold uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-white/50 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
             How It Works
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
             Find any address in
             <br />
-            <span className="text-gradient-gold">3 simple steps</span>
+            <span className="text-gradient-brand">3 simple steps</span>
           </h2>
           <p className="text-white/50 text-lg max-w-xl mx-auto">
             Qatar uses a unique Zone-Street-Building addressing system. Go Qatar makes it second nature.
@@ -72,16 +72,16 @@ export default function HowItWorksSection() {
                   <div className="relative inline-flex items-center justify-center mb-6">
                     <m.div
                       variants={{ hover: { scale: 1.08, transition: { duration: 0.2, ease: "easeOut" } } }}
-                      className="w-20 h-20 rounded-2xl bg-gradient-to-br from-gold/15 to-gold/5 border border-gold/20 flex items-center justify-center text-gold"
+                      className="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand/30 to-brand/10 border border-brand-light/20 flex items-center justify-center text-brand-light"
                     >
                       {step.icon}
                     </m.div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-gold flex items-center justify-center">
-                      <span className="text-black text-[9px] font-black">{i + 1}</span>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-brand flex items-center justify-center">
+                      <span className="text-white text-[9px] font-black">{i + 1}</span>
                     </div>
                   </div>
 
-                  <div className="text-gold/40 text-xs font-black tracking-[0.2em] mb-2">STEP {step.step}</div>
+                  <div className="text-brand-light/40 text-xs font-black tracking-[0.2em] mb-2">STEP {step.step}</div>
                   <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                   <p className="text-white/50 text-sm leading-relaxed">{step.description}</p>
                 </m.div>
@@ -100,7 +100,7 @@ export default function HowItWorksSection() {
               {[
                 { code: "Zone", value: "25", color: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20" },
                 { code: "Street", value: "330", color: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20" },
-                { code: "Building", value: "12", color: "text-gold", bg: "bg-gold/10", border: "border-gold/20" },
+                { code: "Building", value: "12", color: "text-brand-light", bg: "bg-brand/20", border: "border-brand-light/20" },
               ].map((part, i) => (
                 <div key={part.code} className="flex items-center gap-4 sm:gap-6">
                   <div className={`text-center px-5 py-3 rounded-xl ${part.bg} border ${part.border}`}>

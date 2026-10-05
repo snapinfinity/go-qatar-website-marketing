@@ -10,53 +10,29 @@ const features = [
         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
       </svg>
     ),
-    title: "Precision Address Search",
+    title: "Blueboard",
     description:
-      "Find any location in Qatar using the official Zone, Street, and Building number system — fast, accurate, and built for Qatar's unique addressing.",
-    hero: true,
-    color: "from-gold/10 to-gold/5",
-    border: "border-gold/15",
-    iconColor: "text-gold",
-    iconBg: "bg-gold/10",
+      "Read any blue plate. Type the three numbers and get the exact building on the map — then open it in Apple Maps, Google Maps or Waze.",
+    color: "from-brand/25 to-brand/5",
+    border: "border-brand-light/15",
+    iconColor: "text-brand-light",
+    iconBg: "bg-brand/30",
+    glow: "rgba(138,21,56,0.25)",
   },
   {
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" />
+        <path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h2.23l2-2H14l2 2h2v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-3.58-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm3.5-7H6V6h5v4zm2 0V6h5v4h-5zm3.5 7c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
       </svg>
     ),
-    title: "Live Google Maps",
-    description: "Visualize every location on a live Google Map. Drop a pin and navigate with turn-by-turn directions.",
-    color: "from-blue-500/10 to-blue-500/5",
-    border: "border-blue-500/15",
-    iconColor: "text-blue-400",
-    iconBg: "bg-blue-500/10",
-  },
-  {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-      </svg>
-    ),
-    title: "Save Favourites",
-    description: "Bookmark home, office, or any important spot. One-tap access — no re-typing needed.",
-    color: "from-rose-500/10 to-rose-500/5",
-    border: "border-rose-500/15",
-    iconColor: "text-rose-400",
-    iconBg: "bg-rose-500/10",
-  },
-  {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" />
-      </svg>
-    ),
-    title: "Search History",
-    description: "Recent searches always one tap away. Instantly revisit any location without searching again.",
-    color: "from-purple-500/10 to-purple-500/5",
-    border: "border-purple-500/15",
-    iconColor: "text-purple-400",
-    iconBg: "bg-purple-500/10",
+    title: "Doha Metro",
+    description:
+      "All 3 lines and 37 stations, with a journey planner, your nearest station, and a buzz one stop before yours. Works with no signal.",
+    color: "from-emerald-500/10 to-emerald-500/5",
+    border: "border-emerald-500/15",
+    iconColor: "text-emerald-400",
+    iconBg: "bg-emerald-500/10",
+    glow: "rgba(31,122,77,0.18)",
   },
   {
     icon: (
@@ -64,50 +40,88 @@ const features = [
         <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z" />
       </svg>
     ),
-    title: "Qatar News Feed",
-    description: "Latest Qatar news in List, Grid, or Reel mode. Filter by category, browse your way.",
-    color: "from-amber-500/10 to-amber-500/5",
-    border: "border-amber-500/15",
-    iconColor: "text-amber-400",
-    iconBg: "bg-amber-500/10",
+    title: "Qatar News",
+    description: "Qatar's latest from Al Jazeera, Gulf Times, Doha News and more, across nine categories.",
+    color: "from-sky-500/10 to-sky-500/5",
+    border: "border-sky-500/15",
+    iconColor: "text-sky-400",
+    iconBg: "bg-sky-500/10",
+    glow: "rgba(14,165,233,0.12)",
   },
   {
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
       </svg>
     ),
-    title: "Secure Sign-In",
-    description: "Sign in with Google or Apple. Your favorites and history sync securely across all devices.",
-    color: "from-emerald-500/10 to-emerald-500/5",
-    border: "border-emerald-500/15",
-    iconColor: "text-emerald-400",
-    iconBg: "bg-emerald-500/10",
+    title: "Currency Converter",
+    description: "Live QAR exchange rates for 160+ currencies.",
+    color: "from-violet-500/10 to-violet-500/5",
+    border: "border-violet-500/15",
+    iconColor: "text-violet-400",
+    iconBg: "bg-violet-500/10",
+    glow: "rgba(139,92,246,0.12)",
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+      </svg>
+    ),
+    title: "Favourites & Sign-in",
+    description:
+      "Sign in with Google or Apple to save places and sync them across devices — or continue as a guest.",
+    color: "from-rose-500/10 to-rose-500/5",
+    border: "border-rose-500/15",
+    iconColor: "text-rose-400",
+    iconBg: "bg-rose-500/10",
+    glow: "rgba(244,63,94,0.12)",
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" />
+      </svg>
+    ),
+    title: "Suggestions & Feedback",
+    description: "Suggest a feature and follow it from Submitted to In Review to Resolved.",
+    color: "from-amber-500/10 to-amber-500/5",
+    border: "border-amber-500/15",
+    iconColor: "text-amber-400",
+    iconBg: "bg-amber-500/10",
+    glow: "rgba(245,158,11,0.12)",
   },
 ];
 
 const hero = features[0];
-const rest = features.slice(1);
+const metro = features[1];
+const rest = features.slice(2);
+
+const metroLines = [
+  { name: "Red", className: "bg-metro-red" },
+  { name: "Green", className: "bg-metro-green" },
+  { name: "Gold", className: "bg-metro-gold" },
+];
 
 export default function FeaturesSection() {
   return (
     <section id="features" className="py-24 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/[0.03] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand/[0.08] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <AnimateIn className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-semibold uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 border border-brand-light/25 text-brand-light text-xs font-semibold uppercase tracking-[0.2em] mb-4">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
             Features
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-            Everything you need to
+            What you open
             <br />
-            <span className="text-gradient-gold">navigate Qatar</span>
+            <span className="text-gradient-brand">Go Qatar for</span>
           </h2>
           <p className="text-white/50 text-lg max-w-xl mx-auto">
-            A complete toolkit for finding, saving, and exploring any address in Qatar — all in one beautifully designed app.
+            Addresses, metro, news and rates — in one app.
           </p>
         </AnimateIn>
 
@@ -121,15 +135,15 @@ export default function FeaturesSection() {
               className={`group relative h-full min-h-[200px] sm:min-h-[220px] rounded-2xl bg-gradient-to-br ${hero.color} border ${hero.border} p-7 overflow-hidden flex flex-col justify-between`}
             >
               {/* Animated background glow */}
-              <div className="absolute -top-10 -right-10 w-48 h-48 bg-gold/[0.08] rounded-full blur-[60px] pointer-events-none transition-all duration-500 group-hover:scale-125" />
+              <div className="absolute -top-10 -right-10 w-48 h-48 bg-brand/[0.2] rounded-full blur-[60px] pointer-events-none transition-all duration-500 group-hover:scale-125" />
 
               <div className="relative z-10 flex items-start gap-5">
-                <div className={`w-14 h-14 rounded-2xl ${hero.iconBg} border border-gold/20 flex items-center justify-center flex-shrink-0 ${hero.iconColor}`}>
+                <div className={`w-14 h-14 rounded-2xl ${hero.iconBg} border border-brand-light/20 flex items-center justify-center flex-shrink-0 ${hero.iconColor}`}>
                   {hero.icon}
                 </div>
                 <div>
-                  <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-gold/15 border border-gold/25 text-gold text-[10px] font-bold uppercase tracking-widest mb-2">
-                    <span className="w-1 h-1 rounded-full bg-gold" />
+                  <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-brand/30 border border-brand-light/25 text-brand-light text-[10px] font-bold uppercase tracking-widest mb-2">
+                    <span className="w-1 h-1 rounded-full bg-brand-light" />
                     Core Feature
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">{hero.title}</h3>
@@ -137,17 +151,17 @@ export default function FeaturesSection() {
                 </div>
               </div>
 
-              {/* Address format preview */}
+              {/* Blue plate preview */}
               <div className="relative z-10 mt-6 flex items-center gap-3 flex-wrap">
                 {[
-                  { label: "Zone", value: "25", color: "text-blue-400" },
-                  { label: "Street", value: "330", color: "text-green-400" },
-                  { label: "Building", value: "12", color: "text-gold" },
+                  { label: "Zone", value: "25" },
+                  { label: "Street", value: "330" },
+                  { label: "Building", value: "12" },
                 ].map((part, i) => (
                   <div key={part.label} className="flex items-center gap-3">
-                    <div className="bg-black/20 rounded-xl px-3 py-1.5 border border-white/[0.06]">
-                      <div className={`text-lg font-black ${part.color}`}>{part.value}</div>
-                      <div className="text-white/30 text-[9px] uppercase tracking-wider">{part.label}</div>
+                    <div className="bg-plate rounded-xl px-3 py-1.5 border border-white/20 shadow-lg shadow-plate/20 text-center min-w-[64px]">
+                      <div className="text-lg font-black text-white">{part.value}</div>
+                      <div className="text-white/70 text-[9px] uppercase tracking-wider">{part.label}</div>
                     </div>
                     {i < 2 && <span className="text-white/20 text-lg">/</span>}
                   </div>
@@ -156,25 +170,33 @@ export default function FeaturesSection() {
             </m.div>
           </AnimateIn>
 
-          {/* First of the rest — right column, top */}
+          {/* Metro — right column, top */}
           <AnimateIn delay={80}>
             <m.div
               whileHover={{ y: -4, transition: { duration: 0.2, ease: "easeOut" } }}
-              className={`group relative rounded-2xl bg-gradient-to-br ${rest[0].color} border ${rest[0].border} p-6 overflow-hidden`}
+              className={`group relative h-full rounded-2xl bg-gradient-to-br ${metro.color} border ${metro.border} p-6 overflow-hidden`}
             >
               <div className="absolute -top-6 -right-6 w-28 h-28 rounded-full blur-[50px] pointer-events-none transition-all duration-500 group-hover:scale-125"
-                style={{ background: "rgba(59,130,246,0.1)" }} />
-              <div className={`w-11 h-11 rounded-xl ${rest[0].iconBg} border border-blue-500/20 flex items-center justify-center ${rest[0].iconColor} mb-4`}>
-                {rest[0].icon}
+                style={{ background: metro.glow }} />
+              <div className={`w-11 h-11 rounded-xl ${metro.iconBg} border border-emerald-500/20 flex items-center justify-center ${metro.iconColor} mb-4`}>
+                {metro.icon}
               </div>
-              <h3 className="text-lg font-bold text-white mb-1.5">{rest[0].title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed">{rest[0].description}</p>
+              <h3 className="text-lg font-bold text-white mb-1.5">{metro.title}</h3>
+              <p className="text-white/50 text-sm leading-relaxed mb-4">{metro.description}</p>
+              <div className="flex items-center gap-3">
+                {metroLines.map((line) => (
+                  <span key={line.name} className="flex items-center gap-1.5 text-white/50 text-xs">
+                    <span className={`w-2.5 h-2.5 rounded-full ${line.className}`} />
+                    {line.name}
+                  </span>
+                ))}
+              </div>
             </m.div>
           </AnimateIn>
 
-          {/* Bottom row — 3 equal cards */}
-          <StaggerContainer className="sm:col-span-2 lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4" staggerMs={80}>
-            {rest.slice(1).map((feat) => (
+          {/* Bottom row — 4 equal cards */}
+          <StaggerContainer className="sm:col-span-2 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" staggerMs={80}>
+            {rest.map((feat) => (
               <StaggerItem key={feat.title}>
                 <m.div
                   whileHover={{ y: -4, transition: { duration: 0.2, ease: "easeOut" } }}

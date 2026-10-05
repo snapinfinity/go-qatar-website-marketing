@@ -19,20 +19,20 @@ export default function FeatureCard({
     <div
       className={`group relative p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 ${
         highlight
-          ? "bg-gradient-to-br from-gold/10 to-gold/5 border-gold-subtle"
+          ? "bg-gradient-to-br from-brand/20 to-brand/10 border-brand-subtle"
           : "bg-glass hover:bg-white/[0.06]"
       }`}
       style={{ animationDelay: `${delay}ms` }}
     >
       {highlight && (
-        <div className="absolute inset-0 rounded-2xl bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 rounded-2xl bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       )}
 
       <div
         className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
           highlight
-            ? "bg-gold/20 text-gold"
-            : "bg-white/[0.07] text-white/80 group-hover:bg-gold/15 group-hover:text-gold transition-colors duration-300"
+            ? "bg-brand/40 text-brand-light"
+            : "bg-white/[0.07] text-white/80 group-hover:bg-brand/30 group-hover:text-brand-light transition-colors duration-300"
         }`}
       >
         {icon}

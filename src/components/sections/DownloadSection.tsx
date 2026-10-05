@@ -8,20 +8,20 @@ import { APP_STORE_URL, PLAY_STORE_URL } from "@/lib/storeLinks";
 export default function DownloadSection() {
   return (
     <section id="download" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-radial from-gold/[0.06] via-transparent to-transparent pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-gold/[0.05] blur-[100px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-radial from-brand/[0.15] via-transparent to-transparent pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-brand/[0.12] blur-[100px] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative">
         <AnimateIn>
           {/* App icon */}
-          <div className="mb-6 mx-auto inline-block rounded-[22px] border border-white/15 overflow-hidden shadow-2xl shadow-gold/10">
+          <div className="mb-6 mx-auto inline-block rounded-[22px] border border-white/15 overflow-hidden shadow-2xl shadow-brand/20">
             <Image src="/logos/app_icon.svg" alt="Go Qatar app icon" width={88} height={88} className="block" />
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
             Get Go Qatar
             <br />
-            <span className="text-gradient-gold">for free today</span>
+            <span className="text-gradient-brand">for free today</span>
           </h2>
           <p className="text-white/50 text-xl mb-10 max-w-lg mx-auto leading-relaxed">
             Join thousands of Qatar residents and visitors who navigate smarter every day.
@@ -55,7 +55,7 @@ export default function DownloadSection() {
             whileHover={{ scale: 1.04, y: -3 }}
             whileTap={{ scale: 0.97 }}
             transition={{ duration: 0.15 }}
-            className="group flex items-center gap-4 px-7 py-4 bg-gold text-black rounded-2xl shadow-xl shadow-gold/20"
+            className="group flex items-center gap-4 px-7 py-4 bg-brand text-white rounded-2xl shadow-xl shadow-brand/40"
           >
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
               <path d="M3 20.5v-17C3 2.91 3.34 2.5 3.85 2.5c.23 0 .48.08.69.24L20.5 12l-16 9.26C4.33 21.42 4.08 21.5 3.85 21.5 3.34 21.5 3 21.09 3 20.5z" fill="#34A853"/>
@@ -64,7 +64,7 @@ export default function DownloadSection() {
               <path d="M3 3.5v17l9.56-8.5L3 3.5z" fill="#4285F4"/>
             </svg>
             <div className="text-left">
-              <div className="text-black/50 text-xs leading-none mb-0.5">Get it on</div>
+              <div className="text-white/70 text-xs leading-none mb-0.5">Get it on</div>
               <div className="font-bold text-lg leading-tight">Google Play</div>
             </div>
           </m.a>
@@ -73,9 +73,9 @@ export default function DownloadSection() {
         {/* Features list */}
         <AnimateIn delay={200}>
           <div className="flex flex-wrap gap-6 justify-center">
-            {["100% Free", "Works Offline", "Regular Updates", "Qatar Address System"].map((item) => (
+            {["100% Free", "Metro works offline", "iOS & Android", "Qatar Address System"].map((item) => (
               <div key={item} className="flex items-center gap-2 text-white/50 text-sm">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8A0B0">
                   <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                 </svg>
                 {item}

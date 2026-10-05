@@ -14,22 +14,22 @@ function NewsIcon3D() {
     >
       <svg viewBox="0 0 320 260" fill="none" xmlns="http://www.w3.org/2000/svg"
         className="w-[52%]"
-        style={{ filter: "drop-shadow(0 20px 40px rgba(201,168,76,0.45))" }}>
+        style={{ filter: "drop-shadow(0 20px 40px rgba(138,21,56,0.63))" }}>
         <defs>
-          <linearGradient id="ng-gold" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#F5E49A"/>
-            <stop offset="100%" stopColor="#C9A84C"/>
+          <linearGradient id="ng-brand" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#F0BFCB"/>
+            <stop offset="100%" stopColor="#E8A0B0"/>
           </linearGradient>
-          <linearGradient id="ng-gold-dim" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#9A7B2E"/>
-            <stop offset="100%" stopColor="#7A5F20"/>
+          <linearGradient id="ng-brand-dim" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#A83A57"/>
+            <stop offset="100%" stopColor="#74122F"/>
           </linearGradient>
           <linearGradient id="ng-card" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor="#2C2C2C"/>
             <stop offset="100%" stopColor="#1A1A1A"/>
           </linearGradient>
           <radialGradient id="ng-img" cx="50%" cy="40%" r="60%">
-            <stop offset="0%" stopColor="#9A7B2E" stopOpacity="0.4"/>
+            <stop offset="0%" stopColor="#A83A57" stopOpacity="0.4"/>
             <stop offset="100%" stopColor="#1A1A1A" stopOpacity="0"/>
           </radialGradient>
           <clipPath id="ng-header-clip">
@@ -44,17 +44,17 @@ function NewsIcon3D() {
         <m.rect x="44" y="28" width="220" height="160" rx="18" fill="#1E1E1E"
           animate={{ y: [28, 24, 28] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.15 }}/>
-        <m.rect x="44" y="28" width="220" height="38" rx="18" fill="url(#ng-gold-dim)" opacity="0.85"
+        <m.rect x="44" y="28" width="220" height="38" rx="18" fill="url(#ng-brand-dim)" opacity="0.85"
           animate={{ y: [28, 24, 28] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.15 }}/>
-        <m.rect x="44" y="52" width="220" height="14" fill="url(#ng-gold-dim)" opacity="0.85"
+        <m.rect x="44" y="52" width="220" height="14" fill="url(#ng-brand-dim)" opacity="0.85"
           animate={{ y: [52, 48, 52] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.15 }}/>
 
         {/* Main card */}
         <rect x="30" y="14" width="220" height="162" rx="18" fill="url(#ng-card)"/>
-        <rect x="30" y="14" width="220" height="42" rx="18" fill="url(#ng-gold)"/>
-        <rect x="30" y="38" width="220" height="18" fill="url(#ng-gold)"/>
+        <rect x="30" y="14" width="220" height="42" rx="18" fill="url(#ng-brand)"/>
+        <rect x="30" y="38" width="220" height="18" fill="url(#ng-brand)"/>
 
         {/* Shimmer sweep over header */}
         <g clipPath="url(#ng-header-clip)">
@@ -87,8 +87,8 @@ function NewsIcon3D() {
         <rect x="46" y="146" width="188" height="7" rx="3.5" fill="#333"/>
         <rect x="46" y="160" width="148" height="7" rx="3.5" fill="#2A2A2A"/>
 
-        {/* Gold accent dot */}
-        <m.circle cx="228" cy="136" r="5" fill="#C9A84C"
+        {/* Accent dot */}
+        <m.circle cx="228" cy="136" r="5" fill="#E8A0B0"
           animate={{ opacity: [0.5, 1, 0.5] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}/>
       </svg>
@@ -106,28 +106,28 @@ function FavouritesIcon3D() {
     >
       <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg"
         className="w-[52%]"
-        style={{ filter: "drop-shadow(0 24px 48px rgba(201,168,76,0.5))" }}>
+        style={{ filter: "drop-shadow(0 24px 48px rgba(138,21,56,0.70))" }}>
         <defs>
-          <linearGradient id="fg-gold" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#F7ECAA"/>
-            <stop offset="50%" stopColor="#C9A84C"/>
-            <stop offset="100%" stopColor="#A08538"/>
+          <linearGradient id="fg-brand" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#F6D5DD"/>
+            <stop offset="50%" stopColor="#E8A0B0"/>
+            <stop offset="100%" stopColor="#B9566F"/>
           </linearGradient>
           <linearGradient id="fg-side" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#8A6E28"/>
-            <stop offset="100%" stopColor="#5C4410"/>
+            <stop offset="0%" stopColor="#8A1538"/>
+            <stop offset="100%" stopColor="#63152C"/>
           </linearGradient>
           <radialGradient id="fg-shine" cx="32%" cy="22%" r="55%">
-            <stop offset="0%" stopColor="#FFF8DC" stopOpacity="0.55"/>
+            <stop offset="0%" stopColor="#FDF0F3" stopOpacity="0.55"/>
             <stop offset="100%" stopColor="transparent"/>
           </radialGradient>
         </defs>
 
         {/* Expanding pulse rings */}
-        <m.circle cx="160" cy="145" r="70" stroke="#C9A84C" strokeWidth="1.5" fill="none"
+        <m.circle cx="160" cy="145" r="70" stroke="#E8A0B0" strokeWidth="1.5" fill="none"
           animate={{ r: [70, 130], opacity: [0.45, 0] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut" }}/>
-        <m.circle cx="160" cy="145" r="70" stroke="#C9A84C" strokeWidth="1" fill="none"
+        <m.circle cx="160" cy="145" r="70" stroke="#E8A0B0" strokeWidth="1" fill="none"
           animate={{ r: [70, 130], opacity: [0.3, 0] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut", delay: 1.2 }}/>
 
@@ -140,7 +140,7 @@ function FavouritesIcon3D() {
 
         {/* Pin body */}
         <path d="M160 264 C160 264 100 182 98 140 C98 106 126 76 160 76 C194 76 222 106 222 140 C220 182 160 264 160 264Z"
-          fill="url(#fg-gold)"/>
+          fill="url(#fg-brand)"/>
         <path d="M160 264 C160 264 100 182 98 140 C98 106 126 76 160 76 C194 76 222 106 222 140 C220 182 160 264 160 264Z"
           fill="url(#fg-shine)"/>
 
@@ -155,21 +155,21 @@ function FavouritesIcon3D() {
           transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1] }}
         >
           <path d="M160 156 C160 156 136 142 136 128 C136 120 143 115 150 118 C153.5 119.5 157 122.5 160 127 C163 122.5 166.5 119.5 170 118 C177 115 184 120 184 128 C184 142 160 156 160 156Z"
-            fill="url(#fg-gold)"/>
+            fill="url(#fg-brand)"/>
           <path d="M160 156 C160 156 136 142 136 128 C136 120 143 115 150 118 C153.5 119.5 157 122.5 160 127 C163 122.5 166.5 119.5 170 118 C177 115 184 120 184 128 C184 142 160 156 160 156Z"
             fill="url(#fg-shine)" opacity="0.7"/>
         </m.g>
 
         {/* Sparkle dots */}
-        <m.circle cx="96" cy="104" r="3.5" fill="#C9A84C"
+        <m.circle cx="96" cy="104" r="3.5" fill="#E8A0B0"
           animate={{ opacity: [0.35, 0.8, 0.35], scale: [1, 1.4, 1] }}
           style={{ transformOrigin: "96px 104px" }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}/>
-        <m.circle cx="224" cy="118" r="2.5" fill="#C9A84C"
+        <m.circle cx="224" cy="118" r="2.5" fill="#E8A0B0"
           animate={{ opacity: [0.25, 0.7, 0.25], scale: [1, 1.4, 1] }}
           style={{ transformOrigin: "224px 118px" }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}/>
-        <m.circle cx="104" cy="174" r="2" fill="#C9A84C"
+        <m.circle cx="104" cy="174" r="2" fill="#E8A0B0"
           animate={{ opacity: [0.2, 0.6, 0.2], scale: [1, 1.4, 1] }}
           style={{ transformOrigin: "104px 174px" }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}/>
@@ -198,16 +198,16 @@ function HistoryIcon3D() {
     >
       <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg"
         className="w-[52%]"
-        style={{ filter: "drop-shadow(0 20px 40px rgba(201,168,76,0.4))" }}>
+        style={{ filter: "drop-shadow(0 20px 40px rgba(138,21,56,0.56))" }}>
         <defs>
           <linearGradient id="hg-bezel" x1="0%" y1="0%" x2="30%" y2="100%">
-            <stop offset="0%" stopColor="#F7ECAA"/>
-            <stop offset="40%" stopColor="#C9A84C"/>
-            <stop offset="100%" stopColor="#7A5F20"/>
+            <stop offset="0%" stopColor="#F6D5DD"/>
+            <stop offset="40%" stopColor="#E8A0B0"/>
+            <stop offset="100%" stopColor="#74122F"/>
           </linearGradient>
           <linearGradient id="hg-bezel-3d" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#7A5F20"/>
-            <stop offset="100%" stopColor="#4A3A10"/>
+            <stop offset="0%" stopColor="#74122F"/>
+            <stop offset="100%" stopColor="#4A0F21"/>
           </linearGradient>
           <linearGradient id="hg-face" x1="0%" y1="0%" x2="20%" y2="100%">
             <stop offset="0%" stopColor="#242424"/>
@@ -232,7 +232,7 @@ function HistoryIcon3D() {
         {ticks.map((t, i) => (
           <line key={i}
             x1={t.x1} y1={t.y1} x2={t.x2} y2={t.y2}
-            stroke={t.major ? "#C9A84C" : "rgba(201,168,76,0.32)"}
+            stroke={t.major ? "#E8A0B0" : "rgba(232,160,176,0.32)"}
             strokeWidth={t.major ? 3.5 : 1.5}
             strokeLinecap="round"/>
         ))}
@@ -243,7 +243,7 @@ function HistoryIcon3D() {
           animate={{ rotate: 360 }}
           transition={{ duration: 720, repeat: Infinity, ease: "linear" }}
         >
-          <line x1="160" y1="160" x2="127" y2="103" stroke="#C9A84C" strokeWidth="6" strokeLinecap="round"/>
+          <line x1="160" y1="160" x2="127" y2="103" stroke="#E8A0B0" strokeWidth="6" strokeLinecap="round"/>
         </m.g>
 
         {/* Minute hand — moderate (90s per revolution) */}
@@ -252,7 +252,7 @@ function HistoryIcon3D() {
           animate={{ rotate: 360 }}
           transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
         >
-          <line x1="160" y1="160" x2="200" y2="116" stroke="#C9A84C" strokeWidth="4" strokeLinecap="round"/>
+          <line x1="160" y1="160" x2="200" y2="116" stroke="#E8A0B0" strokeWidth="4" strokeLinecap="round"/>
         </m.g>
 
         {/* Second hand — fast (8s per revolution) */}
@@ -261,9 +261,9 @@ function HistoryIcon3D() {
           animate={{ rotate: 360 }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
         >
-          <line x1="160" y1="160" x2="136" y2="210" stroke="#F7ECAA" strokeWidth="2" strokeLinecap="round" opacity="0.8"/>
+          <line x1="160" y1="160" x2="136" y2="210" stroke="#F6D5DD" strokeWidth="2" strokeLinecap="round" opacity="0.8"/>
           {/* Counter-balance tail */}
-          <line x1="160" y1="160" x2="170" y2="142" stroke="#F7ECAA" strokeWidth="2" strokeLinecap="round" opacity="0.5"/>
+          <line x1="160" y1="160" x2="170" y2="142" stroke="#F6D5DD" strokeWidth="2" strokeLinecap="round" opacity="0.5"/>
         </m.g>
 
         {/* Center cap */}
@@ -292,13 +292,13 @@ const screens = [
     description:
       "Stay informed with curated Qatar news filtered by category. Browse in List, Grid or Reel view and tap any card to read the full story.",
     bullets: [
-      "Categories: All, Qatar, Sports, Business, Tech",
+      "Nine categories, from Qatar to World",
       "List / Grid / Reel view modes",
       "Tap any card to read full article",
-      "Updated in real-time",
+      "Adjustable text size and sharing",
     ],
     visual: <NewsIcon3D />,
-    glow: "rgba(201,168,76,0.18)",
+    glow: "rgba(138,21,56,0.40)",
   },
   {
     id: "favourites",
@@ -310,15 +310,15 @@ const screens = [
     ),
     title: "Save the Places You Love",
     description:
-      "Star any location with a custom label — Home, Office, Mall — and re-navigate in one tap. Open directly in Google Maps or Waze, or share the pin with anyone.",
+      "Star any location with a custom label — Home, Office, Mall — and re-navigate in one tap. Open directly in Apple Maps, Google Maps or Waze, or share the pin with anyone.",
     bullets: [
       "Custom labels for saved places",
       "One-tap navigation to any saved spot",
-      "Open with Google Maps or Waze",
+      "Open with Apple Maps, Google Maps or Waze",
       "Share location with friends",
     ],
     visual: <FavouritesIcon3D />,
-    glow: "rgba(201,168,76,0.22)",
+    glow: "rgba(138,21,56,0.48)",
   },
   {
     id: "history",
@@ -334,11 +334,11 @@ const screens = [
     bullets: [
       "Auto-saves every search",
       "Timestamped entries (date & time)",
-      "Open in Google Maps or Waze",
+      "Open in Apple Maps, Google Maps or Waze",
       "Add any entry to Favourites",
     ],
     visual: <HistoryIcon3D />,
-    glow: "rgba(201,168,76,0.18)",
+    glow: "rgba(138,21,56,0.40)",
   },
 ];
 
@@ -349,18 +349,18 @@ export default function AppScreensSection() {
   return (
     <section className="py-24 relative overflow-hidden" id="features-screens">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-gold/[0.04] blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-brand/[0.10] blur-[120px]" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         {/* Header */}
         <AnimateIn className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-semibold uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 border border-brand-light/25 text-brand-light text-xs font-semibold uppercase tracking-[0.2em] mb-4">
             Inside the App
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
             Every screen,{" "}
-            <span className="text-gradient-gold">perfectly designed</span>
+            <span className="text-gradient-brand">perfectly designed</span>
           </h2>
           <p className="text-white/50 text-lg max-w-xl mx-auto">
             Explore the real Go Qatar app — built for speed, clarity, and every
@@ -376,7 +376,7 @@ export default function AppScreensSection() {
               onClick={() => setActive(i)}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 ${
                 active === i
-                  ? "bg-gold text-black shadow-lg shadow-gold/20"
+                  ? "bg-brand text-white shadow-lg shadow-brand/40"
                   : "bg-white/[0.06] text-white/60 border border-white/10 hover:bg-white/[0.09] hover:text-white"
               }`}
             >
@@ -397,7 +397,7 @@ export default function AppScreensSection() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.92, y: -12 }}
                 transition={{ duration: 0.45, ease: [0.23, 1, 0.32, 1] }}
-                className="relative rounded-3xl overflow-hidden bg-gradient-to-b from-[#161616] to-[#0C0C0C] border border-white/[0.07]"
+                className="relative rounded-3xl overflow-hidden bg-gradient-to-b from-surface to-background border border-white/[0.07]"
                 style={{
                   aspectRatio: "4/3",
                   boxShadow: `0 0 60px ${current.glow}`,
@@ -425,7 +425,7 @@ export default function AppScreensSection() {
                 exit={{ opacity: 0, x: -10 }}
                 transition={{ duration: 0.32, ease: [0.23, 1, 0.32, 1] }}
               >
-                <div className="inline-flex items-center gap-2 text-gold mb-3">
+                <div className="inline-flex items-center gap-2 text-brand-light mb-3">
                   {current.icon}
                   <span className="text-sm font-semibold uppercase tracking-wider">
                     {current.label}
@@ -440,8 +440,8 @@ export default function AppScreensSection() {
                 <ul className="space-y-3">
                   {current.bullets.map((b) => (
                     <li key={b} className="flex items-center gap-3 text-white/70">
-                      <div className="w-5 h-5 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0">
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="#C9A84C">
+                      <div className="w-5 h-5 rounded-full bg-brand/30 border border-brand-light/30 flex items-center justify-center flex-shrink-0">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="#E8A0B0">
                           <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                         </svg>
                       </div>

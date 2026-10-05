@@ -24,9 +24,9 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-gold-gradient text-black hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] shadow-lg",
+      "bg-brand-gradient text-white hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] shadow-lg",
     secondary:
-      "bg-glass border border-white/10 text-white hover:border-gold/40 hover:bg-white/[0.07] active:scale-[0.98]",
+      "bg-glass border border-white/10 text-white hover:border-brand-light/40 hover:bg-white/[0.07] active:scale-[0.98]",
     ghost:
       "text-white/70 hover:text-white hover:bg-white/05 active:scale-[0.98]",
   };

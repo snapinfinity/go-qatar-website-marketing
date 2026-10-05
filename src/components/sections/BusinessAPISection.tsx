@@ -64,7 +64,7 @@ const USE_CASES = [
 ];
 
 const inputClass =
-  "w-full bg-[#161616] border border-white/[0.08] rounded-xl px-4 py-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/20 transition-all duration-200";
+  "w-full bg-field border border-white/[0.08] rounded-xl px-4 py-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-brand-light/50 focus:ring-1 focus:ring-brand-light/20 transition-all duration-200";
 
 export default function BusinessAPISection() {
   const [form, setForm] = useState({
@@ -139,13 +139,13 @@ export default function BusinessAPISection() {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
-        <div className="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full bg-gold/[0.04] blur-[140px] -translate-y-1/2" />
+        <div className="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full bg-brand/[0.10] blur-[140px] -translate-y-1/2" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         {/* Header */}
         <AnimateIn className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-semibold uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 border border-brand-light/25 text-brand-light text-xs font-semibold uppercase tracking-[0.2em] mb-4">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
               <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
             </svg>
@@ -154,7 +154,7 @@ export default function BusinessAPISection() {
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
             Need the Go Qatar API
             <br />
-            <span className="text-gradient-gold">for your business?</span>
+            <span className="text-gradient-brand">for your business?</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
             Integrate Qatar&apos;s most accurate Zone-Street-Building address resolution
@@ -169,9 +169,9 @@ export default function BusinessAPISection() {
             <StaggerItem key={uc.title}>
             <m.div
               whileHover={{ y: -3, transition: { duration: 0.18 } }}
-              className="group flex items-start gap-4 p-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:border-gold/20 hover:bg-white/[0.04] transition-colors duration-200"
+              className="group flex items-start gap-4 p-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:border-brand-light/20 hover:bg-white/[0.04] transition-colors duration-200"
             >
-              <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0 text-gold group-hover:bg-gold/15 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-brand/20 border border-brand-light/20 flex items-center justify-center flex-shrink-0 text-brand-light group-hover:bg-brand/30 transition-colors">
                 {uc.icon}
               </div>
               <div>
@@ -199,8 +199,8 @@ export default function BusinessAPISection() {
                   "White-label options available",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-white/60 text-sm">
-                    <div className="w-4 h-4 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg width="8" height="8" viewBox="0 0 24 24" fill="#C9A84C">
+                    <div className="w-4 h-4 rounded-full bg-brand/30 border border-brand-light/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="#E8A0B0">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
                     </div>
@@ -210,8 +210,8 @@ export default function BusinessAPISection() {
               </ul>
             </div>
 
-            <div className="p-5 rounded-2xl bg-gold/[0.06] border border-gold/15">
-              <p className="text-gold font-semibold text-sm mb-1">Custom pricing</p>
+            <div className="p-5 rounded-2xl bg-brand/[0.15] border border-brand-light/15">
+              <p className="text-brand-light font-semibold text-sm mb-1">Custom pricing</p>
               <p className="text-white/50 text-xs leading-relaxed">
                 Pricing is based on API call volume and features required. Fill the form and we&apos;ll send you a tailored quote within 1 business day.
               </p>
@@ -229,8 +229,8 @@ export default function BusinessAPISection() {
           <div className="lg:col-span-3 bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6 sm:p-8">
             {status === "success" ? (
               <div className="text-center py-10">
-                <div className="w-16 h-16 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center mx-auto mb-5">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="#C9A84C">
+                <div className="w-16 h-16 rounded-full bg-brand/30 border border-brand-light/30 flex items-center justify-center mx-auto mb-5">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="#E8A0B0">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                   </svg>
                 </div>
@@ -297,15 +297,15 @@ export default function BusinessAPISection() {
                       onChange={(e) => setForm({ ...form, useCase: e.target.value })}
                       className={`${inputClass} cursor-pointer`}
                     >
-                      <option value="" className="bg-[#161616]">Select one...</option>
-                      <option className="bg-[#161616]">Delivery Routing</option>
-                      <option className="bg-[#161616]">Address Validation</option>
-                      <option className="bg-[#161616]">E-commerce Checkout</option>
-                      <option className="bg-[#161616]">Field Service / Dispatch</option>
-                      <option className="bg-[#161616]">Appointment Booking</option>
-                      <option className="bg-[#161616]">Real Estate Platform</option>
-                      <option className="bg-[#161616]">Government / Public Sector</option>
-                      <option className="bg-[#161616]">Other</option>
+                      <option value="" className="bg-field">Select one...</option>
+                      <option className="bg-field">Delivery Routing</option>
+                      <option className="bg-field">Address Validation</option>
+                      <option className="bg-field">E-commerce Checkout</option>
+                      <option className="bg-field">Field Service / Dispatch</option>
+                      <option className="bg-field">Appointment Booking</option>
+                      <option className="bg-field">Real Estate Platform</option>
+                      <option className="bg-field">Government / Public Sector</option>
+                      <option className="bg-field">Other</option>
                     </select>
                   </div>
                   <div>
@@ -316,12 +316,12 @@ export default function BusinessAPISection() {
                       onChange={(e) => setForm({ ...form, volume: e.target.value })}
                       className={`${inputClass} cursor-pointer`}
                     >
-                      <option value="" className="bg-[#161616]">Select range...</option>
-                      <option className="bg-[#161616]">Under 1,000 requests</option>
-                      <option className="bg-[#161616]">1,000 – 10,000 requests</option>
-                      <option className="bg-[#161616]">10,000 – 100,000 requests</option>
-                      <option className="bg-[#161616]">100,000+ requests</option>
-                      <option className="bg-[#161616]">Not sure yet</option>
+                      <option value="" className="bg-field">Select range...</option>
+                      <option className="bg-field">Under 1,000 requests</option>
+                      <option className="bg-field">1,000 – 10,000 requests</option>
+                      <option className="bg-field">10,000 – 100,000 requests</option>
+                      <option className="bg-field">100,000+ requests</option>
+                      <option className="bg-field">Not sure yet</option>
                     </select>
                   </div>
                 </div>
@@ -358,7 +358,7 @@ export default function BusinessAPISection() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full py-3.5 bg-gold text-black font-bold rounded-xl hover:bg-gold-light transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 flex items-center justify-center gap-2"
+                  className="w-full py-3.5 bg-brand text-white font-bold rounded-xl hover:brightness-110 transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 flex items-center justify-center gap-2"
                 >
                   {status === "loading" ? (
                     <>

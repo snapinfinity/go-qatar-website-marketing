@@ -3,10 +3,10 @@
 import { m } from "framer-motion";
 
 const stats = [
-  { value: "50+", label: "Zones Covered", sub: "All of Qatar" },
-  { value: "2", label: "Platforms", sub: "iOS & Android" },
-  { value: "Free", label: "To Download", sub: "No subscription" },
-  { value: "Real-time", label: "Location Data", sub: "Powered by Google Maps" },
+  { value: "37", label: "Metro Stations", sub: "Red, Green & Gold lines" },
+  { value: "160+", label: "Currencies", sub: "Live QAR rates" },
+  { value: "9", label: "News Categories", sub: "Al Jazeera, Gulf Times & more" },
+  { value: "Free", label: "On iOS & Android", sub: "No subscription" },
 ];
 
 export default function StatsSection() {
@@ -29,7 +29,7 @@ export default function StatsSection() {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] } },
               }}
             >
-              <div className="text-3xl font-bold text-gradient-gold mb-1">{stat.value}</div>
+              <div className="text-3xl font-bold text-gradient-brand mb-1">{stat.value}</div>
               <div className="text-white font-medium text-sm mb-0.5">{stat.label}</div>
               <div className="text-white/35 text-xs">{stat.sub}</div>
             </m.div>

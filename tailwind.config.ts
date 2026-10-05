@@ -9,22 +9,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0C0C0C",
-        surface: "#1A1A1A",
-        panel: "#2C2C2E",
-        field: "#3A3A3C",
-        gold: {
-          DEFAULT: "#C9A84C",
-          light: "#E8C96A",
-          dark: "#A07830",
+        background: "#0B0C0E",
+        surface: "#141619",
+        panel: "#1C1F23",
+        field: "#1C1F23",
+        brand: {
+          DEFAULT: "#8A1538",
+          light: "#E8A0B0",
+          deep: "#63152C",
+          ink: "#150A10",
+        },
+        plate: "#1B62C4",
+        metro: {
+          red: "#C0392B",
+          green: "#1F7A4D",
+          gold: "#B08D3F",
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        sans: ["var(--font-jost)", "system-ui", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gold-gradient": "linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #C9A84C 100%)",
+        "brand-gradient": "linear-gradient(135deg, #8A1538 0%, #63152C 44%, #150A10 100%)",
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease-out forwards",

@@ -9,7 +9,6 @@ import DownloadSection from "@/components/sections/DownloadSection";
 
 const NewsSection = dynamic(() => import("@/components/sections/NewsSection"));
 const AppScreensSection = dynamic(() => import("@/components/sections/AppScreensSection"));
-const UpcomingSection = dynamic(() => import("@/components/sections/UpcomingSection"));
 const BusinessAPISection = dynamic(() => import("@/components/sections/BusinessAPISection"));
 
 const jsonLd = {
@@ -22,7 +21,7 @@ const jsonLd = {
       url: "https://goqatar.app",
       logo: "https://goqatar.app/icon-192.png",
       description:
-        "Go Qatar is a mobile navigation app for finding any address in Qatar using the official Zone, Street & Building number system.",
+        "Go Qatar is a free mobile app for living in and getting around Qatar: find any building from its blue address plate, ride the Doha Metro, read Qatar news and convert Qatari Riyal.",
       sameAs: [
         "https://apps.apple.com/us/app/go-qatar/id6756709380",
         "https://play.google.com/store/apps/details?id=com.snapinfinity.goqatar",
@@ -50,7 +49,7 @@ const jsonLd = {
       url: "https://goqatar.app",
       name: "Go Qatar",
       description:
-        "Navigate Qatar like never before. Find any address by Zone, Street & Building number. Get Qatar news, save favourite locations, and explore your city effortlessly.",
+        "Find any building in Qatar from its blue plate, plan Doha Metro journeys, read Qatar news and convert QAR — free on iOS and Android.",
       inLanguage: "en-US",
       publisher: { "@id": "https://goqatar.app/#organization" },
     },
@@ -59,7 +58,7 @@ const jsonLd = {
       "@id": "https://goqatar.app/#software",
       name: "Go Qatar",
       description:
-        "Navigate Qatar like never before. Find any address by Zone, Street & Building number. Get Qatar news, save favourite locations, and explore your city effortlessly.",
+        "Find any building in Qatar from its blue plate, plan Doha Metro journeys, read Qatar news and convert QAR — free on iOS and Android.",
       url: "https://goqatar.app",
       image: "https://goqatar.app/og-image.png",
       applicationCategory: "TravelApplication",
@@ -100,7 +99,6 @@ export default function Home() {
       <AppScreensSection />
       <HowItWorksSection />
       <NewsSection />
-      <UpcomingSection />
       <BusinessAPISection />
       <DownloadSection />
       <Footer />

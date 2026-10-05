@@ -156,7 +156,7 @@ export default function PrivacyPolicyPage() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-gold/[0.05] blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-brand/[0.12] blur-[100px] pointer-events-none" />
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
           style={{
@@ -167,12 +167,12 @@ export default function PrivacyPolicyPage() {
         />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/10 border border-gold/25 text-gold text-xs font-semibold uppercase tracking-widest mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 border border-brand-light/25 text-brand-light text-xs font-semibold uppercase tracking-[0.2em] mb-6">
             <div className="w-4 h-4 rounded-sm overflow-hidden flex-shrink-0 border border-white/20"><Image src="/logos/app_icon.svg" alt="" width={16} height={16} className="w-full h-full" /></div>
             Legal
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-            Privacy <span className="text-gradient-gold">Policy</span>
+            Privacy <span className="text-gradient-brand">Policy</span>
           </h1>
           <p className="text-white/50 text-lg leading-relaxed mb-4">
             We value your privacy and are committed to being transparent about
@@ -191,9 +191,9 @@ export default function PrivacyPolicyPage() {
       <section className="pb-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           {/* Intro card */}
-          <div className="p-6 bg-gold/[0.06] border border-gold/20 rounded-2xl mb-10">
+          <div className="p-6 bg-brand/[0.15] border border-brand-light/20 rounded-2xl mb-10">
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold shrink-0 mt-0.5">
+              <div className="w-8 h-8 rounded-lg bg-brand/40 flex items-center justify-center text-brand-light shrink-0 mt-0.5">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                 </svg>
@@ -211,12 +211,12 @@ export default function PrivacyPolicyPage() {
             {sections.map((section) => (
               <div
                 key={section.number}
-                className="group p-6 bg-white/[0.03] border border-white/[0.06] rounded-2xl hover:border-gold/20 hover:bg-white/[0.05] transition-all duration-200"
+                className="group p-6 bg-white/[0.03] border border-white/[0.06] rounded-2xl hover:border-brand-light/20 hover:bg-white/[0.05] transition-all duration-200"
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 flex items-center gap-3">
-                    <span className="text-gold/30 text-xs font-black tracking-widest">{section.number}</span>
-                    <div className="w-9 h-9 rounded-xl bg-white/[0.05] group-hover:bg-gold/10 group-hover:text-gold text-white/40 flex items-center justify-center transition-all duration-200">
+                    <span className="text-brand-light/30 text-xs font-black tracking-widest">{section.number}</span>
+                    <div className="w-9 h-9 rounded-xl bg-white/[0.05] group-hover:bg-brand/20 group-hover:text-brand-light text-white/40 flex items-center justify-center transition-all duration-200">
                       {section.icon}
                     </div>
                   </div>
@@ -234,7 +234,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-white/40 text-sm mb-2">Questions about this policy?</p>
             <a
               href="mailto:help.goqatar@gmail.com"
-              className="text-gold font-semibold hover:text-gold-light transition-colors text-sm"
+              className="text-brand-light font-semibold hover:text-white transition-colors text-sm"
             >
               help.goqatar@gmail.com
             </a>

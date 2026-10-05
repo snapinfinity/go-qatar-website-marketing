@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Jost } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import MotionProvider from "@/components/ui/MotionProvider";
 import "./globals.css";
 
-const inter = Inter({
+const jost = Jost({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-jost",
   display: "swap",
 });
 
@@ -14,7 +14,7 @@ const BASE_URL = "https://goqatar.app";
 const GTM_ID = "GTM-PS48G5JD";
 
 export const viewport: Viewport = {
-  themeColor: "#C9A84C",
+  themeColor: "#8A1538",
   width: "device-width",
   initialScale: 1,
 };
@@ -22,11 +22,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Go Qatar — Your City. Your Way.",
+    default: "Go Qatar — Find Any Address, Metro & News in Qatar",
     template: "%s | Go Qatar",
   },
   description:
-    "Navigate Qatar like never before. Find any address by Zone, Street & Building number. Get Qatar news, save favourite locations, and explore your city effortlessly.",
+    "Find any building from its blue plate, plan Doha Metro journeys, and read Qatar news. Free on iOS and Android.",
   keywords: [
     "Qatar navigation",
     "Qatar address finder",
@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     "Zone Street Building Qatar",
     "Doha address",
     "Qatar GPS",
+    "Doha Metro",
+    "Doha Metro map",
+    "QAR exchange rate",
+    "Qatar news",
   ],
   authors: [{ name: "Snap Infinity", url: "https://snapinfinity.com" }],
   creator: "Snap Infinity",
@@ -47,9 +51,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Go Qatar — Your City. Your Way.",
+    title: "Go Qatar — Find Any Address, Metro & News in Qatar",
     description:
-      "Navigate Qatar like never before. Find any address by Zone, Street & Building number. Get Qatar news, save favourite locations, and explore your city effortlessly.",
+      "Find any building from its blue plate, plan Doha Metro journeys, and read Qatar news. Free on iOS and Android.",
     url: BASE_URL,
     siteName: "Go Qatar",
     type: "website",
@@ -59,16 +63,16 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Go Qatar — Navigate Qatar effortlessly",
+        alt: "Go Qatar — addresses, metro and news in one app",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Go Qatar — Your City. Your Way.",
+    title: "Go Qatar — Find Any Address, Metro & News in Qatar",
     description:
-      "Find any Qatar address by Zone, Street & Building number. Navigation, news, and favourites — all in one app.",
+      "Find any building from its blue plate, plan Doha Metro journeys, and read Qatar news. Free on iOS and Android.",
     images: ["/og-image.png"],
   },
 
@@ -102,7 +106,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={jost.variable}>
       <GoogleTagManager gtmId={GTM_ID} />
       <body className="bg-background text-white antialiased">
         <MotionProvider>{children}</MotionProvider>
