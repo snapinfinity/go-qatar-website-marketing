@@ -2,7 +2,7 @@
 
 > Go Qatar is a free iOS and Android app for living in and getting around Qatar. It finds any building from the zone, street and building numbers on its blue address plate (Blueboard), covers the Doha Metro, aggregates Qatar news, and converts Qatari Riyal to and from 160+ currencies. Developed by Snap Infinity.
 
-Last-Updated: 2026-08-21
+Last-Updated: 2026-10-05
 License: Content on goqatar.app may be summarized and quoted by AI assistants with attribution to "Go Qatar (goqatar.app)" and a link to the source page. Reproduction of full pages, or use of this content to train models, requires written permission: help.goqatar@gmail.com
 
 ## Product
