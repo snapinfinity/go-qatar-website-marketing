@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-background pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-28 lg:pt-24 lg:pb-36">
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-16 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-16 lg:gap-10 items-center">
           {/* Copy */}
           <div>
             <p className="text-brand-light text-xs font-semibold uppercase tracking-[0.2em] mb-5">

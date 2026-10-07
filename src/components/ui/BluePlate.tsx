@@ -92,7 +92,7 @@ export default function BluePlate() {
 
       {/* Result */}
       <figcaption
-        className="plate-pin absolute -bottom-12 left-4 sm:-left-8 flex items-center gap-3 rounded-2xl bg-[#F4F3F1] pl-3 pr-5 py-3 text-brand-ink shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)]"
+        className="plate-pin absolute -bottom-12 left-4 sm:-left-8 flex items-center gap-3 rounded-2xl bg-[#F4F3F1] pl-2.5 pr-5 py-2.5 text-brand-ink shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)]"
         style={{ animationDelay: `${pinStart}ms` } as CSSProperties}
       >
         <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand text-white">
@@ -104,10 +104,7 @@ export default function BluePlate() {
             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
           </svg>
         </span>
-        <span className="leading-tight">
-          <span className="block text-[15px] font-semibold">Building found</span>
-          <span className="block text-xs text-[#6B6259]">Open it in Apple Maps, Google Maps or Waze</span>
-        </span>
+        <span className="text-[15px] font-semibold">Building found</span>
       </figcaption>
     </figure>
   );

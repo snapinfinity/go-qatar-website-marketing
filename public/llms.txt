@@ -10,7 +10,7 @@ License: Content on goqatar.app may be summarized and quoted by AI assistants wi
 - [Homepage](https://goqatar.app/): Overview, features, and download links for Go Qatar.
 - [How It Works](https://goqatar.app/#how-it-works): 3-step guide to finding a Qatar address by Zone, Street, and Building number.
 - [Features](https://goqatar.app/#features): Blueboard address finder, Doha Metro, Qatar news, QAR currency converter, favourites with Google/Apple sign-in, feature suggestions and feedback.
-- [Qatar News](https://goqatar.app/#news): In-app curated Qatar news feed with List, Grid, and Reel view modes.
+- [Qatar News](https://goqatar.app/#news): Qatar news from Al Jazeera, Gulf Times, Doha News and others, across nine categories.
 - [Download](https://goqatar.app/#download): App Store and Google Play links.
 
 ## Company

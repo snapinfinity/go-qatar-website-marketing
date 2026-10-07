@@ -61,7 +61,7 @@ export default function HowItWorksSection() {
 
         {/* Steps */}
         <StaggerContainer staggerMs={140}>
-          <div className="grid sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {steps.map((step, i) => (
               <StaggerItem key={step.step}>
                 <m.div

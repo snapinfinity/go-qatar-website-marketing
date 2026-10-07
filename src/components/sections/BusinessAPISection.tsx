@@ -164,7 +164,7 @@ export default function BusinessAPISection() {
         </AnimateIn>
 
         {/* Use case tiles */}
-        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16" staggerMs={70}>
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16" staggerMs={70}>
           {USE_CASES.map((uc) => (
             <StaggerItem key={uc.title}>
             <m.div
@@ -184,7 +184,7 @@ export default function BusinessAPISection() {
         </StaggerContainer>
 
         {/* Form + Info grid */}
-        <AnimateIn delay={80} className="grid lg:grid-cols-5 gap-10 items-start">
+        <AnimateIn delay={80} className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
           {/* Left — Info */}
           <div className="lg:col-span-2 space-y-8">
             <div>
@@ -246,7 +246,7 @@ export default function BusinessAPISection() {
                 <p className="text-white/40 text-sm mb-6">Tell us about your project and we&apos;ll get back to you with a custom proposal.</p>
 
                 {/* Company + Name */}
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-medium text-white/60 mb-1.5">Company Name *</label>
                     <input
@@ -288,7 +288,7 @@ export default function BusinessAPISection() {
                 </div>
 
                 {/* Use case + Volume */}
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="business-use-case" className="block text-xs font-medium text-white/60 mb-1.5">Primary Use Case</label>
                     <select

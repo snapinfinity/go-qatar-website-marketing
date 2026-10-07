@@ -387,7 +387,7 @@ export default function AppScreensSection() {
         </AnimateIn>
 
         {/* Content grid */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* 3D icon panel — aspect-[4/3] keeps it compact */}
           <div className="order-1 lg:order-none">
             <AnimatePresence mode="wait">
